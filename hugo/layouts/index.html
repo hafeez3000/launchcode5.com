@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en-US" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
+    <head>
+{{ template "partials/html-header.html" . }}
+    </head>
+<body lang="en">
+{{ template "partials/page-header.html" . }}
+
+<section id="main">
+    <div>
+        {{ range first 10 .Data.Pages }}
+        {{ .Render "summary"}}
+        {{ end }}
+    </div>
+</section>
+
+{{ template "chrome/sidebar.html" . }}
+
+<div class="content container">
+    <div class="posts">
+
+        {{ range .Data.Pages }}
+        <div class="post">
+            <h1 class="post-title">
+                <a href="{{ .Permalink }}">
+                    {{ .Title }}
+                </a>
+            </h1>
+
+            <span class="post-date">{{ .Date.Format "Mon, Jan 2, 2006" }}</span>
+
+            {{ .Content }}
+        </div>
+        {{ end }}
+    </div>
+
+{{ template "partials/footer.html" }}
+</body>
+</html>

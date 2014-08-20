@@ -4,14 +4,21 @@ module.exports.jsFiles = [
     './app/js/app.js',
     './app/js/app-templates.generated.js',
     './app/js/config.js',
-    './app/js/qwontifyDirectives.js',
     './app/js/states.js',
-    './app/js/**/*.js'
+    './app/js/**/*.js',
+    './app/assets/**/*.js'
 ];
 
 module.exports.cssFiles = [
     './app/css/*.css',
-    './js/**/*.css'
+    './app/css/transitions/*.css',
+    './app/js/**/*.css',
+    './app/assets/**/*.css'
+];
+
+module.exports.scssFiles = [
+    './app/css/app*.scss',
+    './app/js/**/*.scss'
 ];
 
 module.exports.templateFiles = [

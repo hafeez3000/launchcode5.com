@@ -1,0 +1,41 @@
+.navbar {
+    border-radius: 0 !important;
+}
+
+.navbar-default .navbar-brand
+{
+    color: #F0FFFF;
+}
+
+.navbar-default a.navbar-brand:hover
+{
+    color: #F0FFFF;
+}
+
+.navbar-default {
+    background-color: #446666;
+    border-color: #337777;
+    color: #d9F0F0;
+}
+
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover {
+    background-color: #337777;
+    color: #F0FFFF;
+}
+
+.navbar-default .navbar-nav > li > a {
+    color: #d9F0F0;
+}
+
+.navbar-default .navbar-nav > li > a:hover {
+    color: #F0FFFF;
+}
+
+.navbar .form-control {
+    background-color: #DDDDCC;
+}
+
+.navbar .btn-default {
+    background-color: #BBBBAA;
+}
