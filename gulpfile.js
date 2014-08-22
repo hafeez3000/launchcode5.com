@@ -1,6 +1,7 @@
 'use strict';
 
 var actions             = require('./gulp-scripts/gulp-actions'),
+    connect             = require('gulp-connect'),
     cdnizer             = require('gulp-cdnizer'),
     gulp                = require('gulp'),
     plugins             = require('gulp-load-plugins')(),
@@ -23,8 +24,27 @@ gulp.task('clean', function(callback){
     actions.clean('./build/*', callback);
 });
 
-gulp.task('dist', function(callback) {
+gulp.task('build-dev', function(callback) {
+    runSequence('clean', 'vendor', 'hugo-dev', 'process-hugo-output', callback);
+});
 
+gulp.task('process-hugo-output', function(callback) {
+    gulp.src(['./build/hugo/**/*.html'], { base: './build/hugo/' })
+        .pipe(plugins.replace('${base}', 'http://localhost:4000/'))
+        .pipe(gulp.dest(buildProperties.expressRoot))
+        .pipe(gulp.dest(buildProperties.publicDir))
+        .on('error', plugins.util.log)
+        .on('end', function(){
+            plugins.util.log('Done copying html files...');
+            gulp.src(['./build/hugo/**/*', '!./build/hugo/**/*.html'], { base: './build/hugo/' })
+                .pipe(gulp.dest(buildProperties.expressRoot))
+                .pipe(gulp.dest(buildProperties.publicDir))
+                .on('error', plugins.util.log)
+                .on('end', function(){
+                    plugins.util.log('Done copying other hugo resources...');
+                    if(callback) callback();
+                });
+        });
 });
 
 gulp.task('hugo-dev', ['vendor'], function(callback) {
@@ -36,26 +56,29 @@ gulp.task('hugo', ['vendor'], function(callback) {
 });
 
 gulp.task('default', function(callback) {
-    runSequence('express', 'hugo-dev', callback);
+    runSequence('express', 'build-dev', callback);
 });
 
 gulp.task('express', function(callback) {
-    actions.startExpress(buildProperties);
-    actions.startLiveReload(buildProperties);
-    runSequence('clean', 'dist', function()
-    {
-        //Set up watches
-        gulp.watch('src/**/*').on('change', function(file) {
-            runSequence('dist', function(){
-                actions.notifyLiveReload(file.path);
-            });
-        });
-
-        gulp.watch('app/index.html').on('change', function(file) {
-            actions.notifyLiveReload(file.path);
-        });
+    //actions.startExpress(buildProperties);
+    connect.server({
+       root: [buildProperties.expressRoot],
+       port: buildProperties.expressPort,
+       livereload: true
     });
-    if(callback) callback();
+
+    //actions.startLiveReload(buildProperties);
+    runSequence('clean', 'build-dev', function()
+    {
+        return gulp.src(['hugo/**/*', '!hugo/static/vendor/**/*'], { read : false})
+            .pipe(plugins.watch({ emit: 'all', debounce: 200, timeout: 0 }, function(events, done){
+                runSequence('build-dev', function() {
+                    connect.reload();
+                    //actions.notifyLiveReload(files); //was file.path
+                    done();
+                });
+            }));
+     });
 });
 
 gulp.task('rebuildApp', function(callback){
