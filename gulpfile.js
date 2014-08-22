@@ -11,6 +11,7 @@ var actions             = require('./gulp-scripts/gulp-actions'),
 var buildProperties = {
     GOOGLE_ANALYTICS_ID : process.env.GOOGLE_ANALYTICS_ID || 'DEVELOP',
     appFiles            : require('./gulp-scripts/src-lists/app-files.js'),
+    base                : 'http://localhost:4000/',
     expressPort         : 4000,
     expressRoot         : require('path').resolve('./build/express-tmp'),
     liveReloadPort      : 35729,
@@ -25,26 +26,21 @@ gulp.task('clean', function(callback){
 });
 
 gulp.task('build-dev', function(callback) {
-    runSequence('clean', 'vendor', 'hugo-dev', 'process-hugo-output', callback);
+    runSequence('clean', 'vendor', 'hugo-dev', 'buildCss', 'process-hugo-output', callback);
 });
 
 gulp.task('process-hugo-output', function(callback) {
-    gulp.src(['./build/hugo/**/*.html'], { base: './build/hugo/' })
-        .pipe(plugins.replace('${base}', 'http://localhost:4000/'))
-        .pipe(gulp.dest(buildProperties.expressRoot))
-        .pipe(gulp.dest(buildProperties.publicDir))
-        .on('error', plugins.util.log)
-        .on('end', function(){
-            plugins.util.log('Done copying html files...');
-            gulp.src(['./build/hugo/**/*', '!./build/hugo/**/*.html'], { base: './build/hugo/' })
-                .pipe(gulp.dest(buildProperties.expressRoot))
-                .pipe(gulp.dest(buildProperties.publicDir))
-                .on('error', plugins.util.log)
-                .on('end', function(){
-                    plugins.util.log('Done copying other hugo resources...');
-                    if(callback) callback();
-                });
-        });
+    actions.processHtml(buildProperties, function() {
+        //copy non-html files
+        var gulpPipe = gulp.src(['./build/hugo/**/*', '!./build/hugo/**/*.html'], { base: './build/hugo/' })
+            .pipe(gulp.dest(buildProperties.expressRoot))
+            .pipe(gulp.dest(buildProperties.publicDir));
+        //.pipe(inject('./css/vendor-concat*.css', path , 'vendorcss'))
+        //.pipe(inject('./js/app*.js', path, 'appjs'))
+        //.pipe(inject('./js/vendor-concat*.js', path, 'vendorjs'));
+        if(callback) callback();
+    });
+
 });
 
 gulp.task('hugo-dev', ['vendor'], function(callback) {
@@ -57,6 +53,15 @@ gulp.task('hugo', ['vendor'], function(callback) {
 
 gulp.task('default', function(callback) {
     runSequence('express', 'build-dev', callback);
+});
+
+gulp.task('buildProd', function(callback) {
+   buildProperties.base = 'http://www.wychwoodsoft.com/';
+   runSequence('clean', 'vendor', 'hugo', 'buildCss', 'process-hugo-output', callback);
+});
+
+gulp.task('buildCss', function(callback) {
+    return actions.processSass(buildProperties, callback);
 });
 
 gulp.task('express', function(callback) {
