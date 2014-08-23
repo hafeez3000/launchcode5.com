@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<div class="content container">
+    <h1>Posts</h1>
+    <ul class="posts">
+        {{ range .Data.Pages }}
+        <li><a href="{{ .Permalink }}">{{ .Title }}</a><time class="pull-right post-list">{{ .Date.Format "Mon, Jan 2, 2006" }}</time></li>
+        {{ end }}
+    </ul>
+</div>
+</body>
+</html>

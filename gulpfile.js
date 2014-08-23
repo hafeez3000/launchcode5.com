@@ -44,7 +44,7 @@ gulp.task('process-hugo-output', function(callback) {
 });
 
 gulp.task('hugo-dev', ['vendor'], function(callback) {
-    gulp.src('').pipe(shell(['hugo -v -D -F -d ../build/hugo -s ./hugo'], { cwd: process.cwd() })).on('end', callback || function() {});;
+    gulp.src('').pipe(shell(['hugo -v -D -F -d ../build/hugo -s ./hugo -b ' + buildProperties.base], { cwd: process.cwd() })).on('end', callback || function() {});;
 });
 
 gulp.task('hugo', ['vendor'], function(callback) {

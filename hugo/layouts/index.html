@@ -15,25 +15,44 @@
     </div>
 </section>
 
-{{ template "chrome/sidebar.html" . }}
-
-<div class="content container">
-    <div class="posts">
-
-        {{ range .Data.Pages }}
-        <div class="post">
-            <h1 class="post-title">
-                <a href="{{ .Permalink }}">
-                    {{ .Title }}
-                </a>
-            </h1>
-
-            <span class="post-date">{{ .Date.Format "Mon, Jan 2, 2006" }}</span>
-
-            {{ .Content }}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-4">
+        {{ template "chrome/sidebar.html" . }}
         </div>
-        {{ end }}
+
+
+        <div class="content col-md-8">
+            <div class="posts">
+
+                {{ range .Data.Pages }}
+                <div class="post">
+                    <h1 class="post-title">
+                        <a href="{{ .Permalink }}">
+                            {{ .Title }}
+                        </a>
+                    </h1>
+
+                    <span class="post-date">{{ .Date.Format "Mon, Jan 2, 2006" }}</span>
+
+                    {{ .Content }}
+                </div>
+                {{ end }}
+            </div>
+
+            <hr>
+            <div>
+                <h2>Recent Posts</h2>
+
+                {{ range first 5 .Data.Pages }}
+                <h3 class="posts"><a href="{{ .Permalink }}">{{ .Title }}</a><time class="pull-right post-list">{{ .Date.Format "Mon, Jan 2, 2006" }}</time></h3>
+                <p> {{ .Description }} <a href="{{ .Permalink }}"> Read More &rarr; </a></p>
+                {{ end }}
+
+            </div>
+        </div>
     </div>
+</div>
 
 {{ template "partials/footer.html" }}
 </body>
