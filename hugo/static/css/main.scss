@@ -1,5 +1,33 @@
+$firstColour   : #698eb8;
+$secondColour  : #ADB7BD;
+$thirdColour   : #FFFFFD;
+$fourthColour  : #486775;
+$fifthColour   : #0C100B;
+/* Colours generated from our banner image using pictaculous.com */
+
 * {
   box-sizing: border-box;
+  z-index: 1;
+}
+
+.first {
+  background-color: $firstColour;
+}
+
+.second {
+  background-color: $secondColour;
+}
+
+.third {
+  background-color: $thirdColour;
+}
+
+.fourth {
+  background-color: $fourthColour;
+}
+
+.fifth {
+  background-color: $fifthColour;
 }
 
 div.banner {
@@ -14,9 +42,9 @@ div.banner {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  border: thin solid green;
-  z-index: 99999;
+  z-index: 0;
   background-color: black;
+  border-bottom: 2px solid black;
 
   .vert-text {
     display: table-cell;
@@ -47,6 +75,24 @@ div.banner {
   }
 }
 
+div.section
+{
+  min-height: 75px;
+  width: 100%;
+  min-width: 100%;
+
+  .tile {
+    padding: 10px 10px;
+    margin: 10px 10px;
+  }
+
+  .tileLink
+  {
+    color: $fifthColour;
+    text-decoration: none;
+  }
+
+}
 
 
 .navbar {

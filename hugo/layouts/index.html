@@ -12,17 +12,35 @@
             <img class="logo-text-2" src="/images/software-studios.png">
         </div>
     </div>
-{{ template "partials/page-header.html" . }}
 
-<section id="main">
-    <div>
-        {{ range first 10 .Data.Pages }}
-        {{ .Render "summary"}}
-        {{ end }}
-    </div>
-</section>
 
 <div class="container-fluid">
+    <div class="row section fifth">
+       <div class="col-xs-6 col-md-3">
+           <a class="tileLink" href="#section1"><div class="tile first">tile 1</div></a>
+       </div>
+       <div class="col-xs-6 col-md-3">
+           <a class="tileLink" href="#section2"> <div class="tile second">tile 2</div></a>
+       </div>
+       <div class="col-xs-6 col-md-3">
+           <a class="tileLink" href="#section3"><div class="tile third">tile 3</div></a>
+       </div>
+       <div class="col-xs-6 col-md-3">
+            <a class="tileLink" href="#section4"><div class="tile fourth">tile 4</div></a>
+       </div>
+    </div>
+    <div id="section1" class="row section first">
+
+    </div>
+    <div id="section2" class="row section second">
+
+    </div>
+    <div id="section3" class="row section third">
+
+    </div>
+    <div id="section4" class="row section fourth">
+
+    </div>
     <div class="row">
         <div class="col-md-4">
         {{ template "chrome/sidebar.html" . }}
