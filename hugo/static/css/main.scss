@@ -77,13 +77,18 @@ div.banner {
 
 div.section
 {
+  padding-top: 15px;
+  padding-bottom: 15px;
   min-height: 75px;
-  width: 100%;
-  min-width: 100%;
+
 
   .tile {
+    text-align: center;
     padding: 10px 10px;
-    margin: 10px 10px;
+    display: table;
+    width: 100%;
+    min-width: 100%;
+    border-radius: 6px;
   }
 
   .tileLink
@@ -97,6 +102,14 @@ div.section
 
 .navbar {
     border-radius: 0 !important;
+
+    &.wychwood-nav
+    {
+      position: fixed;
+      width: 100%;
+      background-color: rgba($fourthColour, 0.75);
+      z-index: 50;
+    }
 }
 
 .navbar-default .navbar-brand
@@ -110,14 +123,13 @@ div.section
 }
 
 .navbar-default {
-    background-color: #446666;
     border-color: #337777;
     color: #d9F0F0;
 }
 
 .navbar-default .navbar-nav > .active > a,
 .navbar-default .navbar-nav > .active > a:hover {
-    background-color: #337777;
+    background-color: rgba($fourthColour, 0.9);
     color: #F0FFFF;
 }
 
