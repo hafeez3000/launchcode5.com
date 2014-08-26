@@ -139,6 +139,9 @@ div.section
     width: 100%;
     min-width: 100%;
     border-radius: 6px;
+    margin: 10px inherit;
+    height: 100%;
+    min-height: 100%;
   }
 
   .tileLink
@@ -174,6 +177,12 @@ div.section
       background-color: rgba($fourthColour, 0.75);
       z-index: 50;
     }
+}
+
+.nav > li > a
+{
+  padding: 10px 10px;
+  padding-top: 15px;
 }
 
 .navbar-default .navbar-brand
