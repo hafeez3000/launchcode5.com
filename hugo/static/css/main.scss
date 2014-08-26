@@ -3,6 +3,7 @@ $secondColour  : #ADB7BD;
 $thirdColour   : #FFFFFD;
 $fourthColour  : #486775;
 $fifthColour   : #0C100B;
+$darkColour    : #253C4A;
 /* Colours generated from our banner image using pictaculous.com */
 
 * {
@@ -28,6 +29,55 @@ $fifthColour   : #0C100B;
 
 .fifth {
   background-color: $fifthColour;
+}
+
+div.modal-dialog
+{
+  width: 90%;
+  max-width: 800px;
+  color: rgba($thirdColour, 0.8);
+
+  &.wychmodal
+  {
+    div.modal-content {
+      top: 20px;
+      box-shadow: none !important;
+      background-color: transparent !important;
+      border: solid transparent none !important;
+      border-radius: none !important;
+
+      .close {
+        color: $thirdColour;
+      }
+
+      .note
+      {
+        padding-top: 2px;
+        font-size: 11px;
+        font-weight: normal;
+        color: $firstColour;
+      }
+
+      .required-note
+      {
+        font-size: 12px;
+      }
+    }
+  }
+
+}
+
+div.modal-content {
+  box-shadow: none !important;
+  background-color: none !important;
+  border: none !important;
+  border-radius: none !important;
+}
+
+.modal-backdrop
+{
+  background-color: rgba($darkColour, 0.9);
+  opacity: 1.0 !important;
 }
 
 div.banner {
@@ -99,6 +149,20 @@ div.section
 
 }
 
+.contact-header
+{
+  color: $thirdColour;
+  border-bottom: 1px solid $darkColour;
+  position: fixed;
+  top: 0px;
+  font-size: 16px;
+  height: 50px;
+  max-height: 50px;
+  width: 100%;
+  min-width: 100%;
+  z-index: 50;
+}
+
 
 .navbar {
     border-radius: 0 !important;
@@ -123,7 +187,7 @@ div.section
 }
 
 .navbar-default {
-    border-color: #337777;
+    border-color: $darkColour;
     color: #d9F0F0;
 }
 
