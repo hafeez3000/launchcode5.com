@@ -1,10 +1,10 @@
 +++
 date = 2014-08-12T21:49:12Z
 draft = true
-title = "about"
+title = "Using Social Authentication"
 
 +++
-Some content created in Hugo - testing
+Using Social Authentication
 --------------------------------------
 
 This is before the highlight

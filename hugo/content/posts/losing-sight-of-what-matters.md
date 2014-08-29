@@ -1,13 +1,13 @@
 +++
 date = 2014-08-12T21:49:12Z
 draft = true
-title = "about"
+title = "Losing Sight of What Matters"
 
 +++
 Some content created in Hugo - testing
 --------------------------------------
 
-This is before the highlight
+How do you keep staff asking the right questions to make sure they are doing the right things?
 
 {{% highlight html %}}
 <section id="main">

@@ -1,7 +1,7 @@
 +++
 date = 2014-08-12T21:49:12Z
 draft = true
-title = "about"
+title = "JavaScript Promise-wrapped-promises"
 
 +++
 Some content created in Hugo - testing

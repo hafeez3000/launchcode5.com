@@ -1,13 +1,14 @@
 +++
 date = 2014-08-12T21:49:12Z
 draft = true
-title = "about"
+title = "Taking on Investment"
 
 +++
 Some content created in Hugo - testing
 --------------------------------------
 
-This is before the highlight
+Maintaining control vs taking on investment.
+Be careful with Angel investors - they aren't all angels.
 
 {{% highlight html %}}
 <section id="main">

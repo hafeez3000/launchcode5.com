@@ -1,6 +1,6 @@
 +++
 date = 2014-08-12T21:49:12Z
-draft = false
+draft = true
 title = "Hugo and Gulp"
 +++
 Some content created in Hugo - testing

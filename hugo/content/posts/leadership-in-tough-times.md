@@ -1,10 +1,10 @@
 +++
-date = 2014-08-12T21:49:12Z
+date = 2014-09-22T21:49:12Z
 draft = true
-title = "about"
+title = "Leadership in Tough Times"
 
 +++
-Some content created in Hugo - testing
+Leadership in tough times
 --------------------------------------
 
 This is before the highlight

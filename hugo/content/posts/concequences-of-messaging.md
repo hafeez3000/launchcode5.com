@@ -1,10 +1,10 @@
 +++
 date = 2014-08-12T21:49:12Z
 draft = true
-title = "about"
+title = "The Concequences of 'Messaging'"
 
 +++
-Some content created in Hugo - testing
+The Concequences of 'Messaging'
 --------------------------------------
 
 This is before the highlight

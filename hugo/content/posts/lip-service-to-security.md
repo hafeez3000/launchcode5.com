@@ -1,10 +1,10 @@
 +++
 date = 2014-08-12T21:49:12Z
 draft = true
-title = "about"
+title = "Organizations Paying Lip Service to Security"
 
 +++
-Some content created in Hugo - testing
+Organizations Paying Lip Service to Security
 --------------------------------------
 
 This is before the highlight
