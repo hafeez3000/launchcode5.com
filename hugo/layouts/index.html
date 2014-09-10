@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en-US" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
+    <head>
+        <!-- This is where the head starts -->
+{{ template "partials/html-header.html" . }}
+    </head>
+<body lang="en">
+    {{ template "partials/page-header.html" . }}
+    <div class="banner">
+        <div class="vert-text">
+            <img class="logo-text-1" src="/images/wychwood.png">
+            <br />
+            <img class="logo-text-2" src="/images/software-studios.png">
+        </div>
+    </div>
+
+
+<div class="container-fluid">
+    <div class="row section fifth">
+       <div class="col-xs-6 col-md-3">
+           <div class="tile first">
+               <a class="tileLink" href="#section1">
+                   <i class="fa fa-lightbulb-o fa-4x"></i>
+                   <div>Ideation &amp Startup Support</div>
+               </a>
+           </div>
+       </div>
+       <div class="col-xs-6 col-md-3">
+           <div class="tile second">
+               <a class="tileLink" href="#section2">
+                   <img src="images/protractor.png" style="width: 4em; height: auto; padding-top: 10px; padding-bottom: 10px;">
+                   <div>Software Design &amp; Development</div>
+               </a>
+           </div>
+       </div>
+       <div class="col-xs-6 col-md-3">
+           <div class="tile third">
+               <a class="tileLink" href="#section3">
+                   <i class="fa fa-road fa-4x"></i>
+                   <div>Startup Support &amp; Services</div>
+               </a>
+           </div>
+       </div>
+       <div class="col-xs-6 col-md-3">
+           <div class="tile fourth">
+               <a class="tileLink" href="#section4">
+                    <i class="fa fa-comments fa-4x"></i>
+                    <div>Free Consultation</div>
+               </a>
+           </div>
+       </div>
+    </div>
+    <div class="anchor" id="section1"></div>
+    <div class="row section first">
+        <div class="col-xs-3">
+        <i class="fa fa-lightbulb-o fa-4x pull-right"></i>
+        </div>
+        <div class="col-xs-9"><h2>Ideation &amp; Startup Support</h2></div>
+    </div>
+    <div class="anchor" id="section2"></div>
+    <div class="row section second">
+        <div class="col-xs-3">
+            <div class="pull-right">
+                <img src="images/protractor.png" style="width: 4em; height: auto; padding-top: 1em; padding-bottom: 1em;">
+            </div>
+        </div>
+        <div class="col-xs-9"><h2>Software Design &amp; Development</h2></div>
+    </div>
+    <div class="anchor" id="section3"></div>
+    <div class="row section third">
+        <div class="col-xs-3">
+            <i class="fa fa-road fa-4x pull-right"></i>
+        </div>
+        <div class="col-xs-9">
+            <h2>Startup Support &amp; Services</h2>
+        </div>
+    </div>
+    <div class="anchor" id="section4"></div>
+    <div class="row section fourth">
+        <div class="col-xs-3">
+            <i class="fa fa-comments fa-4x pull-right"></i>
+        </div>
+        <div class="col-xs-9">
+            <h2>Free Consultation</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+        {{ template "chrome/sidebar.html" . }}
+        </div>
+
+
+        <div class="content col-md-8">
+            <div class="posts">
+
+                {{ range .Data.Pages }}
+                <div class="post">
+                    <h1 class="post-title">
+                        <a href="{{ .Permalink }}">
+                            {{ .Title }}
+                        </a>
+                    </h1>
+
+                    <span class="post-date">{{ .Date.Format "Mon, Jan 2, 2006" }}</span>
+
+                    {{ .Content }}
+                </div>
+                {{ end }}
+            </div>
+
+            <hr>
+            <div>
+                <h2>Recent Posts</h2>
+
+                {{ range first 5 .Data.Pages }}
+                <h3 class="posts"><a href="{{ .Permalink }}">{{ .Title }}</a><time class="pull-right post-list">{{ .Date.Format "Mon, Jan 2, 2006" }}</time></h3>
+                <p> {{ .Description }} <a href="{{ .Permalink }}"> Read More &rarr; </a></p>
+                {{ end }}
+
+            </div>
+        </div>
+    </div>
+</div>
+
+{{ template "partials/footer.html" }}
+</body>
+</html>
