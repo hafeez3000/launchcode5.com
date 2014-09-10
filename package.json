@@ -1,11 +1,7 @@
 {
-<<<<<<< HEAD
-  "name": "www.wychwoodsoft.com",
-=======
   "name": "www-wychwoodsoft",
   "description": "A project for our WychwoodSoft website",
   "repository": "https://bitbucket.org/RateAndPillage/www-wychwoodsoft.git",
->>>>>>> cc61d146d9bc3cf4c00e9b66663bfcf1e7549da3
   "version": "0.0.0",
   "dependencies": {
     "connect-livereload": "^0.4.0",
