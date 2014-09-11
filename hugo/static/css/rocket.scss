@@ -1,0 +1,374 @@
+/*----------------------------------------------
+   Be sure to run this CSS through http://prefixr.com/ to add the appropriate prefixes for the different browsers
+ ----------------------------------------------- */
+
+/*=============================================
+[ Page Setup ]
+==============================================*/
+body{background:#34495e}
+#pageWrap {width:100%;overflow:hidden;}
+
+.rocketSvg {
+  display:inline-block;
+  margin:0 auto;
+  margin-top:0px;
+}
+
+/*=============================================
+[ Inactive State Styles ]
+==============================================*/
+
+.rocketTable {
+  display: table;
+}
+
+.rocketTable div.titleLeft,
+.rocketTable div.titleRight {
+  display: inline-block;
+  opacity: 1.0;
+  transform: rotate(0deg) scale(1.0);
+  transition: 1.8s;
+  transition-timing-function: ease-in;
+  letter-spacing: -3px; font-size: 60px; color: #e0e0e0; text-shadow: 4px 4px rgba(50, 50, 50, 0.5);
+}
+
+.rocketTable .rocketSvg
+{
+  transform: rotate(0deg);
+  transition: 0.5s;
+}
+
+.rocketInner {
+  transform: translateY(15px) translateX(-3px);
+  -webkit-transition: .3s;
+  -moz-transition: .3s;
+  transition: .3s;
+  color: rgba(72, 103, 117, 1.0);
+}
+
+.rocket-no-circle .iconCircle
+{
+  visibility: hidden;
+}
+
+.iconCircle {
+  transition: .2s;
+  fill: #22303e;
+  background: #22303e;
+}
+.largeWindowPath {
+  transition: .2s;
+  fill: #22303e;
+}
+.smallWindowPath {
+  fill: #22303e;
+}
+
+.wing, .wingShadow
+{
+  fill: #34495e;
+}
+
+.rocketBottom { fill: #34495e; }
+.rocketBody { fill: #34495e; }
+.rocketShadow { fill: #34495e; }
+.windows { fill: #22303e; }
+.wingBase { fill: #34495e }
+.firePath { fill: #F7941E }
+
+
+/*=============================================
+[ Hover Styles ]
+==============================================*/
+
+.rocketTable:hover .rocketSvg
+{
+  animation-delay: 0.3s;
+  animation-name: rocketTurn;
+  animation-duration: 1.2s;
+  animation-iteration-count: 1;
+  transform: rotate(75deg) scale(3.0);
+}
+
+.rocketTable:hover div.titleLeft {
+  animation-delay: 0.2s;
+  animation-name: fallAwayLeft;
+  animation-duration: 1.8s;
+  animation-iteration-count: 1;
+  transition-timing-function: ease-in;
+  transform-origin: top right;
+  position: relative;
+  opacity: 0.0;
+  transform: rotate(-30deg) scale(0.0);
+  top: 600px;
+}
+
+.rocketTable:hover div.titleRight{
+  animation-delay: 0.2s;
+  animation-name: fallAwayRight;
+  animation-duration: 1.8s;
+  animation-iteration-count: 1;
+  transition-timing-function: ease-in;
+  transform-origin: top left;
+  position: relative;
+  opacity: 0.0;
+  transform: rotate(30deg) scale(0.0);
+  top: 600px;
+}
+
+.rocketTable:hover .rocketBase {
+  transition: .2s;
+  fill: #FFFFFF !important;
+  stroke-width: 0px !important;
+}
+.rocketTable:hover .rocketShadow {
+  transition: .2s;
+  fill: #EDEDED !important;
+  stroke-width: 0px !important;
+}
+.rocketTable:hover .iconCircle {
+  transition: .2s;
+  fill: #282e3a !important;
+  stroke: #fff !important;
+  stroke-width: 5px !important;
+}
+.rocketTable:hover .smallWindowPath {
+  transition: .2s;
+  fill: #28B767 !important;
+  stroke-width: 0px !important;
+}
+
+.rocketTable:hover .wingBase {
+  transition: .2s;
+  fill: #E16E36 !important;
+  stroke-width: 0px !important;
+}
+
+.rocketTable:hover .rocketShadow {
+  transition: .2s;
+  fill: #EDEDED !important;
+}
+
+.rocketTable:hover .rocketMain {
+  transition: .2s;
+  fill: #FFFFFF !important;
+}
+
+.rocketTable:hover .wingShadow
+{
+  transition: .2s;
+  display: block !important;
+  fill:#336699 !important;
+}
+
+.rocketTable:hover .wing {
+  transition: .2s;
+  display: block !important;
+  fill: #698EB8 !important;
+}
+
+.rocketTable:hover .windows .largeWindow > circle,
+.rocketTable:hover .windows .smallWindow > circle {
+  transition: 0.2s;
+  fill: #AAA9A9 !important;
+}
+
+.rocketTable:hover .windows .largeWindow > ellipse,
+.rocketTable:hover .windows .smallWindow > ellipse {
+  transition: 0.2s;
+  fill: #CCCCCC !important;
+}
+
+.rocketTable:hover .rocketInner {
+  transition: .5s;
+  transform: translateY(0px) translateX(-3px) !important;
+}
+
+/*=============================================
+[ Animation Classes ]
+==============================================*/
+
+.rocketTable:hover .rocketWrap
+{
+
+}
+
+.fire {
+  display: none;
+  animation-delay: 0s;
+  fill-opacity: 1;
+  animation-timing-function: ease-in;
+  stroke-width: 0px;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  transform-origin: 50% 50%;
+  animation-direction: normal;
+}
+.rocketTable:hover .fireLeft {
+  display: block;
+  animation-delay: 0s;
+  animation-name: fireLeft, fillOpacity1;
+  animation-duration: 1.2s;
+}
+.rocketTable:hover .fireMiddle {
+  display: block;
+  animation-delay: 0s;
+  animation-name: fireMiddle, fillOpacity1;
+  animation-duration: 1s;
+}
+.rocketTable:hover .fireRight {
+  display: block;
+  animation-delay: 0s;
+  animation-name: fireRight, fillOpacity1;
+  animation-duration: 1.3s;
+}
+.rocketTable:hover .fireSmallLeft {
+  display: block;
+  animation-delay: 0s;
+  animation-name: fireSmall, fillOpacity2;
+  animation-duration: 1.3s;
+  transform-origin: bottom;
+}
+.rocketTable:hover .fireSmallRight {
+  display: block;
+  animation-delay: 0.3s;
+  animation-name: fireSmall, fillOpacity3;
+  animation-duration: 1.6s;
+  transform-origin: bottom;
+}
+/*=============================================
+[ KeyFrame Animations ]
+==============================================*/
+@keyframes fireSmall {
+  10% { transform: rotate(17deg) translateY(1px) }
+  20% { transform: rotate(-13deg) translateY(2px) }
+  30% { transform: rotate(21deg) translateY(3px) }
+  40% { transform: rotate(-34deg)translateY(4px) }
+  50% { transform: rotate(24deg) translateY(5px) }
+  60% { transform: rotate(-17deg) translateY(6px) }
+  70% { transform: rotate(31deg) translateY(7px) }
+  80% { transform: rotate(-28deg) translateY(8px) }
+  90% { transform: rotate(14deg) translateY(9px) }
+  99% { transform: rotate(0deg) translateY(10px) }
+}
+@keyframes fireLeft {
+  6% { transform: rotate(25deg) }
+  15% { transform: rotate(-19deg) }
+  25% { transform: rotate(25deg) }
+  32% { transform: rotate(-30deg) }
+  46% { transform: rotate(22deg) }
+  54% { transform: rotate(-29deg) }
+  61% { transform: rotate(32deg) }
+  74% { transform: rotate(-9deg) }
+  83% { transform: rotate(16deg) }
+  99% { transform: rotate(0deg) }
+}
+@keyframes fireMiddle {
+  10% { transform: rotate(25deg) }
+  20% { transform: rotate(-25deg) }
+  30% { transform: rotate(30deg) }
+  40% { transform: rotate(-22deg) }
+  50% { transform: rotate(29deg) }
+  60% { transform: rotate(-45deg) }
+  70% { transform: rotate(37deg) }
+  80% { transform: rotate(-15deg) }
+  90% { transform: rotate(16deg) }
+  99% { transform: rotate(0deg) }
+}
+@keyframes fireRight {
+  15% { transform: rotate(17deg) }
+  23% { transform: rotate(-13deg) }
+  37% { transform: rotate(21deg) }
+  45% { transform: rotate(-34deg) }
+  54% { transform: rotate(24deg) }
+  67% { transform: rotate(-17deg) }
+  72% { transform: rotate(31deg) }
+  84% { transform: rotate(-28deg) }
+  96% { transform: rotate(14deg) }
+  99% { transform: rotate(0deg) }
+}
+@keyframes fillOpacity1 {
+  0% {
+    fill-opacity: 1;
+    stroke-opacity: 1;
+  }
+  50% {
+    fill-opacity: 1;
+    stroke-opacity: 1;
+  }
+  100% {
+    fill-opacity: 0;
+    stroke-opacity: 0;
+  }
+}
+@keyframes fillOpacity2 {
+  0% {
+    fill-opacity: 1;
+    stroke-opacity: 1;
+  }
+  25% {
+    fill-opacity: 1;
+    stroke-opacity: 1;
+  }
+  100% {
+    fill-opacity: 0;
+    stroke-opacity: 0;
+  }
+}
+@keyframes fillOpacity3 {
+  0% {
+    fill-opacity: 1;
+    stroke-opacity: 1;
+  }
+  67% {
+    fill-opacity: 1;
+    stroke-opacity: 1;
+  }
+  100% {
+    fill-opacity: 0;
+    stroke-opacity: 0;
+  }
+}
+@keyframes rocketMove {
+  0% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(20px);
+  }
+}
+
+@keyframes rocketTurn {
+  0% {
+    transform: rotate(0deg) scale(1.0);
+  }
+  100% {
+    transform: rotate(75deg) scale(3.0);
+  }
+}
+
+@keyframes fallAwayLeft {
+  0% {
+    opacity: 1.0;
+    transform: rotate(0deg) scale(1.0);
+    top: 0px;
+  }
+  100% {
+    opacity: 0.0;
+    transform: rotate(-30deg) scale(0.0);
+    top: 600px;
+  }
+}
+
+@keyframes fallAwayRight {
+  0% {
+    opacity: 1.0;
+    transform: rotate(0deg) scale(1.0);
+    top: 0px;
+  }
+  100% {
+    opacity: 0.0;
+    transform: rotate(30deg) scale(0.0);
+    top: 600px;
+  }
+}

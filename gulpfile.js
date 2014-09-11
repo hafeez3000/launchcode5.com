@@ -4,6 +4,7 @@ var actions             = require('./gulp-scripts/gulp-actions'),
     connect             = require('gulp-connect'),
     cdnizer             = require('gulp-cdnizer'),
     gulp                = require('gulp'),
+    gulpAws             = require('gulp-awspublish'),
     plugins             = require('gulp-load-plugins')(),
     shell               = require('gulp-shell'),
     runSequence         = require('run-sequence');
@@ -34,11 +35,14 @@ gulp.task('process-hugo-output', function(callback) {
         //copy non-html files
         var gulpPipe = gulp.src(['./build/hugo/**/*', '!./build/hugo/**/*.html'], { base: './build/hugo/' })
             .pipe(gulp.dest(buildProperties.expressRoot))
-            .pipe(gulp.dest(buildProperties.publicDir));
+            .pipe(gulp.dest(buildProperties.publicDir))
         //.pipe(inject('./css/vendor-concat*.css', path , 'vendorcss'))
         //.pipe(inject('./js/app*.js', path, 'appjs'))
         //.pipe(inject('./js/vendor-concat*.js', path, 'vendorjs'));
-        if(callback) callback();
+            .on('end', function() {
+                if(callback) callback();
+            });
+
     });
 
 });
@@ -48,7 +52,7 @@ gulp.task('hugo-dev', ['vendor'], function(callback) {
 });
 
 gulp.task('hugo', ['vendor'], function(callback) {
-    gulp.src('').pipe(shell(['hugo -v -d ../build/hugo -s ./hugo'], { cwd: process.cwd() })).on('end', callback || function() {});;
+    gulp.src('').pipe(shell(['hugo -v -d ../build/hugo -s ./hugo -b ' + buildProperties.base], { cwd: process.cwd() })).on('end', callback || function() {});;
 });
 
 gulp.task('default', function(callback) {
@@ -56,8 +60,11 @@ gulp.task('default', function(callback) {
 });
 
 gulp.task('buildProd', function(callback) {
-   buildProperties.base = 'http://www.wychwoodsoft.com/';
-   runSequence('clean', 'vendor', 'hugo', 'buildCss', 'process-hugo-output', callback);
+   buildProperties.base = 'http://www.launchcode5.com/';
+   runSequence('clean', 'vendor', 'hugo', 'buildCss', 'process-hugo-output', function(){
+       console.log("Completed buildProd, calling callback...");
+       if(callback) callback();
+   });
 });
 
 gulp.task('buildCss', function(callback) {
@@ -65,7 +72,7 @@ gulp.task('buildCss', function(callback) {
 });
 
 gulp.task('express', function(callback) {
-    //actions.startExpress(buildProperties);
+
     connect.server({
        root: [buildProperties.expressRoot],
        port: buildProperties.expressPort,
@@ -93,3 +100,40 @@ gulp.task('rebuildApp', function(callback){
 gulp.task('vendor', function(callback){
     actions.copyVendorDependencies(buildProperties, callback);
 });
+
+gulp.task('deploy:production', ['buildProd'], function(callback){
+
+    buildProperties.API_SERVER = 'https://gameserver.rateandpillage.com';
+    buildProperties.FIREBASE_SERVER = '<replace me!>'
+    buildProperties.useMin = 'min.';
+
+    // create a new publisher
+    var publisher = gulpAws.create({
+         "key": "AKIAJXYACETOUPXW7XEA",
+         "secret": "4G475F+jeyq4FXVStVm5TUr9lF2RxXUew4B972xK",
+         "bucket": "www.launchcode5.com",
+         "region": "us-west-2"
+    });
+
+        // define custom headers
+        var resourceHeaders = {
+            'Cache-Control': 'max-age=315360000, no-transform, public',
+            'Content-Encoding': 'gzip'
+        };
+
+        var indexHeaders = {
+            'Cache-Control': 'max-age=0, no-transform, public',
+            'Content-Encoding': 'gzip'
+        };
+
+        console.log("...starting upload...");
+        gulp.src(['./build/www/**/*'])
+            .pipe(gulpAws.gzip())
+            .pipe(publisher.publish(resourceHeaders))
+            .pipe(gulpAws.reporter())
+            .on('end', function(){
+                console.log("Completed upload...");
+            });
+
+});
+
