@@ -1,0 +1,138 @@
+.rocketFlier
+{
+  position: relative;
+}
+
+.rocketFlier .rocket-no-circle
+{
+  position: absolute;
+}
+
+.rocketFlier .rocket-no-circle
+{
+  transition: 3s;
+  margin: 0 auto;
+}
+
+.rocketFlier.animate .rocket-no-circle
+{
+  transition: 3.5s;
+  animation-delay: 0.7s;
+  animation-name: flyAcrossScreen;
+  animation-duration: 3.0s;
+  animation-iteration-count: 1;
+  transform: translateX(2400px);
+  transform-origin: bottom;
+}
+
+.rocketFlier .rocketSvg,
+.rocketFlier.animate .rocketSvg
+{
+  transition: 0s;
+  transform: rotate(-90deg);
+}
+
+.rocketFlier.animate .rocketBase {
+  transition: .2s;
+  fill: #FFFFFF !important;
+  stroke-width: 0px !important;
+}
+.rocketFlier.animate .rocketShadow {
+  transition: .2s;
+  fill: #EDEDED !important;
+  stroke-width: 0px !important;
+}
+.rocketFlier.animate .iconCircle {
+  transition: .2s;
+  fill: #282e3a !important;
+  stroke: #fff !important;
+  stroke-width: 5px !important;
+}
+.rocketFlier.animate .smallWindowPath {
+  transition: .2s;
+  fill: #28B767 !important;
+  stroke-width: 0px !important;
+}
+
+.rocketFlier.animate .wingBase {
+  transition: .2s;
+  fill: #E16E36 !important;
+  stroke-width: 0px !important;
+}
+
+.rocketFlier.animate .rocketShadow {
+  transition: .2s;
+  fill: #EDEDED !important;
+}
+
+.rocketFlier.animate .rocketMain {
+  transition: .2s;
+  fill: #FFFFFF !important;
+}
+
+.rocketFlier.animate .wingShadow
+{
+  transition: .2s;
+  display: block !important;
+  fill:#336699 !important;
+}
+
+.rocketFlier.animate .wing {
+  transition: .2s;
+  display: block !important;
+  fill: #698EB8 !important;
+}
+
+.rocketFlier.animate .windows .largeWindow > circle,
+.rocketFlier.animate .windows .smallWindow > circle {
+  transition: 0.2s;
+  fill: #AAA9A9 !important;
+}
+
+.rocketFlier.animate .windows .largeWindow > ellipse,
+.rocketFlier.animate .windows .smallWindow > ellipse {
+  transition: 0.2s;
+  fill: #CCCCCC !important;
+}
+
+.rocketFlier.animate .fireLeft {
+  display: block;
+  animation-delay: 0s;
+  animation-name: fireLeft, fillOpacity1;
+  animation-duration: 1.2s;
+}
+.rocketFlier.animate .fireMiddle {
+  display: block;
+  animation-delay: 0s;
+  animation-name: fireMiddle, fillOpacity1;
+  animation-duration: 1s;
+}
+.rocketFlier.animate .fireRight {
+  display: block;
+  animation-delay: 0s;
+  animation-name: fireRight, fillOpacity1;
+  animation-duration: 1.3s;
+}
+.rocketFlier.animate .fireSmallLeft {
+  display: block;
+  animation-delay: 0s;
+  animation-name: fireSmall, fillOpacity2;
+  animation-duration: 1.3s;
+  transform-origin: bottom;
+}
+.rocketFlier.animate .fireSmallRight {
+  display: block;
+  animation-delay: 0.3s;
+  animation-name: fireSmall, fillOpacity3;
+  animation-duration: 1.6s;
+  transform-origin: bottom;
+}
+
+@keyframes flyAcrossScreen {
+  0% {
+    transform: translateX(2400px);
+  }
+  100% {
+    transform: translateX(-700px);
+  }
+}
