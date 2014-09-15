@@ -1,0 +1,268 @@
+/*
+  For "n" images You must define:
+        a=presentation time for one image
+        b=duration for cross fading
+        Total animation-duration is of course t=(a+b)*n
+
+              animation-delay = t/n or = a+b
+                   Percentage for keyframes:
+
+                    0%
+                    a/t*100%
+                    (a+b)/t*100% = 1/n*100%
+                    100%-(b/t*100%)
+                    100%
+*/
+
+.banner-background-img {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 0;
+  position: absolute;
+  top: 0;
+
+  .overlay
+  {
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    position: relative;
+    background-color: rgba($darkColour, 0.84);
+  }
+
+  .banner-image-wrapper {
+
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+
+    img {
+      position: relative;
+      width: 100%;
+      height: auto;
+      animation-duration: 40s;
+      animation-timing-function: ease-in-out;
+      animation-iteration-count: infinite;
+      animation-direction: forward;
+    }
+
+    .img1 {
+      transform: scale(1.1);
+      animation-name: crossFade1;
+      animation-delay: 0s;
+    }
+
+    .img2 {
+      background: url(/images/banner.JPG);
+      background-position: center center;
+      background-repeat: no-repeat;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+      z-index: 0;
+      transform: scale(1.2);
+      animation-name: crossFade2;
+      animation-delay: 0s;
+    }
+
+    .img3 {
+      transform: scale(1.1);
+      animation-name: crossFade3;
+      animation-delay: 0s;
+    }
+
+    .img4 {
+      transform: scale(1.2);
+      animation-name: crossFade4;
+      animation-delay: 0s;
+    }
+
+    .img5 {
+      transform: scale(1.1);
+      animation-name: crossFade5;
+      animation-delay: 0s;
+    }
+  }
+}
+
+div.wychwood-logo
+{
+  position: relative;
+}
+
+svg.wychwood-svg
+{
+  animation-name: fadeOut;
+  animation-duration: 1.5s;
+  animation-delay: 3s;
+  -webkit-animation-fill-mode: forwards; /* Chrome, Safari, Opera */
+  animation-fill-mode: forwards;
+}
+
+svg.gets-better-svg
+{
+  margin-left: -100%;
+  animation-name: fadeIn;
+  animation-duration: 1.5s;
+  animation-delay: 4s;
+  -webkit-animation-fill-mode: forwards; /* Chrome, Safari, Opera */
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+
+div.banner-table.slide-zoom-animation
+{
+  transition: 0.1s;
+  animation-delay: 0.0s;
+  animation-name: slideZoomAnimation;
+  animation-duration: 5.0s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes slideZoomAnimation {
+  0% {
+    background-position: 0 0;
+  }
+  70% {
+    opacity: 100
+  }
+  100% {
+    background-position: 10% 15%;
+  }
+}
+
+/* Each cross fade animation needs to cover the entire duration of our slideshow - # of slides X seconds per slide
+
+  For 5 slides, we are using 20 seconds. This also means each slide should only be visible for 20% of the time.
+ */
+@keyframes crossFade1 {
+  0% {
+    opacity:1;
+    transform: scale(1.1) translate(0, 0);
+  }
+  20% {
+    opacity: 1;
+  }
+  25% {
+    opacity:0;
+    transform: scale(1.2) translate(5%, 2.5%);
+  }
+  95% {
+    opacity: 0;
+    transform: scale(1.1) translate(0, 0);
+  }
+  100% {
+    opacity:1;
+    transform: scale(1.1) translate(0, 0);
+  }
+}
+
+@keyframes crossFade2 {
+  0% {
+    opacity:0;
+    transform: scale(1.2) translate(0, 0);
+  }
+  20% {
+    opacity: 0;
+    transform: scale(1.2) translate(0, 0);
+  }
+  25% {
+    opacity:1;
+  }
+  40% {
+    opacity: 1;
+
+  }
+  45% {
+    opacity: 0;
+    transform: scale(1.1) translate(-2.5%, -2.5%);
+  }
+  100%
+  {
+    opacity:0;
+    transform: scale(1.2) translate(0, 0);
+  }
+}
+
+@keyframes crossFade3 {
+  0% { opacity:0;
+       transform: scale(1.1) translate(0, 0);
+  }
+  40% {
+    opacity: 0;
+    transform: scale(1.1) translate(0, 0);
+  }
+  45% {
+    opacity:1;
+  }
+  60% {
+    opacity: 1;
+  }
+  65% {
+    opacity: 0;
+    transform: scale(1.2) translate(1.6%, -1.0%);
+  }
+  100% { opacity:0;
+    transform: scale(1.1) translate(0, 0);
+  }
+}
+
+@keyframes crossFade4 {
+  0% { opacity:0; }
+  60% {
+    opacity: 0;
+    transform: scale(1.2) translate(0, 0);
+  }
+  65% { opacity:1; }
+  80% { opacity: 1;}
+  85% {
+    opacity: 0;
+    transform: scale(1.1) translate(-1.4%, 1.4%);
+  }
+  100% {
+    opacity:0;
+    transform: scale(1.2) translate(0, 0);
+  }
+}
+
+@keyframes crossFade5 {
+  0% {
+    opacity:0;
+    transform: scale(1.1) translate(0, 0);
+  }
+  80% {
+    opacity: 0;
+    transform: scale(1.1) translate(0, 0);
+  }
+  85% {
+    opacity:1;
+  }
+  95% { opacity: 1; }
+  100% {
+    opacity: 0;
+    transform: scale(1.2) translate(-1.3%, -1.6%);
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity:1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

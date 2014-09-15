@@ -6,20 +6,40 @@
     </head>
 <body lang="en" class="tk-freight-sans-pro">
     {{ template "partials/page-header.html" . }}
-    <div class="banner">
-        <div class="rocketFlier animate">
-            <div class="rocket-no-circle">
-                    {{ $rocketSize := 600 }}
-                    {{ template "partials/rocket.html" $rocketSize }}
+    <div class="banner-table">
+        <div style="display: table-row;">
+            <div class="banner-background-img">
+                <div class="overlay"></div>
+                <div class="banner-image-wrapper">
+                    <img class="img1" src="images/1.jpg" />
+                </div>
+                <div class="banner-image-wrapper">
+                    <img class="img2" src="images/2.jpg" />
+                </div>
+                <div class="banner-image-wrapper">
+                    <img class="img3" src="images/3.jpg" />
+                </div>
+                <div class="banner-image-wrapper">
+                    <img class="img4" src="images/4.jpg" />
+                </div>
+                <div class="banner-image-wrapper">
+                    <img class="img5" src="images/5.jpg" />
+                </div>
+            </div>
+            <div class="center-cell" style="overflow: hidden;">
+                <div class="wychwood-logo">
+                    {{ template "partials/wychwood-software-studios.html" . }}
+                </div>
+                <div class="rocketFlier animate">
+                    <div class="rocket-no-circle">
+                        {{ $rocketSize := "600px" }}
+                        {{ template "partials/rocket.html" $rocketSize }}
+                    </div>
+                </div>
             </div>
         </div>
-
-        <div class="vert-text">
-            <img class="logo-text-1" src="/images/wychwood.png">
-            <br />
-            <img class="logo-text-2" src="/images/software-studios.png">
-        </div>
     </div>
+
 
 
 <div class="container-fluid">

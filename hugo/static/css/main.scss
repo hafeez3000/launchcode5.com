@@ -65,11 +65,13 @@ div.modal-dialog
 }
 
 
-div.banner {
+div.banner-table {
   display: table;
   width: 100%;
   max-height: 15%;
   position: relative;
+  overflow: hidden;
+  /*
   background: url(/images/banner.JPG);
   background-position: center center;
   background-repeat: no-repeat;
@@ -79,12 +81,16 @@ div.banner {
   background-size: cover;
   z-index: 0;
   background-color: black;
+  */
   border-bottom: 2px solid black;
 
-  .vert-text {
+  .center-cell {
+    position: relative;
     display: table-cell;
     vertical-align: middle;
     text-align: center;
+    padding-top: 50px;
+    z-index: 10;
   }
 
   .logo-text-1 {
