@@ -28,7 +28,7 @@
     height: 100%;
     z-index: 2;
     position: relative;
-    background-color: rgba($darkColour, 0.84);
+    background-color: rgba($darkColour, 0.75);
   }
 
   .banner-image-wrapper {
@@ -92,23 +92,47 @@
 div.wychwood-logo
 {
   position: relative;
+
+  svg {
+    animation-iteration-count: infinite;
+  }
 }
 
 svg.wychwood-svg
 {
-  animation-name: fadeOut;
-  animation-duration: 1.5s;
-  animation-delay: 3s;
+  opacity: 0;
+  width: 40%; height: auto; margin: 15% auto;
+  animation-name: wychwoodSvgAnimation;
+  animation-duration: 15s;
   -webkit-animation-fill-mode: forwards; /* Chrome, Safari, Opera */
   animation-fill-mode: forwards;
 }
 
 svg.gets-better-svg
 {
-  margin-left: -100%;
-  animation-name: fadeIn;
-  animation-duration: 1.5s;
-  animation-delay: 4s;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60%;
+  margin: 15% 20% 0 20%;
+  height: auto;
+  animation-name: getsBetterSvgAnimation;
+  animation-duration: 15s;
+  -webkit-animation-fill-mode: forwards; /* Chrome, Safari, Opera */
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+svg.let-us-help
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60%;
+  margin: 15% 20% 0 20%;
+  height: auto;
+  animation-name: letUsHelpSvgAnimation;
+  animation-duration: 15s;
   -webkit-animation-fill-mode: forwards; /* Chrome, Safari, Opera */
   animation-fill-mode: forwards;
   opacity: 0;
@@ -249,20 +273,72 @@ div.banner-table.slide-zoom-animation
   }
 }
 
-@keyframes fadeOut {
+@keyframes wychwoodSvgAnimation {
   0% {
-    opacity:1;
+    opacity:0;
   }
+
+  4.2% {
+    opacity: 1;
+  }
+
+  29.2% {
+    opacity: 1;
+  }
+
+  33.3% {
+    opacity: 0;
+  }
+
   100% {
     opacity: 0;
   }
 }
 
-@keyframes fadeIn {
+@keyframes getsBetterSvgAnimation {
   0% {
     opacity:0;
   }
-  100% {
+
+  33.3% {
+    opacity: 0;
+  }
+
+  37.5% {
     opacity: 1;
+  }
+
+  62.5% {
+    opacity: 1;
+  }
+
+  66.66% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes letUsHelpSvgAnimation {
+  0% {
+    opacity:0;
+  }
+
+  66.66% {
+    opacity: 0;
+  }
+
+  70.9% {
+    opacity: 1;
+  }
+
+  95.8% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
   }
 }
