@@ -3,6 +3,10 @@
   z-index: 1;
 }
 
+body {
+  color: #000;
+}
+
 .first {
   background-color: $firstColour;
 }
@@ -19,8 +23,27 @@
   background-color: $fourthColour;
 }
 
-.fifth {
-  background-color: $fifthColour;
+.firstGradient {
+  @include gradient($firstColour, darken($firstColour, 10));
+}
+
+.secondGradient {
+  @include gradient($secondColour, darken($secondColour, 10));
+}
+
+.thirdGradient {
+  @include gradient($thirdColour, darken($thirdColour, 10));
+}
+
+.fourthGradient {
+  @include gradient($fourthColour, darken($fourthColour, 10));
+}
+
+.button-section {
+  position: relative;
+  /* background-color: $fifthColour; */
+  @include gradient($darkColour, darken($darkColour, 10));
+  padding: 30px 0;
 }
 
 .anchor
@@ -71,17 +94,6 @@ div.banner-table {
   max-height: 15%;
   position: relative;
   overflow: hidden;
-  /*
-  background: url(/images/banner.JPG);
-  background-position: center center;
-  background-repeat: no-repeat;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  z-index: 0;
-  background-color: black;
-  */
   border-bottom: 2px solid black;
 
   .center-cell {
@@ -105,6 +117,10 @@ div.section
     margin-top: 10px;
   }
 
+  p {
+    font-size: 15px;
+  }
+
 
   .tile {
     text-align: center;
@@ -112,7 +128,8 @@ div.section
     display: table;
     width: 100%;
     min-width: 100%;
-    border-radius: 6px;
+    border-radius: 15px;
+    border: 3px solid #000000;
     margin: 10px inherit;
     height: 100%;
     min-height: 100%;
@@ -135,7 +152,7 @@ div.section
     {
       position: fixed;
       width: 100%;
-      background-color: rgba($fourthColour, 0.75);
+      background-color: rgba($fourthColour, 0.85);
       z-index: 50;
     }
 }
