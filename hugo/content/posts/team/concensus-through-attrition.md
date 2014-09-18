@@ -1,10 +1,12 @@
 +++
-date = 2014-09-22T21:49:12Z
+date = 2014-08-12T21:49:12Z
 draft = true
-title = "Leadership in Tough Times"
+title = "Consensus Through Attrition"
+author = "ryan-kimber"
+categories = ["team"]
 
 +++
-Leadership in tough times
+Some content created in Hugo - testing
 --------------------------------------
 
 This is before the highlight

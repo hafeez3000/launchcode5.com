@@ -1,10 +1,12 @@
 +++
 date = 2014-08-12T21:49:12Z
 draft = true
-title = "The Troubles with Twitter and Yahoo Authentication"
+title = "Using Social Authentication"
+author = "ryan-kimber"
+categories = ["tech"]
 
 +++
-Some content created in Hugo - testing
+Using Social Authentication
 --------------------------------------
 
 This is before the highlight

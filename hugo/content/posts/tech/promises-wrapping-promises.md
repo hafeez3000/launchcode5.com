@@ -1,7 +1,9 @@
 +++
 date = 2014-08-12T21:49:12Z
 draft = true
-title = "Angular Filters and Arguments"
+title = "JavaScript Promise-wrapped-promises"
+author = "ryan-kimber"
+categories = ["tech"]
 
 +++
 Some content created in Hugo - testing

@@ -1,10 +1,13 @@
 +++
-date = 2014-08-12T21:49:12Z
+date = 2014-09-27T21:49:12Z
 draft = true
-title = "Organizations Paying Lip Service to Security"
+title = "Leadership in Tough Times"
+description = "Ryan discusses the temptation that company leadership may feel to couch bad news..."
+author = "ryan-kimber"
+categories = ["team"]
 
 +++
-Organizations Paying Lip Service to Security
+Leadership in tough times
 --------------------------------------
 
 This is before the highlight

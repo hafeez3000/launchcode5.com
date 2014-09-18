@@ -1,10 +1,12 @@
 +++
 date = 2014-08-12T21:49:12Z
 draft = true
-title = "Staff Retention for Development Teams"
+title = "FHIR and JSON"
+author = "ryan-kimber"
+categories = ["tech"]
 
 +++
-Staff Retention for Development Teams
+FHIR and JSON
 --------------------------------------
 
 This is before the highlight

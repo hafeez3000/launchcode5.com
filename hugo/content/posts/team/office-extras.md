@@ -2,6 +2,8 @@
 date = 2014-08-12T21:49:12Z
 draft = true
 title = "Office Extras"
+author = "ryan-kimber"
+categories = ["team"]
 
 +++
 Coffee, social/beer Fridays, etc

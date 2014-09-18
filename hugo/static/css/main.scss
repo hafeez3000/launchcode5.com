@@ -36,7 +36,7 @@ body {
 }
 
 .fourthGradient {
-  @include gradient($fourthColour, darken($fourthColour, 10));
+  @include gradient(lighten($fourthColour, 20), lighten($fourthColour, 10));
 }
 
 .button-section {
@@ -142,8 +142,6 @@ div.section
   }
 
 }
-
-
 
 .navbar {
     border-radius: 0 !important;

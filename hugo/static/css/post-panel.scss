@@ -1,0 +1,178 @@
+div.post-wrapper {
+  background-color: $thirdColour;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  position: relative;
+  max-height: 250px;
+  min-height: 250px;
+  overflow: hidden;
+  border-radius: 0 0 8px 8px;
+  border-top: 6px solid #ccc;
+  box-shadow: 2px 2px 2px 2px #888;
+
+  div.post-header {
+    padding: 20px 20px;
+  }
+
+  div.post-body
+  {
+    position: relative;
+  }
+
+  div.post-description {
+    position: absolute;
+    top: 0;
+    opacity: 1.0;
+    transition: all 0.5s ease 0;
+    padding: 0px 20px;
+    max-height: 200px;
+    text-overflow: ellipsis;
+  }
+
+  &:hover div.post-description
+  {
+    opacity: 0.0;
+  }
+
+
+
+  a {
+    color: $darkColour;
+  }
+
+  a:hover {
+    text-decoration: none;
+  }
+
+  &.team {
+    border-top: 6px solid $firstColour;
+  }
+
+  &.tech {
+    border-top: 6px solid $secondColour;
+  }
+
+  &.process {
+    border-top: 6px solid $fourthColour;
+  }
+
+  &.launchcode {
+    border-top: 6px solid $fifthColour;
+  }
+
+  div.table-row {
+    display: table-row;
+    width: 100%;
+
+    div {
+      display: table-cell;
+      vertical-align: middle;
+    }
+  }
+
+  &:hover div.author-block {
+    bottom: 50px;
+
+    div.post-author {
+      opacity: 1.0;
+    }
+  }
+
+  div.author-block {
+    position: absolute;
+    bottom: -35px;
+    width: 100%;
+    transition: all 0.4s ease 0;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    div.table-row {
+      position: relative;
+      width: 100%;
+    }
+
+    div.post-author {
+      display: table-cell;
+      opacity: 0;
+      transition: all 0.4s ease 0;
+      width: 70%;
+    }
+
+    div.post-author-pic {
+      display: table-cell;
+      width: 30%;
+      img.author-pic {
+        width: 100px;
+        height: auto;
+        border-radius: 50%;
+        border: 1px solid white;
+      }
+    }
+  }
+
+
+
+  .post-footer
+  {
+    width: 100%;
+    position: absolute;
+    display: table;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 5;
+    font-size: 11px;
+    padding: 4px 4px;
+
+    .post-date
+    {
+      text-align: right;
+    }
+
+
+    &.team {
+      background-color: $firstColour;
+      color: darken($firstColour, 30);
+    }
+
+    &.tech {
+      background-color: $secondColour;
+      color: darken($secondColour, 30);
+    }
+
+    &.process {
+      background-color: $fourthColour;
+      color: darken($fourthColour, 30);
+    }
+
+    &.launchcode {
+      background-color: $fifthColour;
+      color: darken($fifthColour, 30);
+    }
+
+
+    &.team .post-category:before{
+      content: "Team Building & Management"
+    }
+
+    &.tech .post-category:before {
+      content: "Technology"
+    }
+
+    &.process .post-category:before {
+      content: "Development & Business Processes"
+    }
+
+    &.launchcode .post-category:before {
+      content: "Launchcode News"
+    }
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  h3.post-title {
+    margin-top: 0px;
+  }
+}

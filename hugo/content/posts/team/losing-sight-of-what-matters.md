@@ -2,6 +2,8 @@
 date = 2014-08-12T21:49:12Z
 draft = true
 title = "Losing Sight of What Matters"
+author = "ryan-kimber"
+categories = ["team"]
 
 +++
 Some content created in Hugo - testing

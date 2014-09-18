@@ -2,6 +2,8 @@
 date = 2014-08-12T21:49:12Z
 draft = true
 title = "HL7 and FHIR"
+author = "ryan-kimber"
+categories = ["tech"]
 
 +++
 HL7 and FHIR

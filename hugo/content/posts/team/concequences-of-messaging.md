@@ -1,10 +1,12 @@
 +++
 date = 2014-08-12T21:49:12Z
 draft = true
-title = "JavaScript Promise-wrapped-promises"
+title = "The Concequences of 'Messaging'"
+author = "ryan-kimber"
+categories = ["team"]
 
 +++
-Some content created in Hugo - testing
+The Concequences of 'Messaging'
 --------------------------------------
 
 This is before the highlight

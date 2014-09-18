@@ -2,6 +2,8 @@
 date = 2014-08-12T21:49:12Z
 draft = true
 title = "Mentors Matter - Developing Junior Staff"
+author = "ryan-kimber"
+categories = ["team"]
 
 +++
 Brains & experience

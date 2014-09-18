@@ -1,10 +1,12 @@
 +++
 date = 2014-08-12T21:49:12Z
 draft = true
-title = "The Concequences of 'Messaging'"
+title = "Organizations Paying Lip Service to Security"
+author = "ryan-kimber"
+categories = ["tech"]
 
 +++
-The Concequences of 'Messaging'
+Organizations Paying Lip Service to Security
 --------------------------------------
 
 This is before the highlight

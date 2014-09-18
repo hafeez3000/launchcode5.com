@@ -1,10 +1,12 @@
 +++
 date = 2014-08-12T21:49:12Z
 draft = true
-title = "FHIR and JSON"
+title = "The Troubles with Twitter and Yahoo Authentication"
+author = "ryan-kimber"
+categories = ["tech"]
 
 +++
-FHIR and JSON
+Some content created in Hugo - testing
 --------------------------------------
 
 This is before the highlight

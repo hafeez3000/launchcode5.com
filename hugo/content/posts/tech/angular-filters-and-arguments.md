@@ -1,10 +1,12 @@
 +++
 date = 2014-08-12T21:49:12Z
 draft = true
-title = "Using Social Authentication"
+title = "Angular Filters and Arguments"
+author = "ryan-kimber"
+categories = ["tech"]
 
 +++
-Using Social Authentication
+Some content created in Hugo - testing
 --------------------------------------
 
 This is before the highlight

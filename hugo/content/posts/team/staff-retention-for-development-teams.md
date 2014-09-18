@@ -1,10 +1,12 @@
 +++
 date = 2014-08-12T21:49:12Z
 draft = true
-title = "Rewrites vs Migrations"
+title = "Staff Retention for Development Teams"
+author = "ryan-kimber"
+categories = ["team"]
 
 +++
-Some content created in Hugo - testing
+Staff Retention for Development Teams
 --------------------------------------
 
 This is before the highlight
