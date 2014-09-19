@@ -50,7 +50,7 @@
             <div class="tile firstGradient">
                 <a class="tileLink" href="#section1">
                     <img src="images/protractor.png" style="width: 4em; height: auto; padding-top: 10px; padding-bottom: 10px;" />
-                    <div><span class="hidden-xs">Web &amp; App&nbsp;</span>Development</div>
+                    <div>Web &amp; App Development</div>
                 </a>
             </div>
         </div>
@@ -58,7 +58,7 @@
            <div class="tile secondGradient">
                <a class="tileLink" href="#section2">
                    <i class="fa fa-lightbulb-o fa-4x"></i>
-                   <div>Startup Support</div>
+                   <div>Strategy &amp; Startup Support</div>
                </a>
            </div>
        </div>
@@ -244,12 +244,12 @@
             <h4>We're happy to share our experiences through four blogs: 1 each for Technology, Team Building, Development &amp; Business Processes, plus 1 to share what's happening at Launchcode.</h4>
         </div> -->
         <div class="col-xs-12">
-            <div class="col-xs-1"></div>
-            <div class="col-xs-10">
+            <div class="col-md-1 hidden-sm hidden-xs"></div>
+            <div class="col-md-10 col-sm-12">
                 <div class="content">
                     <div class="posts">
                         {{ range first 6 .Data.Pages }}
-                        <div class="col-md-4 col-sm-6">
+                        <div class="col-lg-4 col-sm-6">
 
                             <div class="post-wrapper {{ range .Params.categories }} {{ . }} {{ end }}" onclick="location.href = '{{ .Permalink }}';">
                                 <div class="post-header">

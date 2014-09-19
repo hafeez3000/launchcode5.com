@@ -57,7 +57,7 @@ div.post-wrapper {
   }
 
   &.launchcode {
-    border-top: 6px solid $fifthColour;
+    border-top: 6px solid #ff8800;;
   }
 
   div.table-row {
@@ -71,7 +71,7 @@ div.post-wrapper {
   }
 
   &:hover div.author-block {
-    bottom: 60px;
+    bottom: 50px;
 
     div.post-author {
       opacity: 1.0;
@@ -155,8 +155,8 @@ div.post-wrapper {
     }
 
     &.launchcode {
-      background-color: $fifthColour;
-      color: darken($fifthColour, 30);
+      background-color: #ff8800;
+      color: darken(#ff8800, 30);
     }
 
 
