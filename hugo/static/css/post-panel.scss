@@ -71,7 +71,7 @@ div.post-wrapper {
   }
 
   &:hover div.author-block {
-    bottom: 50px;
+    bottom: 60px;
 
     div.post-author {
       opacity: 1.0;
@@ -80,7 +80,7 @@ div.post-wrapper {
 
   div.author-block {
     position: absolute;
-    bottom: -35px;
+    bottom: -30px;
     width: 100%;
     transition: all 0.4s ease 0;
     padding-left: 20px;
@@ -96,6 +96,15 @@ div.post-wrapper {
       opacity: 0;
       transition: all 0.4s ease 0;
       width: 70%;
+
+      .author {
+        text-align: center;
+      }
+
+      .author-brief
+      {
+        color: lighten($darkColour, 30);
+      }
     }
 
     div.post-author-pic {
@@ -156,7 +165,7 @@ div.post-wrapper {
     }
 
     &.tech .post-category:before {
-      content: "Technology"
+      content: "Technology & Development"
     }
 
     &.process .post-category:before {
