@@ -6,42 +6,7 @@
     </head>
 <body lang="en" class="tk-freight-sans-pro">
     {{ template "partials/page-header.html" . }}
-    <div class="banner-table">
-        <div style="display: table-row;">
-            <div class="banner-background-img">
-                <div class="overlay"></div>
-                <div class="banner-image-wrapper">
-                    <img class="img1" src="images/1.jpg" />
-                </div>
-                <div class="banner-image-wrapper">
-                    <img class="img2" src="images/2.jpg" />
-                </div>
-                <div class="banner-image-wrapper">
-                    <img class="img3" src="images/3.jpg" />
-                </div>
-                <div class="banner-image-wrapper">
-                    <img class="img4" src="images/4.jpg" />
-                </div>
-                <div class="banner-image-wrapper">
-                    <img class="img5" src="images/5.jpg" />
-                </div>
-            </div>
-        </div>
-        <div style="display: table-row;">
-            <div class="center-cell" style="overflow: hidden;">
-                <div class="wychwood-logo">
-                    {{ template "partials/banner-messages.html" . }}
-                </div>
-                <!-- <div class="rocketFlier animate">
-                    <div class="rocket-no-circle">
-                        {{ $rocketSize := "600px" }}
-                        {{ template "partials/rocket.html" $rocketSize }}
-                    </div>
-                </div> -->
-            </div>
-        </div>
-    </div>
-
+    {{ template "partials/index/banner.html" . }}
 
 
 <div class="container-fluid">
@@ -82,211 +47,25 @@
     </div>
     <div class="anchor" id="section1"></div>
     <div class="row section firstGradient">
-        <div class="col-xs-3 col-md-2">
-            <div class="pull-right" style="width: 70px;">
-               <img src="/images/protractor.png" style="width: 70px; height: auto;" />
-            </div>
-        </div>
-        <div class="col-xs-8">
-            <h2>Web &amp; Application Development</h2>
-            <div class="row">
-                <div class="col-sm-12">
-                    <h1 style="padding-bottom:15px;"><span class="text-light">Professional development, inspiring design</span></h1>
-                </div>
-
-                <div class="col-sm-6">
-                    <div class="row pad-below">
-                        <div class="col-sm-3 pad-above hidden-xs">
-                            <span class="icon icon-ideation"></span>
-                        </div>
-                        <div class="col-sm-9">
-                            <h4>Ideation</h4>
-                            <p>We create meaningful solutions for our customers starting with ideation - a process that
-                                organizes objectives, business problems, target customers and product ideas into a consolidated vision. </p>
-                        </div>
-                    </div>
-                    <div class="row pad-below">
-                        <div class="col-sm-3 pad-above hidden-xs">
-                            <span class="icon icon-customer-first"></span>
-                        </div>
-                        <div class="col-sm-9">
-                            <h4>Customer First</h4>
-                            <p>Creating great software requires a laser focus on the actual people using the
-                                application. With the right focus, we create positive user experiences.</p>
-                        </div>
-                    </div>
-                    <div class="row pad-below">
-                        <div class="col-sm-3 pad-above hidden-xs">
-                            <span class="icon icon-engineering-discipline"></span>
-                        </div>
-                        <div class="col-sm-9">
-                            <h4>Engineering Discipline</h4>
-                            <p>We provide weekly releases, automated builds and testing, full transparency,
-                                continuous integration, and one-click production deployment.</p>
-                        </div>
-                    </div>
-                    <div class="row pad-below">
-                        <div class="col-sm-3 pad-above hidden-xs">
-                            <span class="icon icon-release-on-demand"></span>
-                        </div>
-                        <div class="col-sm-9">
-                            <h4>Release On Demand</h4>
-                            <p>Monthly, weekly, daily — whenever you want and need to without the worry of quality problems, deployment errors, or process delays.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6">
-                    <div class="row pad-below">
-                        <div class="col-sm-3 pad-above hidden-xs">
-                            <span class="icon icon-rd"></span>
-                        </div>
-                        <div class="col-sm-9">
-                            <h4>Rapid Prototyping, R&amp;D</h4>
-                            <p>We accelerate innovation for our customers by fulfilling an R&amp;D capacity as an extension
-                                of their organization. We apply iterative thinking to rapidly prototype, confirm and
-                                collaborate on concepts with our customers to arrive at the right solution.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="row pad-below">
-                        <div class="col-sm-3 pad-above hidden-xs">
-                            <span class="icon icon-teams"></span>
-                        </div>
-                        <div class="col-sm-9">
-                            <h4>High Performance Teams</h4>
-                            <p>We find and grow professionals with shared purpose, discipline, passion for the
-                                craft, and pride of workmanship.</p>
-                        </div>
-                    </div>
-                    <div class="row pad-below">
-                        <div class="col-sm-3 pad-above hidden-xs">
-                            <span class="icon icon-agile"></span>
-                        </div>
-                        <div class="col-sm-9">
-                            <h4>Agile &amp; Lean</h4>
-                            <p>We iteratively develop software, delivering the highest value items first and providing
-                                radical transparency to stakeholders. These principles are applied beyond development,
-                                from ideation straight through to delivery. </p>
-                        </div>
-                    </div>
-                    <div class="row pad-below">
-                        <div class="col-sm-3 pad-above hidden-xs">
-                            <span class="icon icon-product"></span>
-                        </div>
-                        <div class="col-sm-9">
-                            <h4>Software as a Product</h4>
-                            <p>We build low dependency architectures to help lower your maintenance costs, reduce
-                                technical debt, and make it easier to build future capabilities when you need them.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        {{ template "partials/index/web-and-app-development.html" . }}
     </div>
     <div class="anchor" id="section2"></div>
 
     <div class="row section secondGradient">
-        <div class="col-xs-3 col-md-2">
-        <i class="fa fa-fw fa-lightbulb-o fa-4x pull-right"></i>
-        </div>
-        <div class="col-xs-8">
-            <h2>Startup Support &amp; Concept Development</h2>
-            <p>Whether you represent an existing enterprise or are trying to start up a new company, we're here to help.</p>
-            <p>Our team has years of experience in the development and commercialization of new products, both within large pre-existing enterprises and with companies that are just starting up.</p>
-            <p>Let us help you understand the technical and logistical challenges you may encounter in trying to bring a product to life, develop a working prototype or turn an existing prototype into a marketable finished product.</p>
-        </div>
+       {{ template "partials/index/strategy-and-startup-support.html" . }}
     </div>
 
 
     <div class="anchor" id="section3"></div>
     <div class="row section thirdGradient">
-        <div class="col-xs-3 col-md-2">
-            <i class="fa fa-fw fa-road fa-4x pull-right"></i>
-        </div>
-        <div class="col-xs-8">
-            <h2>Our Approach</h2>
-            <p>Our team works directly with our clients in a rapid, collaborative &amp; iterative process.</p>
-            <p>Working iteratively ensures that feedback can be quickly incorporated into the product &amp; minimizes the cost of changes.</p>
-            <p>Our team is guided by seven founding principles that help to ensure the success of our projects and the positive relationships we have both with our clients and within our team:
-                <ul>
-                    <li>Measurable, Iterative Results</li>
-                    <li>Product Quality is more imporant than Growth</li>
-                    <li>Clients are Respected Partners</li>
-                    <li>Hard Work &amp; Commitment are Rewarded</li>
-                    <li>Objectives, Reasoning &amp; Expectations are clear</li>
-                    <li>Treat the Team and Clients like Family</li>
-                    <li>Dedication to Innovation</li>
-                    <li>Honesty &amp; Integrity above all else</li>
-                </ul>
-
-            </p>
-        </div>
+        {{ template "partials/index/our-approach.html" . }}
     </div>
     <div class="anchor" id="section4"></div>
     <div class="row section fourthGradient">
-        <div class="col-xs-3 col-md-2">
-            <i class="fa fa-fw fa-comments fa-4x pull-right"></i>
-        </div>
-        <div class="col-xs-8">
-            <h2>No Fee Consultations</h2>
-            <p></p>
-        </div>
+        {{ template "partials/index/consultations.html" . }}
     </div>
     <div class="row section secondGradient">
-        <div class="col-xs-3 col-md-2">
-            <i class="fa fa-fw fa-rss fa-4x pull-right"></i>
-        </div>
-        <div class="col-xs-8">
-            <h2>The Latest from our Blogs...</h2>
-        </div>
-        <!-- <div class="col-xs-9 pull-right">
-            <h4>We're happy to share our experiences through four blogs: 1 each for Technology, Team Building, Development &amp; Business Processes, plus 1 to share what's happening at Launchcode.</h4>
-        </div> -->
-        <div class="col-xs-12">
-            <div class="col-md-1 hidden-sm hidden-xs"></div>
-            <div class="col-md-10 col-sm-12">
-                <div class="content">
-                    <div class="posts">
-                        {{ range first 6 .Data.Pages }}
-                        <div class="col-lg-4 col-sm-6">
-
-                            <div class="post-wrapper {{ range .Params.categories }} {{ . }} {{ end }}" onclick="location.href = '{{ .Permalink }}';">
-                                <div class="post-header">
-                                    <h3 class="post-title">{{ .Title }}</h3>
-                                </div>
-                                <div class="post-body">
-                                    <div class="post-description">
-                                        {{ .Description }}
-                                    </div>
-                                </div>
-
-                                <div class="post-footer {{ range .Params.categories }} {{ . }} {{ end }}">
-                                    <div class="table-row">
-                                        <div class="post-category"></div>
-                                        <div class="post-date">{{ .Date.Format "Jan 2, 2006" }}</div>
-                                    </div>
-                                </div>
-                                <div class="author-block">
-                                    <div class="table-row">
-                                        <div class="post-author">
-                                            {{ if eq .Params.author "ryan-kimber" }}
-                                                {{ template "partials/authors/ryan-kimber.html" . }}
-                                            {{ end}}
-                                        </div>
-                                        <div class="post-author-pic">
-                                            <img class="author-pic" src="/images/contributors/{{ .Params.author}}.jpg" />
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                        {{ end }}
-                    </div>
-                </div>
-            </div>
-        </div>
+        {{ template "partials/index/latest-from-blog.html" . }}
     </div>
 </div>
 
