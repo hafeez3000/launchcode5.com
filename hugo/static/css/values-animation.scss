@@ -1,0 +1,123 @@
+div.values-svg-wrapper
+{
+  position: relative;
+
+  svg {
+    position: absolute;
+    animation-iteration-count: infinite;
+
+  }
+
+  svg.value-svg-1
+  {
+      position: absolute;
+      opacity: 0;
+      width: 40%; height: auto; margin: 15% auto;
+      animation-name: value1Animation;
+      animation-duration: 20s;
+      -webkit-animation-fill-mode: forwards; /* Chrome, Safari, Opera */
+      animation-fill-mode: forwards;
+  }
+
+  svg.value-svg-2
+  {
+     position: absolute;
+      top: 0;
+      left: 0;
+      width: 60%;
+      margin: 15% 20% 0 20%;
+      height: auto;
+      animation-name: value2Animation;
+      animation-duration: 20s;
+      -webkit-animation-fill-mode: forwards; /* Chrome, Safari, Opera */
+      animation-fill-mode: forwards;
+      opacity: 0;
+  }
+
+  svg.value-svg-3
+  {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 60%;
+      margin: 15% 20% 0 20%;
+      height: auto;
+      animation-name: value3Animation;
+      animation-duration: 20s;
+      -webkit-animation-fill-mode: forwards; /* Chrome, Safari, Opera */
+      animation-fill-mode: forwards;
+      opacity: 0;
+  }
+}
+
+
+@keyframes value1Animation {
+  0% {
+    opacity:0;
+  }
+
+  4.2% {
+    opacity: 1;
+  }
+
+  29.2% {
+    opacity: 1;
+  }
+
+  33.3% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes value2Animation {
+  0% {
+    opacity:0;
+  }
+
+  33.3% {
+    opacity: 0;
+  }
+
+  37.5% {
+    opacity: 1;
+  }
+
+  62.5% {
+    opacity: 1;
+  }
+
+  66.66% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes value3Animation {
+  0% {
+    opacity:0;
+  }
+
+  66.66% {
+    opacity: 0;
+  }
+
+  70.9% {
+    opacity: 1;
+  }
+
+  95.8% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+

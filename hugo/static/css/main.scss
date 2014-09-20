@@ -7,6 +7,46 @@ body {
   color: #000;
 }
 
+a.no-decoration
+{
+  color: inherit;
+  text-decoration: none;
+}
+
+.fa-rotate-45-cw
+{
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.fa-rotate-45-ccw
+{
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.table {
+  display: table;
+
+  .table-row {
+    display: table-row;
+    border: thin solid blue;
+
+
+    .table-cell {
+      display: table-cell;
+      vertical-align: top;
+    }
+  }
+
+}
+
 .first {
   background-color: $firstColour;
 }
@@ -37,6 +77,71 @@ body {
 
 .fourthGradient {
   @include gradient(lighten($fourthColour, 20), lighten($fourthColour, 10));
+}
+
+.section.firstGradient {
+
+  background: url(/images/css/pattern1.png) repeat;
+
+  .section-header {
+      @include gradient(rgba(darken($firstColour, 10), 0.8), rgba(darken($firstColour, 25), 0.8));
+      color: darken($firstColour, 60);
+      box-shadow: 0px 2px 2px 2px rgba(#111111, 0.5);
+      border-top: 1px solid black;
+      border-bottom: solid 1px black;
+  }
+}
+
+.section.secondGradient {
+
+  background: url(/images/css/pattern2.png) repeat;
+
+  .section-header {
+    @include gradient(rgba(darken($secondColour, 10), 0.8), rgba(darken($secondColour, 25), 0.8));
+    color: darken($secondColour, 60);
+    box-shadow: 0px 2px 2px 2px rgba(#111111, 0.5);
+    border-top: 1px solid black;
+    border-bottom: solid 1px black;
+  }
+}
+
+.section.thirdGradient {
+
+  background: url(/images/css/pattern3.png) repeat;
+
+  .section-header {
+    @include gradient(rgba($thirdColour, 0.8), rgba(darken($thirdColour, 10), 0.8));
+    color: #050505;
+    box-shadow: 0px 2px 2px 2px rgba(#111111, 0.5);
+    border-top: 1px solid black;
+    border-bottom: solid 1px black;
+  }
+}
+
+.section.fourthGradient {
+
+  background: url(/images/css/pattern4.png) repeat;
+
+  .section-header {
+    @include gradient(rgba(lighten($fourthColour, 25), 0.8), rgba(lighten($fourthColour, 10), 0.8));
+    color: darken($fourthColour, 60);
+    box-shadow: 0px 2px 2px 2px rgba(#111111, 0.5);
+    border-top: 1px solid black;
+    border-bottom: solid 1px black;
+  }
+}
+
+.section.fifthGradient {
+
+  background: url(/images/css/pattern5.png) repeat;
+
+  .section-header {
+    @include gradient(rgba(darken($fifthColour, 10), 0.8), rgba(darken($fifthColour, 25), 0.8));
+    color: darken($fifthColour, 60);
+    box-shadow: 0px 2px 2px 2px rgba(#111111, 0.5);
+    border-top: 1px solid black;
+    border-bottom: solid 1px black;
+  }
 }
 
 .button-section {
@@ -108,9 +213,14 @@ div.banner-table {
 
 div.section
 {
-  padding-top: 15px;
+  padding-top: 0px;
   padding-bottom: 15px;
   min-height: 75px;
+
+  .section-header {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
 
   h2 {
     padding-top: 0px;
@@ -199,4 +309,47 @@ div.section
 
 .navbar .btn-default {
     background-color: #BBBBAA;
+}
+
+.bullet-wrapper
+{
+  background-color: rgba($thirdColour, 0.7);
+  margin-top: 15px;
+  margin-bottom: 15px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px 8px 8px 8px;
+  border-top: 6px solid #ccc;
+  box-shadow: 2px 2px 2px 2px #888;
+  padding: 15px 15px;
+
+  .bullet-icon {
+    position: relative;
+    padding-right: 15px;
+  }
+
+  .bullet-title {
+      font-size: 20px;
+  }
+
+  .bullet-body {
+    position: relative;
+  }
+}
+
+div.consult-wrapper
+{
+  background-color: rgba($thirdColour, 0.6);
+  margin: 15px 15px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px 8px 8px 8px;
+  border-top: 6px solid #ccc;
+  box-shadow: 2px 2px 2px 2px #888;
+  padding: 15px 15px;
+
+  p
+  {
+    font-size: 18px;
+  }
 }
