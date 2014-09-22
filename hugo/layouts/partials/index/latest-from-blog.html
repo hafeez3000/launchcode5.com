@@ -20,14 +20,21 @@
                                 <h3 class="post-title">{{ .Title }}</h3>
                             </div>
                             <div class="post-body">
+                                <div class="fader1"></div>
+                                <div class="fader2"></div>
                                 <div class="post-description">
                                     {{ .Description }}
                                 </div>
                             </div>
-
-                            <div class="post-footer {{ range .Params.categories }} {{ . }} {{ end }}">
+                            {{ $category := index .Params.categories 0 }}
+                            <div class="post-footer {{ $category }}">
                                 <div class="table-row">
-                                    <div class="post-category"></div>
+                                    <div class="post-category">
+                                        {{ if eq $category "launchcode" }}Thrive: A Launchcode News Blog{{ end }}
+                                        {{ if eq $category "tech" }}Evolve: Technology &amp; Design{{ end }}
+                                        {{ if eq $category "process" }}Emerge: Management &amp; Process{{ end }}
+                                        {{ if eq $category "team" }}Collaborate: Teamwork &amp; Leadership{{ end }}
+                                    </div>
                                     <div class="post-date">{{ .Date.Format "Jan 2, 2006" }}</div>
                                 </div>
                             </div>

@@ -114,7 +114,7 @@
 }
 
 .body-gradient-tech {
-  @include gradient(lighten($techColour, 50), #FFFFFD);
+  @include gradient(lighten($techColour, 30), #FFFFFD);
 
 }
 

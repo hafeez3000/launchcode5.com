@@ -185,7 +185,7 @@ div.modal-dialog
 {
   width: 90%;
   max-width: 800px;
-  color: rgba($thirdColour, 0.8);
+  color: rgba(#FFFFFD, 0.8);
 
   &.wychmodal
   {
@@ -197,7 +197,7 @@ div.modal-dialog
       border-radius: none !important;
 
       .close {
-        color: $thirdColour;
+        color: rgba(#FFFFFD, 0.8);
       }
 
       .note
@@ -205,7 +205,7 @@ div.modal-dialog
         padding-top: 2px;
         font-size: 11px;
         font-weight: normal;
-        color: $firstColour;
+        color: lighten($firstColour, 15);
       }
 
       .required-note
