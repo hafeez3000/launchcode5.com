@@ -62,11 +62,9 @@
                         <div class="post">
                             {{ .Content }}
                         </div>
+                        {{ template "partials/disqus.html" . }}
                     </div>
                 </div>
-            </div>
-            <div class="row">
-                {{ template "partials/disqus.html" . }}
             </div>
         </div>
         {{ template "partials/footer.html" . }}

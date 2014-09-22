@@ -1,7 +1,6 @@
 baseurl : "http://www.launchcode5.com"
 languageCode : "en-us"
 title : "Launchcode5 Software Studios"
-disqusShortname : "launchcode5"
 
 Taxonomies:
   tag: "tags"
