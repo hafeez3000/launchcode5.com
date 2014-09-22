@@ -25,7 +25,7 @@ div.post-wrapper {
       left: 0;
       right: 0;
       width: 100%;
-      height: 120px;
+      height: 100px;
       overflow: hidden;
       @include gradient(rgba(#FFFFFF, 0.0), rgba(#FFFFFF, 1.0));
       z-index: 5;
@@ -34,12 +34,12 @@ div.post-wrapper {
     .fader2
     {
       position: relative;
-      top: 120;
+      top: 100;
       bottom: 0;
       left: 0;
       right: 0;
       width: 100%;
-      height: 30px;
+      height: 50px;
       overflow: hidden;
       background-color: #FFF;
       z-index: 5;
