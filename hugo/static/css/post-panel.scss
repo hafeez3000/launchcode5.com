@@ -45,19 +45,19 @@ div.post-wrapper {
   }
 
   &.team {
-    border-top: 6px solid $firstColour;
+    border-top: 6px solid $teamColour;
   }
 
   &.tech {
-    border-top: 6px solid $secondColour;
+    border-top: 6px solid $techColour;
   }
 
   &.process {
-    border-top: 6px solid $fourthColour;
+    border-top: 6px solid $processColour;
   }
 
   &.launchcode {
-    border-top: 6px solid #ff8800;;
+    border-top: 6px solid $launchcodeColour;
   }
 
   div.table-row {
@@ -140,23 +140,23 @@ div.post-wrapper {
 
 
     &.team {
-      background-color: $firstColour;
-      color: darken($firstColour, 30);
+      background-color: $teamColour;
+      color: darken($teamColour, 30);
     }
 
     &.tech {
-      background-color: $secondColour;
-      color: darken($secondColour, 30);
+      background-color: $techColour;
+      color: darken($techColour, 30);
     }
 
     &.process {
-      background-color: $fourthColour;
-      color: darken($fourthColour, 30);
+      background-color: $processColour;
+      color: darken($processColour, 30);
     }
 
     &.launchcode {
-      background-color: #ff8800;
-      color: darken(#ff8800, 30);
+      background-color: $launchcodeColour;
+      color: darken($launchcodeColour, 30);
     }
 
 

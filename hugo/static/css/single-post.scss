@@ -1,0 +1,150 @@
+.single-post-wrapper
+{
+  min-height: 1000px;
+
+  div.blog-title {
+    height: 150px;
+    width: 150px;
+    margin: 15px auto;
+    vertical-align: middle;
+    z-index: 5;
+
+    @media screen and (max-width: $break-small) {
+      height: 100px;
+      width: 100px;
+    }
+
+    .title-svg
+    {
+      height: 150px;
+      width: 150px;
+
+      @media screen and (max-width: $break-small) {
+        height: 100px;
+        width: 100px;
+      }
+    }
+  }
+
+  div.post-title {
+    padding-top: 0px;
+  }
+
+  div.category-table {
+    display: table;
+    width: 100%;
+    padding-top: 55px;
+
+    div.table-row {
+      display: table-row;
+
+      div.table-cell {
+        display: table-cell;
+        position: relative;
+        vertical-align: middle;
+
+        &.blog-descriptor {
+          width: 290px;
+          font-size: 12pt;
+          vertical-align: middle;
+          margin: 0 auto;
+
+          div.dotted-border {
+            width: 290px;
+            border-top: 1px solid rgba(#000000, 0.5);
+            border-bottom: 1px solid rgba(#000000, 0.5);
+            padding: 5px 5px;
+            text-align: center;
+            text-transform: uppercase;
+            font-weight: 200;
+          }
+        }
+
+        .circuit-left
+        {
+          position: absolute;
+          height: 100%;
+          width: auto;
+          left: 0;
+          top: 0;
+          z-index: 5;
+        }
+
+        .circuit-right
+        {
+          position: absolute;
+          height: 100%;
+          width: auto;
+          right: 0;
+          top: 0;
+          z-index: 5;
+          transform: rotate(180deg);
+        }
+
+        &.left {
+          text-align: left;
+        }
+
+        &.right {
+          text-align: right;
+        }
+      }
+    }
+  }
+
+  img.category-image {
+    border-radius: 50px 50px;
+  }
+}
+
+.body-gradient-launchcode {
+  @include gradient(lighten($launchcodeColour, 25), #FFFFFD);
+}
+
+.body-gradient-process {
+  @include gradient(lighten($processColour, 40), #FFFFFD);
+}
+
+.body-gradient-team {
+  @include gradient(lighten($teamColour, 20), #FFFFFD);
+}
+
+.body-gradient-tech {
+  @include gradient(lighten($techColour, 50), #FFFFFD);
+
+}
+
+div.article-body
+{
+  background-color: #FFFFFD;
+  border-radius: 10px;
+
+  &.launchcode {
+    border-top: 10px solid $launchcodeColour;
+  }
+
+  &.tech {
+    border-top: 10px solid $techColour;
+  }
+
+  &.team {
+    border-top: 10px solid $teamColour;
+  }
+
+  &.process {
+    border-top: 10px solid $processColour;
+  }
+
+  .single-post-author-pic
+  {
+    margin-top: 15px;
+    margin-left: 0px;
+    img {
+      max-width: 120px;
+      width: 100%;
+      height: auto;
+      border-radius: 50%;
+    }
+  }
+}
+
