@@ -60,6 +60,7 @@ gulp.task('default', function(callback) {
 });
 
 gulp.task('buildProd', function(callback) {
+   buildProoperties.GOOGLE_ANALYTICS_ID = 'UA-55041245-1';
    buildProperties.base = 'http://www.launchcode5.com/';
    runSequence('clean', 'vendor', 'hugo', 'buildCss', 'process-hugo-output', function(){
        console.log("Completed buildProd, calling callback...");
