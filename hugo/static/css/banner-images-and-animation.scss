@@ -28,7 +28,7 @@
     height: 100%;
     z-index: 2;
     position: relative;
-    background-color: rgba($darkColour, 0.75);
+    background-color: rgba(darken($firstColour, 20), 0.75);
   }
 
   .banner-image-wrapper {

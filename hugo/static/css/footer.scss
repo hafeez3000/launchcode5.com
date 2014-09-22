@@ -1,7 +1,7 @@
 div.footer
 {
-  color: $thirdColour;
-  background-color: $fifthColour;
+  color: #FFFFFD;
+  background-color: darken($firstColour, 40);
 
   > div {
     padding: 15px 15px;

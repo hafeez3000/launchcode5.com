@@ -48,31 +48,31 @@ a.no-decoration
 }
 
 .first {
-  background-color: $firstColour;
+  background-color: lighten($firstColour, 20);
 }
 
 .second {
-  background-color: $secondColour;
+  background-color: lighten($secondColour, 20);
 }
 
 .third {
-  background-color: $thirdColour;
+  background-color: lighten($thirdColour, 20);
 }
 
 .fourth {
-  background-color: $fourthColour;
+  background-color: lighten($fourthColour, 20);
 }
 
 .firstGradient {
-  @include gradient($firstColour, darken($firstColour, 10));
+  @include gradient(lighten($firstColour, 20), lighten($firstColour, 10));
 }
 
 .secondGradient {
-  @include gradient($secondColour, darken($secondColour, 10));
+  @include gradient(lighten($secondColour, 20), lighten($secondColour, 10));
 }
 
 .thirdGradient {
-  @include gradient($thirdColour, darken($thirdColour, 10));
+  @include gradient(lighten($thirdColour, 20), lighten($thirdColour, 10));
 }
 
 .fourthGradient {
@@ -81,14 +81,18 @@ a.no-decoration
 
 .section.firstGradient {
 
-  background: url(/images/css/pattern1.png) repeat;
+  background: url(/images/css/pattern-light-blue-rotated.png) repeat;
 
   .section-header {
-      @include gradient(rgba(darken($firstColour, 10), 0.8), rgba(darken($firstColour, 25), 0.8));
+      @include gradient(lighten($firstColour, 20), lighten($firstColour, 10));
       color: darken($firstColour, 60);
-      box-shadow: 0px 2px 2px 2px rgba(#111111, 0.5);
-      border-top: 1px solid black;
-      border-bottom: solid 1px black;
+      box-shadow: 0px 1px 2px 2px rgba(#555555, 0.5);
+      border-top: 1px solid $firstColour;
+      border-bottom: solid 1px $firstColour;
+  }
+
+  .bullet-wrapper {
+    border-top: 6px solid $firstColour;
   }
 }
 
@@ -97,11 +101,15 @@ a.no-decoration
   background: url(/images/css/pattern2.png) repeat;
 
   .section-header {
-    @include gradient(rgba(darken($secondColour, 10), 0.8), rgba(darken($secondColour, 25), 0.8));
+    @include gradient(lighten($secondColour, 20), lighten($secondColour, 10));
     color: darken($secondColour, 60);
-    box-shadow: 0px 2px 2px 2px rgba(#111111, 0.5);
-    border-top: 1px solid black;
-    border-bottom: solid 1px black;
+    box-shadow: 0px 1px 2px 2px rgba(#555555, 0.5);
+    border-top: 1px solid $secondColour;
+    border-bottom: solid 1px $secondColour;
+  }
+
+  .bullet-wrapper {
+    border-top: 6px solid $secondColour;
   }
 }
 
@@ -110,11 +118,19 @@ a.no-decoration
   background: url(/images/css/pattern3.png) repeat;
 
   .section-header {
-    @include gradient(rgba($thirdColour, 0.8), rgba(darken($thirdColour, 10), 0.8));
+    @include gradient(lighten($thirdColour, 20), lighten($thirdColour, 10));
     color: #050505;
-    box-shadow: 0px 2px 2px 2px rgba(#111111, 0.5);
-    border-top: 1px solid black;
-    border-bottom: solid 1px black;
+    box-shadow: 0px 1px 2px 2px rgba(#555555, 0.5);
+    border-top: 1px solid #555555;
+    border-bottom: solid 1px #555555;
+  }
+
+  .bullet-wrapper {
+    border-top: 6px solid $thirdColour;
+  }
+
+  .consult-wrapper {
+    border-top: 6px solid $thirdColour;
   }
 }
 
@@ -123,11 +139,15 @@ a.no-decoration
   background: url(/images/css/pattern4.png) repeat;
 
   .section-header {
-    @include gradient(rgba(lighten($fourthColour, 25), 0.8), rgba(lighten($fourthColour, 10), 0.8));
+    @include gradient(lighten($fourthColour, 20), lighten($fourthColour, 10));
     color: darken($fourthColour, 60);
-    box-shadow: 0px 2px 2px 2px rgba(#111111, 0.5);
-    border-top: 1px solid black;
-    border-bottom: solid 1px black;
+    box-shadow: 0px 1px 2px 2px rgba(#555555, 0.5);
+    border-top: 1px solid $fourthColour;
+    border-bottom: solid 1px $fourthColour;
+  }
+
+  .bullet-wrapper {
+    border-top: 6px solid $fourthColour;
   }
 }
 
@@ -136,19 +156,16 @@ a.no-decoration
   background: url(/images/css/pattern5.png) repeat;
 
   .section-header {
-    @include gradient(rgba(darken($fifthColour, 10), 0.8), rgba(darken($fifthColour, 25), 0.8));
+    @include gradient(lighten($fifthColour, 20), lighten($fifthColour, 10));
     color: darken($fifthColour, 60);
-    box-shadow: 0px 2px 2px 2px rgba(#111111, 0.5);
-    border-top: 1px solid black;
-    border-bottom: solid 1px black;
+    box-shadow: 0px 1px 2px 2px rgba(#555555, 0.5);
+    border-top: 1px solid $fifthColour;
+    border-bottom: solid 1px $fifthColour;
   }
-}
 
-.button-section {
-  position: relative;
-  /* background-color: $fifthColour; */
-  @include gradient($darkColour, darken($darkColour, 10));
-  padding: 30px 0;
+  .bullet-wrapper {
+    border-top: 6px solid $fifthColour;
+  }
 }
 
 .anchor
@@ -199,7 +216,7 @@ div.banner-table {
   max-height: 15%;
   position: relative;
   overflow: hidden;
-  border-bottom: 2px solid black;
+  border-bottom: 2px solid darken($firstColour, 20);
 
   .center-cell {
     position: relative;
@@ -216,6 +233,12 @@ div.section
   padding-top: 0px;
   padding-bottom: 15px;
   min-height: 75px;
+
+  &.button-section {
+    position: relative;
+    background: url(/images/css/pattern-grey.png) repeat;
+    padding: 5px 0 20px 0;
+  }
 
   .section-header {
     padding-top: 15px;
@@ -239,7 +262,8 @@ div.section
     width: 100%;
     min-width: 100%;
     border-radius: 15px;
-    border: 3px solid #000000;
+    border: 1px solid rgba(#222222, 0.5);
+    box-shadow: 1px 1px 1px 1px rgba(#555555, 0.5);
     margin: 10px inherit;
     height: 100%;
     min-height: 100%;
@@ -260,7 +284,7 @@ div.section
     {
       position: fixed;
       width: 100%;
-      background-color: rgba($fourthColour, 0.85);
+      background-color: rgba(lighten($fourthColour, 20), 0.7);
       z-index: 50;
     }
 }
@@ -284,12 +308,13 @@ div.section
 
 .navbar-default {
     border-color: $darkColour;
+    border-top: none;
     color: #d9F0F0;
 }
 
 .navbar-default .navbar-nav > .active > a,
 .navbar-default .navbar-nav > .active > a:hover {
-    background-color: rgba($fourthColour, 0.9);
+    background-color: rgba(lighten($fourthColour, 18), 0.8);
     color: #F0FFFF;
 }
 
@@ -313,7 +338,7 @@ div.section
 
 .bullet-wrapper
 {
-  background-color: rgba($thirdColour, 0.7);
+  background-color: rgba(#FFFFFD, 0.4);
   margin-top: 15px;
   margin-bottom: 15px;
   position: relative;
@@ -335,18 +360,33 @@ div.section
   .bullet-body {
     position: relative;
   }
+
+  td.bullet-counter {
+    vertical-align: top;
+    padding: 0px 10px;
+
+    h1 {
+      margin-top: 0;
+    }
+  }
 }
 
 div.consult-wrapper
 {
-  background-color: rgba($thirdColour, 0.6);
-  margin: 15px 15px;
+  background-color: rgba(#FFFFFD, 0.6);
   position: relative;
   overflow: hidden;
   border-radius: 8px 8px 8px 8px;
-  border-top: 6px solid #ccc;
+  border-top: 6px solid $fourthColour;
+
+  margin-top: 15px;
+  margin-bottom: 15px;
   box-shadow: 2px 2px 2px 2px #888;
   padding: 15px 15px;
+
+  @media screen and (max-width: $break-small) {
+    box-shadow: 1px 1px 1px 1px #888;
+  }
 
   p
   {
