@@ -28,8 +28,8 @@ Our main blog, accessible through [launchcode5.com](http://www.launchcode5.com),
             <p>In our Business and Development Processes blog, we'll discuss challenges that we've encountered (or witnessed) in the development of enterprises and supportable products. This is the place where you might find us discussing when change control may or may not be needed, the pros and cons of accepting investor capital, or the value of incubators, industry conventions, etc.</p>
         </li>
         <li>
-            <b>Evolve: Technology & Development</b>
-            <p>Our technology and development blog will focus on the tools we are using, issues we've encountered, the solutions to those issues and, most importantly, stuff that's just plain fun.</p>
+            <b>Evolve: Design & Development</b>
+            <p>Our design and development blog will focus on the tools we are using, issues we've encountered, the solutions to those issues and, most importantly, stuff that's just plain fun or looks great.</p>
         </li>
         <li>
             <b>Thrive: Launchcode5 News</b>
