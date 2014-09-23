@@ -135,6 +135,11 @@ a.no-decoration
 
   .bullet-wrapper {
     border-top: 6px solid $thirdColour;
+
+    &.extra-border-top
+    {
+      border-top: 12px solid $thirdColour;
+    }
   }
 
   .consult-wrapper {
