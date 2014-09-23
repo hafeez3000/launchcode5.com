@@ -7,7 +7,6 @@ div.post-wrapper {
   min-height: 250px;
   overflow: hidden;
   border-radius: 0 0 8px 8px;
-  border-top: 6px solid #ccc;
   box-shadow: 2px 2px 2px 2px #888;
 
   div.post-header {
@@ -48,6 +47,7 @@ div.post-wrapper {
 
   div.post-description {
     position: absolute;
+    color: #444444;
     top: 0;
     opacity: 1.0;
     transition: all 0.5s ease 0;
@@ -70,20 +70,31 @@ div.post-wrapper {
     text-decoration: none;
   }
 
-  &.team {
-    border-top: 6px solid $teamColour;
-  }
+  .post-category {
 
-  &.tech {
-    border-top: 6px solid $techColour;
-  }
+    font-size: 8pt;
+    margin: 0 0;
+    padding: 4px 6px;
 
-  &.process {
-    border-top: 6px solid $processColour;
-  }
+    &.team {
+      background-color: $teamColour;
+      color: darken($teamColour, 30);
+    }
 
-  &.launchcode {
-    border-top: 6px solid $launchcodeColour;
+    &.tech {
+      background-color: $techColour;
+      color: darken($techColour, 30);
+    }
+
+    &.process {
+      background-color: $processColour;
+      color: darken($processColour, 30);
+    }
+
+    &.launchcode {
+      background-color: $launchcodeColour;
+      color: darken($launchcodeColour, 30);
+    }
   }
 
   div.table-row {
@@ -161,6 +172,10 @@ div.post-wrapper {
 
     .post-date
     {
+      text-align: left;
+    }
+
+    .post-comment-count {
       text-align: right;
     }
 

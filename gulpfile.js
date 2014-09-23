@@ -128,7 +128,7 @@ gulp.task('deploy:production', ['buildProd'], function(callback){
         };
 
         console.log("...starting upload...");
-        gulp.src(['./build/www/**/*'])
+        gulp.src(['./build/www/**/*', '!./build/www/**/*.scss'])
             .pipe(gulpAws.gzip())
             .pipe(publisher.publish(resourceHeaders))
             .pipe(gulpAws.reporter())

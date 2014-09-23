@@ -16,6 +16,13 @@
                     <div class="col-lg-4 col-sm-6">
 
                         <div class="post-wrapper {{ range .Params.categories }} {{ . }} {{ end }}" onclick="location.href = '{{ .Permalink }}';">
+                            {{ $category := index .Params.categories 0 }}
+                            <div class="post-category {{ $category }}">
+                                {{ if eq $category "launchcode" }}Thrive: A Launchcode News Blog{{ end }}
+                                {{ if eq $category "tech" }}Evolve: Technology &amp; Design{{ end }}
+                                {{ if eq $category "process" }}Emerge: Management &amp; Process{{ end }}
+                                {{ if eq $category "team" }}Collaborate: Teamwork &amp; Leadership{{ end }}
+                            </div>
                             <div class="post-header">
                                 <h3 class="post-title">{{ .Title }}</h3>
                             </div>
@@ -26,16 +33,13 @@
                                     {{ .Description }}
                                 </div>
                             </div>
-                            {{ $category := index .Params.categories 0 }}
+
                             <div class="post-footer {{ $category }}">
                                 <div class="table-row">
-                                    <div class="post-category">
-                                        {{ if eq $category "launchcode" }}Thrive: A Launchcode News Blog{{ end }}
-                                        {{ if eq $category "tech" }}Evolve: Technology &amp; Design{{ end }}
-                                        {{ if eq $category "process" }}Emerge: Management &amp; Process{{ end }}
-                                        {{ if eq $category "team" }}Collaborate: Teamwork &amp; Leadership{{ end }}
-                                    </div>
                                     <div class="post-date">{{ .Date.Format "Jan 2, 2006" }}</div>
+                                    <div class="post-comment-count">
+                                         <a href="{{ .Permalink }}#disqus_thread"></a>
+                                    </div>
                                 </div>
                             </div>
                             <div class="author-block">

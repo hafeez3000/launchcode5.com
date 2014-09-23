@@ -301,7 +301,7 @@ div.section
     {
       position: fixed;
       width: 100%;
-      background-color: rgba(lighten($fourthColour, 20), 0.7);
+      background-color: rgba(lighten($fourthColour, 10), 0.85);
       z-index: 50;
     }
 }

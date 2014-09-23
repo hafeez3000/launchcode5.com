@@ -56,14 +56,6 @@
     }
 
     .img2 {
-      background: url(/images/banner.JPG);
-      background-position: center center;
-      background-repeat: no-repeat;
-      -webkit-background-size: cover;
-      -moz-background-size: cover;
-      -o-background-size: cover;
-      background-size: cover;
-      z-index: 0;
       transform: scale(1.2);
       animation-name: crossFade2;
       animation-delay: 0s;

@@ -13,6 +13,36 @@
 <script src="vendor/jquery/dist/jquery.js"></script>
 <script src="vendor/bootstrap/dist/js/bootstrap.js"></script>
 <script src="js/main.js"></script>
+
+<!-- Type Kit -->
+<script>
+    (function(d) {
+        var config = {
+                    kitId: 'irq3kqa',
+                    scriptTimeout: 3000
+                },
+                h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='//use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);
+            try{
+                Typekit.load(config);
+                jQuery('head').find('link[rel=stylesheet]:last').attr('data-noprefix', true);
+            }
+            catch(e){}};s.parentNode.insertBefore(tk,s)
+    })(document);
+</script>
+<!-- end TypeKit -->
+<!-- prefixfree is amazing and automatically adds the appropriate vendor-prefixes to your CSS, so our CSS can be free of --webkit, etc. -->
+<script src="http://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+
+<script type="text/javascript">
+    var disqus_shortname = 'launchcode5';
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+</script>
 <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
         (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

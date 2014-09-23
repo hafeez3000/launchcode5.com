@@ -1,14 +1,14 @@
 +++
 date = 2014-09-22T21:49:12Z
 draft = false
-title = "Welcome to Launchcode 5"
-description = "We are pleased to announce the Launchcode 5 blogs. Launchcode5 Software Studios is a collaborative team of designers, developers, solution architects and product and project managers with a wide range of experience and skills. In the pages of our blog, our contributors will discuss many of the skills and strategies that we've seen lead organizations to successful projects, happy clients, happy teams and high levels of both client and employee retention. Wherever possible, we'll contrast those strategies with failed approaches that we've witnessed or even been a part of.</p>"
+title = "Welcome to Launchcode"
+description = "We are pleased to announce the Launchcode Blogs. Launchcode Software Studios is a collaborative team of designers, developers, solution architects and product and project managers with a wide range of experience and skills. In the pages of our blog, our contributors will discuss many of the skills and strategies that we've seen lead organizations to successful projects, happy clients, happy teams and high levels of both client and employee retention. Wherever possible, we'll contrast those strategies with failed approaches that we've witnessed or even been a part of.</p>"
 author = "ryan-kimber"
 categories = ["launchcode"]
 +++
-Today we are introducing the Launchcode5 Blogs.
+Today we are introducing the Launchcode Software Studios Blogs.
 
-Launchcode5 Software Studios is a collaborative team of designers, developers, solution architects and product and project managers with a wide range of experience and skills.
+Launchcode Software Studios is a collaborative team of designers, developers, solution architects and product and project managers with a wide range of experience and skills.
 
 In the pages of our blog, our contributors will discuss many of the skills and strategies that we've seen lead organizations to successful projects, happy clients, happy teams and high levels of both client and employee retention. Wherever possible, we'll contrast those strategies with failed approaches that we've witnessed or even been a part of.
 
