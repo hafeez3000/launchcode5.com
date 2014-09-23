@@ -73,18 +73,22 @@ a.no-decoration
 
 .firstGradient {
   @include gradient(lighten($firstColour, 20), lighten($firstColour, 10));
+  -webkit-background-clip: padding-box;
 }
 
 .secondGradient {
   @include gradient(lighten($secondColour, 20), lighten($secondColour, 10));
+  -webkit-background-clip: padding-box;
 }
 
 .thirdGradient {
   @include gradient(lighten($thirdColour, 20), lighten($thirdColour, 10));
+  -webkit-background-clip: padding-box;
 }
 
 .fourthGradient {
   @include gradient(lighten($fourthColour, 20), lighten($fourthColour, 10));
+  -webkit-background-clip: padding-box;
 }
 
 .section.firstGradient {
