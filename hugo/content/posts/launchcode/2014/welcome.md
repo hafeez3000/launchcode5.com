@@ -20,19 +20,19 @@ Our main blog, accessible through [launchcode5.com](http://www.launchcode5.com),
 
 <div>
     <ul style="list-style-type: none;">
-        <li><b>Team Building & Management</b>
+        <li><b>Collaborate: Team Building & Management</b>
             <p>This blog will focus on the challenges of building and maintaining a talented and satisfied cross-disciplinary team, one that's able to successfully balance life and work and is driven to go the extra mile for customers and each other.</p>
         </li>
         <li>
-            <b>Technology & Development</b>
+            <b>Evolve: Technology & Development</b>
             <p>Our technology and development blog will focus on the tools we are using, issues we've encountered, the solutions to those issues and, most importantly, stuff that's just plain fun.</p>
         </li>
         <li>
-            <b>Business and Development Processes</b>
+            <b>Emerge: Business and Development Processes</b>
             <p>In our Business and Development Processes blog, we'll discuss challenges that we've encountered (or witnessed) in the development of enterprises and supportable products. This is the place where you might find us discussing when change control may or may not be needed, the pros and cons of accepting investor capital, or the value of incubators, industry conventions, etc.</p>
         </li>
         <li>
-            <b>Launchcode5 News</b>
+            <b>Thrive: Launchcode5 News</b>
             <p>Finally, in the Launchcode5 News blog, you'll find us discussing new projects, posting new positions, welcoming new staff or announcing community events.  </p>
         </li>
     </ul>
