@@ -4,6 +4,7 @@ draft = true
 title = "Consensus Through Attrition"
 author = "ryan-kimber"
 categories = ["team"]
+disqusid = "2014-10-22-consensus-through-attrition"
 
 +++
 Some content created in Hugo - testing

@@ -4,6 +4,7 @@ draft = true
 title = "Staff Retention for Development Teams"
 author = "ryan-kimber"
 categories = ["team"]
+disqusid = "2014-10-22-staff-retention"
 
 +++
 Staff Retention for Development Teams

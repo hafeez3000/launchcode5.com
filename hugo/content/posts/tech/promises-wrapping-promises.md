@@ -4,6 +4,7 @@ draft = true
 title = "JavaScript Promise-wrapped-promises"
 author = "ryan-kimber"
 categories = ["tech"]
+disqusid = "2014-10-22-promises-wrapped-in-promises-angular"
 
 +++
 Some content created in Hugo - testing

@@ -4,6 +4,7 @@ draft = true
 title = "Using Social Authentication"
 author = "ryan-kimber"
 categories = ["tech"]
+disqusid = "2014-10-22-social-authentication"
 
 +++
 Using Social Authentication

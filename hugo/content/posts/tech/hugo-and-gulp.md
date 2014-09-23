@@ -4,6 +4,7 @@ draft = true
 title = "Hugo and Gulp"
 author = "ryan-kimber"
 categories = ["tech"]
+disqusid = "2014-10-22-hugo-and-gulp"
 
 +++
 Some content created in Hugo - testing

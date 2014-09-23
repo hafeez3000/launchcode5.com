@@ -4,6 +4,7 @@ draft = true
 title = "Angular Filters and Arguments"
 author = "ryan-kimber"
 categories = ["tech"]
+disqusid = "2014-10-22-angular-filters-and-arguments"
 
 +++
 Some content created in Hugo - testing

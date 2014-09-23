@@ -4,6 +4,7 @@ draft = true
 title = "FHIR and JSON"
 author = "ryan-kimber"
 categories = ["tech"]
+disqusid = "2014-10-22-fhir-and-json"
 
 +++
 FHIR and JSON

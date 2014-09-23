@@ -4,6 +4,7 @@ draft = true
 title = "Happiness and Productivity"
 author = "ryan-kimber"
 categories = ["team"]
+disqusid = "2014-10-22-happiness-and-productivity"
 
 +++
 Some content created in Hugo - testing

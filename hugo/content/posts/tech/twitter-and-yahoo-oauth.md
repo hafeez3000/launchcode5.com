@@ -4,6 +4,7 @@ draft = true
 title = "The Troubles with Twitter and Yahoo Authentication"
 author = "ryan-kimber"
 categories = ["tech"]
+disqusid = "2014-10-22-twitter-and-yahoo-oauth"
 
 +++
 Some content created in Hugo - testing

@@ -4,6 +4,7 @@ draft = true
 title = "Do Tools Matter?"
 author = "ryan-kimber"
 categories = ["team"]
+disqusid = "2014-10-22-do-tools-matter"
 
 +++
 Some content created in Hugo - testing

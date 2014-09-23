@@ -4,6 +4,7 @@ draft = true
 title = "Losing Sight of What Matters"
 author = "ryan-kimber"
 categories = ["team"]
+disqusid = "2014-10-22-losing-sight-of-what-matters"
 
 +++
 Some content created in Hugo - testing

@@ -1,5 +1,6 @@
 +++
-date = 2014-08-12T21:49:12Z
+date = 2014-10-12T21:49:12Z
+disqusid = "2014-10-12-delivering-iterative-value"
 draft = true
 title = "Delivering Iterative Value"
 author = "ryan-kimber"

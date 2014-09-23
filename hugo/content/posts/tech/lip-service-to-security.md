@@ -4,6 +4,7 @@ draft = true
 title = "Organizations Paying Lip Service to Security"
 author = "ryan-kimber"
 categories = ["tech"]
+disqusid = "2014-10-22-lip-service-security"
 
 +++
 Organizations Paying Lip Service to Security

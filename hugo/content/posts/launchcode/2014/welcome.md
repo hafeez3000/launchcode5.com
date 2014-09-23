@@ -1,5 +1,6 @@
 +++
 date = 2014-09-22T21:49:12Z
+disqusid = "2014-09-22-welcome"
 draft = false
 title = "Welcome to Launchcode"
 description = "We are pleased to announce the Launchcode Blogs. Launchcode Software Studios is a collaborative team of designers, developers, solution architects and product and project managers with a wide range of experience and skills. In the pages of our blog, our contributors will discuss many of the skills and strategies that we've seen lead organizations to successful projects, happy clients, happy teams and high levels of both client and employee retention. Wherever possible, we'll contrast those strategies with failed approaches that we've witnessed or even been a part of.</p>"
@@ -42,5 +43,5 @@ We invite you to follow along, contribute your thoughts and your own experiences
 <br />
 **Ryan Kimber**  
 Technologist and Founding Contributor  
-Launchcode5 Software Studios  
+Launchcode Software Studios  
 

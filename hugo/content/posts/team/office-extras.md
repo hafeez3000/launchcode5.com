@@ -4,6 +4,7 @@ draft = true
 title = "Office Extras"
 author = "ryan-kimber"
 categories = ["team"]
+disqusid = "2014-10-22-office-extras"
 
 +++
 Coffee, social/beer Fridays, etc

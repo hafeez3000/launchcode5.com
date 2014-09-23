@@ -5,6 +5,7 @@ title = "Leadership in Tough Times"
 description = "Ryan discusses the temptation that company leadership may feel to couch bad news..."
 author = "ryan-kimber"
 categories = ["team"]
+disqusid = "2014-10-22-leadership-in-tough-times"
 
 +++
 Leadership in tough times

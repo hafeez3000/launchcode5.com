@@ -4,6 +4,7 @@ draft = true
 title = "An Avatar Selector in Angular"
 author = "ryan-kimber"
 categories = ["tech"]
+disqusid = "2014-10-22-angular-avatar-selector"
 
 +++
 Some content created in Hugo - testing

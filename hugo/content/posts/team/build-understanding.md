@@ -4,6 +4,7 @@ draft = true
 title = "Build Understanding instead of Consensus"
 author = "ryan-kimber"
 categories = ["team"]
+disqusid = "2014-10-22-understanding-vs-concensus"
 
 +++
 Some content created in Hugo - testing

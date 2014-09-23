@@ -15,7 +15,7 @@
                             <img class="circuit-left" src="/images/circuitboard.png" />
                         </div>
                         <div class="table-cell blog-descriptor text-right hidden-sm hidden-xs">
-                            <div class="dotted-border">Launchcode5 presents...</div>
+                            <div class="dotted-border">Launchcode presents...</div>
                         </div>
                         <div class="table-cell blog-title">
                             <svg class="title-svg" viewBox="0 0 164 110">
@@ -56,13 +56,17 @@
                         </div>
                     </div>
                     <div class="col-sm-10 col-xs-12">
+                        <div class="post-comment-count pull-right">
+                            <i class="fa fa-comments"></i>&nbsp;
+                            <a href="{{ .Permalink }}/#disqus_thread" data-disqus-identifier="{{ .Params.disqusid }}">View Comments</a>
+                        </div>
                         <div class="post-title">
                             <h1>{{ .Title }}</h1>
                         </div>
                         <div class="post">
                             {{ .Content }}
                         </div>
-                        {{ template "partials/disqus.html" . }}
+                        {{ template "partials/3rd-party-scripts/disqus.html" . }}
                     </div>
                 </div>
             </div>

@@ -4,6 +4,7 @@ draft = true
 title = "Taking on Investment"
 author = "ryan-kimber"
 categories = ["team"]
+disqusid = "2014-10-22-taking-on-investment"
 
 +++
 Some content created in Hugo - testing

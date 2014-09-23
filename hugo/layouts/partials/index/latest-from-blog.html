@@ -36,9 +36,10 @@
 
                             <div class="post-footer {{ $category }}">
                                 <div class="table-row">
-                                    <div class="post-date">{{ .Date.Format "Jan 2, 2006" }}</div>
+                                    <div class="post-date">{{ .Date.Format "January 2, 2006" }}</div>
                                     <div class="post-comment-count">
-                                         <a href="{{ .Permalink }}#disqus_thread"></a>
+                                        <i class="fa fa-comments"></i>&nbsp;
+                                        <a href="{{ .Permalink }}/#disqus_thread" data-disqus-identifier="{{ .Params.disqusid }}">View Comments</a>
                                     </div>
                                 </div>
                             </div>

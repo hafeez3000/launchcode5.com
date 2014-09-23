@@ -4,6 +4,7 @@ draft = true
 title = "Mentors Matter - Developing Junior Staff"
 author = "ryan-kimber"
 categories = ["team"]
+disqusid = "2014-10-22-developing-promising-staff"
 
 +++
 Brains & experience

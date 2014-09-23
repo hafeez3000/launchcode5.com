@@ -4,6 +4,7 @@ draft = true
 title = "LocationChangeStart in Angular"
 author = "ryan-kimber"
 categories = ["tech"]
+disqusid = "2014-10-22-location-change-start-angular"
 
 +++
 Using .preventDefault() and $urlRouter.sync() in locationChangeStart...

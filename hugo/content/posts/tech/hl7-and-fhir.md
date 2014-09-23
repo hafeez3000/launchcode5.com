@@ -4,6 +4,7 @@ draft = true
 title = "HL7 and FHIR"
 author = "ryan-kimber"
 categories = ["tech"]
+disqusid = "2014-10-22-hl7-and-fhir"
 
 +++
 HL7 and FHIR

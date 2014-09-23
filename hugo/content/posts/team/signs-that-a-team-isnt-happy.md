@@ -4,6 +4,7 @@ draft = true
 title = "Signs that your team isn't happy"
 author = "ryan-kimber"
 categories = ["team"]
+disqusid = "2014-10-22-signs-a-team-isnt-happy"
 
 +++
 Some content created in Hugo - testing
