@@ -1,5 +1,5 @@
 +++
-date = 2014-09-22T21:49:12Z
+date = 2014-09-23T21:49:12Z
 disqusid = "2014-09-22-typekit-and-prefixfree"
 draft = false
 title = "Typekit with Prefixfree.js"
