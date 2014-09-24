@@ -2,6 +2,25 @@
 {
   min-height: 1000px;
 
+  figure {
+
+    border: 2px solid rgba(#444444, 0.5);
+    padding: 7px 7px;
+    margin: 15px 15px;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+
+    figcaption {
+      h4 {
+        font-size: 13px;
+        text-align: right;
+      }
+    }
+  }
+
   .post-title{
     margin-bottom: 25px;
   }
@@ -124,6 +143,16 @@
 
 }
 
+.body-gradient-gotcha {
+  @include gradient(lighten($gotchaColour, 20), #FFFFFD);
+
+}
+
+div.single-post-row
+{
+  margin-bottom: 60px;
+}
+
 div.article-body
 {
   background-color: #FFFFFD;
@@ -145,16 +174,8 @@ div.article-body
     border-top: 10px solid $processColour;
   }
 
-  .single-post-author-pic
-  {
-    margin-top: 15px;
-    margin-left: 0px;
-    img {
-      max-width: 120px;
-      width: 100%;
-      height: auto;
-      border-radius: 50%;
-    }
+  &.gotcha {
+    border-top: 10px solid $gotchaColour;
   }
 }
 

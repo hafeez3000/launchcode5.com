@@ -18,6 +18,16 @@
 
 <!-- prefixfree is amazing and automatically adds the appropriate vendor-prefixes to your CSS, so our CSS can be free of --webkit, etc. -->
 <script src="http://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.2/highlight.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $('pre code').each(function(i, block) {
+            hljs.highlightBlock(block);
+        });
+    });
+
+</script>
+
 {{ template "partials/3rd-party-scripts/google-analytics.html" . }}
 {{ template "partials/3rd-party-scripts/disqus-comment-count.html" . }}
 

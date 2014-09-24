@@ -95,6 +95,11 @@ div.post-wrapper {
       background-color: $launchcodeColour;
       color: darken($launchcodeColour, 30);
     }
+
+    &.gotcha {
+      background-color: $gotchaColour;
+      color: darken($gotchaColour, 30);
+    }
   }
 
   div.table-row {
@@ -107,56 +112,13 @@ div.post-wrapper {
     }
   }
 
-  &:hover div.author-block {
+  &:hover div.author-brief {
     bottom: 50px;
 
     div.post-author {
       opacity: 1.0;
     }
   }
-
-  div.author-block {
-    position: absolute;
-    bottom: -30px;
-    width: 100%;
-    transition: all 0.4s ease 0;
-    padding-left: 20px;
-    padding-right: 20px;
-
-    div.table-row {
-      position: relative;
-      width: 100%;
-    }
-
-    div.post-author {
-      display: table-cell;
-      opacity: 0;
-      transition: all 0.4s ease 0;
-      width: 70%;
-
-      .author {
-        text-align: center;
-      }
-
-      .author-brief
-      {
-        color: lighten($darkColour, 30);
-      }
-    }
-
-    div.post-author-pic {
-      display: table-cell;
-      width: 30%;
-      img.author-pic {
-        width: 100px;
-        height: auto;
-        border-radius: 50%;
-        border: 1px solid white;
-      }
-    }
-  }
-
-
 
   .post-footer
   {
@@ -198,6 +160,11 @@ div.post-wrapper {
     &.launchcode {
       background-color: $launchcodeColour;
       color: darken($launchcodeColour, 30);
+    }
+
+    &.gotcha {
+      background-color: $gotchaColour;
+      color: darken($gotchaColour, 30);
     }
   }
 

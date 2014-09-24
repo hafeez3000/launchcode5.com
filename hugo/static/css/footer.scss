@@ -2,6 +2,8 @@ div.footer
 {
   color: #FFFFFD;
   background-color: darken($firstColour, 40);
+  font-size: 13px;
+  font-weight: 100;
 
   > div {
     padding: 15px 15px;

@@ -1,6 +1,8 @@
 baseurl : "http://www.launchcode5.com"
 languageCode : "en-us"
 title : "Launchcode Software Studios"
+pygmentsstyle : "github"
+pygmentsuseclasses : true
 
 Taxonomies:
   tag: "tags"

@@ -23,6 +23,9 @@
                                 {{ if eq $category "launchcode" }}
                                 <text x="23" y="70" class="tk-youngblood" style="font-size: 42pt; fill: #E0E0E0 !important; text-shadow: 2px 2px rgba(15, 15, 15, 0.25);">Thrive</text>
                                 {{ end }}
+                                {{ if eq $category "gotcha" }}
+                                <text x="30" y="66" class="tk-youngblood" style="font-size: 42pt; fill: #E0E0E0 !important; text-shadow: 2px 2px rgba(15, 15, 15, 0.25);">Gotcha</text>
+                                {{ end }}
                                 {{ if eq $category "tech" }}
                                     <text x="32" y="70" class="tk-youngblood" style="font-size: 42pt; fill: #E0E0E0 !important; text-shadow: 2px 2px rgba(15, 15, 15, 0.25);">Evolve</text>
                                 {{ end }}
@@ -37,6 +40,7 @@
                         <div class="table-cell blog-descriptor text-left">
                             <div class="dotted-border">
                                 {{ if eq $category "launchcode" }}A Launchcode News Blog{{ end }}
+                                {{ if eq $category "gotcha" }}A Quick Solutions Blog{{ end }}
                                 {{ if eq $category "tech" }}A Technology Blog{{ end }}
                                 {{ if eq $category "process" }}A Management &amp; Process Blog{{ end }}
                                 {{ if eq $category "team" }}A Teamwork &amp; Leadership Blog{{ end }}
@@ -48,17 +52,16 @@
                     </div>
                 </div>
             </div>
-            <div class="row">
+            <div class="row single-post-row">
                 <div class="col-sm-10 col-sm-offset-1 col-xs-12 article-body {{ $category }}">
                     <div class="col-sm-2 hidden-xs">
-                        <div class="single-post-author-pic">
-                            <img class="author-pic" src="/images/contributors/{{ .Params.author}}.png" />
-                        </div>
+                        {{ template "partials/authors/author-mid.html" . }}
                     </div>
                     <div class="col-sm-10 col-xs-12">
                         <div class="post-comment-count pull-right">
                             <i class="fa fa-comments"></i>&nbsp;
                             <a href="{{ .Permalink }}/#disqus_thread" data-disqus-identifier="{{ .Params.disqusid }}">View Comments</a>
+                            {{ template "partials/3rd-party-scripts/share.html" . }}
                         </div>
                         <div class="post-title">
                             <h1>{{ .Title }}</h1>

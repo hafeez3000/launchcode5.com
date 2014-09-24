@@ -17,7 +17,7 @@ In our collective experiences, the most challenging aspects of building a succes
 
 That isn't to say that we'll ignore technology - our team is eager to write about the technologies that they are using, the challenges they encounter and the solutions they develop to them.
 
-Our main blog, accessible through [launchcode5.com](http://www.launchcode5.com), will be divided into four sub-blogs:
+Our main blog, accessible through [launchcode5.com](http://www.launchcode5.com), will be divided into five sub-blogs:
 
 <div>
     <ul style="list-style-type: none;">
@@ -31,6 +31,10 @@ Our main blog, accessible through [launchcode5.com](http://www.launchcode5.com),
         <li>
             <b>Evolve: Design & Development</b>
             <p>Our design and development blog will focus on the tools we are using, issues we've encountered, the solutions to those issues and, most importantly, stuff that's just plain fun or looks great.</p>
+        </li>
+        <li>
+            <b>Gotcha: Coding Hangups</b>
+            <p>This microblog will demonstrate solutions to the little oddities and frustrations we've run into.</p> 
         </li>
         <li>
             <b>Thrive: Launchcode5 News</b>
