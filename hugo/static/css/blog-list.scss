@@ -1,0 +1,210 @@
+.section-wrapper
+{
+  padding-top: 50px;
+  min-height: 1000px;
+
+  figure {
+
+    border: 2px solid rgba(#444444, 0.5);
+    padding: 7px 7px;
+    margin: 15px 15px;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+
+    figcaption {
+      h4 {
+        font-size: 13px;
+        text-align: right;
+      }
+    }
+  }
+  .post-title{
+    margin-bottom: 25px;
+  }
+
+  div.blog-title {
+    height: auto;
+    width: 150px;
+    margin: 15px auto;
+    vertical-align: middle;
+    z-index: 5;
+
+    @media screen and (max-width: $break-small) {
+      height: auto;
+      width: 100px;
+    }
+
+    .title-svg
+    {
+      height: 150px;
+      width: 150px;
+
+      @media screen and (max-width: $break-small) {
+        height: 100px;
+        width: 100px;
+        margin-left: 5px;
+      }
+    }
+  }
+
+  div.blog-link {
+    a {
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+
+  div.category-table {
+    display: table;
+    width: 100%;
+    padding-top: 0;
+
+    div.table-row {
+      display: table-row;
+
+      div.table-cell {
+        display: table-cell;
+        position: relative;
+        vertical-align: middle;
+
+        .circuit-left
+        {
+          position: absolute;
+          height: 100%;
+          width: auto;
+          left: 0;
+          top: 0px;
+          z-index: 5;
+        }
+
+        .circuit-right
+        {
+          position: absolute;
+          height: 100%;
+          width: auto;
+          right: 0;
+          top: 0px;
+          z-index: 5;
+          transform: rotate(180deg);
+        }
+
+        &.left {
+          text-align: left;
+        }
+
+        &.right {
+          text-align: right;
+        }
+      }
+    }
+  }
+
+  img.category-image {
+    border-radius: 50px 50px;
+  }
+
+  div.our-blogs {
+    margin-top: 15px;
+    font-size: 30pt;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: $launchcodeColour;
+  }
+
+
+  div.blog-title {
+    padding: 10px 15px;
+    a:hover {
+      text-decoration: none;
+    }
+
+    svg
+    {
+      ellipse {
+        stroke-width: 2px;
+      }
+    }
+
+    svg.launchcode {
+      ellipse {
+        fill: darken($launchcodeColour, 5);
+        stroke: darken($launchcodeColour, 15);
+      }
+
+      text::first-of-type {
+        fill: lighten($launchcodeColour, 15) !important;
+      }
+
+      text {
+        fill: lighten($launchcodeColour, 25);
+      }
+    }
+
+    svg.gotcha {
+      ellipse {
+        fill: darken($gotchaColour, 5);
+        stroke: darken($gotchaColour, 15);
+      }
+
+      text::first-of-type {
+        fill: lighten($gotchaColour, 15) !important;
+      }
+
+      text {
+        fill: lighten($gotchaColour, 25);
+      }
+    }
+
+    svg.team {
+      ellipse {
+        fill: darken($teamColour, 5);
+        stroke: darken($teamColour, 15);
+      }
+
+      text::first-of-type {
+        fill: lighten($teamColour, 15) !important;
+      }
+
+      text {
+        fill: lighten($teamColour, 25);
+      }
+    }
+
+    svg.process {
+      ellipse {
+        fill: darken($processColour, 5);
+        stroke: darken($processColour, 15);
+      }
+
+      text::first-of-type {
+        fill: lighten($processColour, 15) !important;
+      }
+
+      text {
+        fill: lighten($processColour, 25);
+      }
+    }
+
+    svg.tech {
+      ellipse {
+        fill: darken($techColour, 5);
+        stroke: darken($techColour, 15);
+      }
+
+      text::first-of-type {
+        fill: lighten($techColour, 15) !important;
+      }
+
+      text {
+        fill: lighten($techColour, 25);
+      }
+    }
+  }
+}
+

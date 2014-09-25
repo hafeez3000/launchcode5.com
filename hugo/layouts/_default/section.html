@@ -1,18 +1,95 @@
 <!DOCTYPE html>
+{{ $firstPage := index .Data.Pages 0 }}
+{{ $category := index $firstPage.Params.categories 0 }}
 <html>
-<head lang="en">
-    <meta charset="UTF-8">
-    <title></title>
+<head>
+    <!-- This is where the head starts -->
+    {{ template "partials/html-header.html" . }}
 </head>
-<body>
-<div class="content container">
-    <h1>Posts</h1>
-    <ul class="posts">
-        {{ range .Data.Pages }}
-            {{ $category := index .Params.categories 0 }}
-            <li>{{ $category }}&nbsp;<a href="{{ .Permalink }}">{{ .Title }}</a><time class="pull-right post-list">{{ .Date.Format "Mon, Jan 2, 2006" }}</time></li>
-        {{ end }}
-    </ul>
+<body lang="en" class="body-gradient-{{ $category }}">
+{{ template "partials/page-header.html" . }}
+<div class="container-fluid section-wrapper">
+    <div class="row">
+        <div class="category-table">
+            <div class="col-sm-10 col-sm-offset-1 col-xs-12">
+                <div class="table-cell our-blogs">
+                    Our Blogs
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="category-table">
+            <div class="table-row">
+                <div class="table-cell">
+                    <img class="circuit-left" src="/images/circuitboard.png" />
+                </div>
+                <div class="table-cell blog-title">
+                   <a href="/categories/launchcode">
+                        <svg class="title-svg launchcode" viewBox="0 0 164 110">
+                            <ellipse cx="82" cy="55" rx="80" ry="55" />
+                            <text x="23" y="65" class="tk-youngblood title" style="font-size: 42pt; text-shadow: 2px 2px rgba(15, 15, 15, 0.25);">Thrive</text>
+                            <text x="23" y="80" class="tk-freight-sans-pro description" style="font-size: 10pt; text-transform: uppercase;">Launchcode News</text>
+                        </svg>
+                    </a>
+                </div>
+                <div class="table-cell blog-title">
+                    <a href="/categories/gotcha">
+                        <svg class="title-svg gotcha" viewBox="0 0 164 110">
+                            <ellipse cx="82" cy="55" rx="80" ry="55"  />
+                            <text x="30" y="65" class="tk-youngblood title" style="font-size: 42pt; text-shadow: 2px 2px rgba(15, 15, 15, 0.25);">Gotcha</text>
+                            <text x="35" y="80" class="tk-freight-sans-pro description" style="font-size: 10pt; text-transform: uppercase;">Quick Solutions</text>
+                        </svg>
+                    </a>
+                </div>
+                <div class="table-cell blog-title">
+                    <a href="/categories/tech">
+                        <svg class="title-svg tech" viewBox="0 0 164 110">
+                            <ellipse cx="82" cy="55" rx="80" ry="55" />
+                            <text x="32" y="65" class="tk-youngblood title" style="font-size: 42pt; text-shadow: 2px 2px rgba(15, 15, 15, 0.25);">Evolve</text>
+                            <text x="17" y="80" class="tk-freight-sans-pro description" style="font-size: 9pt; text-transform: uppercase;">Design &amp; Development</text>
+                        </svg>
+                    </a>
+                </div>
+                <div class="table-cell blog-title">
+                    <a href="/categories/process">
+                        <svg class="title-svg process" viewBox="0 0 164 110">
+                            <ellipse cx="82" cy="55" rx="80" ry="55"  />
+                            <text x="24" y="65" class="tk-youngblood title" style="font-size: 42pt;  text-shadow: 2px 2px rgba(15, 15, 15, 0.25);">Emerge</text>
+                            <text x="23" y="80" class="tk-freight-sans-pro description" style="font-size: 10pt;  text-transform: uppercase;">Business &amp; Process</text>
+                        </svg>
+                    </a>
+                </div>
+                <div class="table-cell blog-title">
+                    <a href="/categories/team">
+                        <svg class="title-svg team" viewBox="0 0 164 110">
+                            <ellipse cx="82" cy="55" rx="80" ry="55"   />
+                            <text x="12" y="63" class="tk-youngblood title" style="font-size: 34pt;  text-shadow: 2px 2px rgba(15, 15, 15, 0.25);">Collaborate</text>
+                            <text x="23" y="80" class="tk-freight-sans-pro description" style="font-size: 10pt; text-transform: uppercase;">Team Management</text>
+                        </svg>
+                    </a>
+                </div>
+                <div class="table-cell">
+                    <img class="circuit-right" src="/images/circuitboard.png" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row section first-gradient">
+        <div class="col-sm-10 col-sm-offset-1 col-xs-12 article-body {{ $category }}">
+            <div class="col-xs-12"><h5>RECENT POSTS</h5></div>
+            <div class="col-xs-12">
+                <div class="content">
+                    <div class="posts">
+                        {{ range first 12 .Data.Pages.ByDate }}
+                        {{ template "partials/common/post-summary-tile.html" . }}
+                        {{ end }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
+{{ template "partials/footer.html" . }}
 </body>
 </html>
