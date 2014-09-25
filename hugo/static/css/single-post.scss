@@ -50,6 +50,16 @@
     }
   }
 
+  div.blog-link {
+    a {
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+
   div.post-title {
     padding-top: 0px;
   }
