@@ -57,7 +57,7 @@
                     <div class="col-sm-2 hidden-xs">
                         {{ template "partials/authors/author-mid.html" . }}
                     </div>
-                    <div class="col-sm-10 col-xs-12">
+                    <div class="col-sm-8 col-xs-12">
                         <div class="post-comment-count pull-right">
                             <i class="fa fa-comments"></i>&nbsp;
                             <a href="{{ .Permalink }}/#disqus_thread" data-disqus-identifier="{{ .Params.disqusid }}">View Comments</a>
@@ -70,6 +70,39 @@
                             {{ .Content }}
                         </div>
                         {{ template "partials/3rd-party-scripts/disqus.html" . }}
+                    </div>
+                    <div class="col-sm-2 hidden-xs">
+                        <h4>Our Blogs</h4>
+                        <div>
+                            <svg class="title-svg" viewBox="0 0 164 65" style="border: thin solid red;">
+                                <text x="23" y="40" class="tk-youngblood" style="font-size: 32pt; fill: #545454 !important;">Thrive</text>
+                                <text x="20" y="55" class="tk-freight-sans-pro" style="font-size: 10pt; fill: #545454; text-transform: uppercase;">Launchcode News</text>
+                            </svg>
+                        </div>
+                        <div>
+                            <svg class="title-svg" viewBox="0 0 164 65">
+                                <text x="10" y="40" class="tk-youngblood" style="font-size: 32pt; fill: #545454 !important;">Gotcha</text>
+                                <text x="20" y="55" class="tk-freight-sans-pro" style="font-size: 10pt; fill: #545454; text-transform: uppercase;">Quick Solutions</text>
+                            </svg>
+                        </div>
+                        <div>
+                            <svg class="title-svg" viewBox="0 0 164 65">
+                                <text x="32" y="40" class="tk-youngblood" style="font-size: 32pt; fill: #545454 !important;">Evolve</text>
+                                <text x="18" y="55" class="tk-freight-sans-pro" style="font-size: 10pt; fill: #545454; text-transform: uppercase;">Design &amp; Development</text>
+                            </svg>
+                        </div>
+                        <div>
+                            <svg class="title-svg" viewBox="0 0 164 65">
+                                <text x="24" y="40" class="tk-youngblood" style="font-size: 32pt; fill: #545454 !important;">Emerge</text>
+                                <text x="18" y="55" class="tk-freight-sans-pro" style="font-size: 10pt; fill: #545454; text-transform: uppercase;">Business &amp; Process</text>
+                            </svg>
+                        </div>
+                        <div>
+                            <svg class="title-svg" viewBox="0 0 164 65">
+                                <text x="10" y="40" class="tk-youngblood" style="font-size: 32pt; fill: #545454 !important;">Collaborate</text>
+                                <text x="18" y="55" class="tk-freight-sans-pro" style="font-size: 10pt; fill: #545454; text-transform: uppercase;">Team Management</text>
+                            </svg>
+                        </div>
                     </div>
                 </div>
             </div>

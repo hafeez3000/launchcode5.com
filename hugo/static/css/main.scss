@@ -5,6 +5,7 @@
 
 body {
   color: #000;
+  -webkit-font-smoothing: antialiased;
 }
 
 a.no-decoration
@@ -19,6 +20,14 @@ a.no-decoration
 
 .text-right {
   text-align: right;
+}
+
+div.blog-description
+{
+  font-size: 12px;
+  padding-top: 0;
+  margin-top: 0;
+  padding-left: 15px;
 }
 
 .fa-rotate-45-cw

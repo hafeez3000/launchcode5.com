@@ -2,9 +2,18 @@
     <div class="table-row single-post-author-pic">
         <img class="author-pic" src="/images/contributors/{{ .Params.author}}.png" />
     </div>
-    <div class="table-row">
+    <div class="table-row bio">
         {{ if eq .Params.author "ryan-kimber" }}
         {{ template "partials/authors/mid/ryan-kimber.html" . }}
         {{ end}}
+    </div>
+    <div class="table-row">
+        <div style="display: table-cell; border-top: 1px dashed #555555; padding-top: 8px;">
+            <div><a href="#contactModal" data-toggle="modal" data-target="#contactModal"><i class="fa fa-fw fa-phone fa-lg"></i><span class="hidden-sm">Hire Us</span></a></div>
+            {{ if eq .Params.author "ryan-kimber" }}
+                <a href="https://twitter.com/ryan_kimber" data-show-count="false"><i class="fa fa-fw fa-twitter fa-lg"></i>Follow Ryan</a>
+                <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+            {{ end }}
+        </div>
     </div>
 </div>
