@@ -58,14 +58,15 @@
                         {{ template "partials/authors/author-mid.html" . }}
                     </div>
                     <div class="col-sm-8 col-xs-12">
-                        <div class="post-comment-count pull-right">
-                            <i class="fa fa-comments"></i>&nbsp;
-                            <a href="{{ .Permalink }}/#disqus_thread" data-disqus-identifier="{{ .Params.disqusid }}">View Comments</a>
-                            {{ template "partials/3rd-party-scripts/share.html" . }}
-                        </div>
                         <div class="post-title">
                             <h1>{{ .Title }}</h1>
+                            <div class="post-comment-count">
+                                <i class="fa fa-comments"></i>
+                                <a href="{{ .Permalink }}/#disqus_thread" data-disqus-identifier="{{ .Params.disqusid }}">View Comments</a>
+                                {{ template "partials/3rd-party-scripts/share.html" . }}
+                            </div>
                         </div>
+                        <hr />
                         <div class="post">
                             {{ .Content }}
                         </div>

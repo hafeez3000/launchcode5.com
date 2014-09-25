@@ -1,6 +1,61 @@
 /**
  * Created by ryankimber on 2014-08-26.
  */
+
+
+function tweet(event, text, url) {
+
+    //Prepare to call bit.ly for a shortened version of the URL
+    var defaults = {
+        version:    '2.0.1',
+        login:      'launchcode5',
+        apiKey:     'R_bf991e5a80084f478eb91419aa1956f0',
+        history:    '0'
+    };
+
+    // Build the URL to query
+    var daurl = "http://api.bit.ly/shorten?"
+        +"version="+defaults.version
+        +"&longUrl="+ encodeURIComponent(url)
+        +"&login="+defaults.login
+        +"&apiKey="+defaults.apiKey
+        +"&history="+defaults.history
+        +"&format=json&callback=?";
+
+    //Once we've synchronously called bit.ly, we open a popup for twitter.
+    //We do this synchronously so that we're opening the popup within the trusted event context (so we don't get blocked by a popup blocker)
+    var successFn = function(data) {
+        // Make a good use of short URL
+        var shortUrl = data.results[url].shortUrl;
+        var width  = 575,
+            height = 400,
+            left   = ($(window).width()  - width)  / 2,
+            top    = ($(window).height() - height) / 2,
+            opts   = 'status=1' +
+                ',width='  + width  +
+                ',height=' + height +
+                ',top='    + top    +
+                ',left='   + left,
+            queryString = 'text=' + encodeURIComponent('Checkout this article: ' + text) +
+                '&via=launchcode5' +
+                '&via=launchcode5' +
+                '&url=' + encodeURIComponent(shortUrl);
+
+        window.open('https://twitter.com/share?' + queryString, 'twitter', opts);
+    };
+
+    // Utilize the bit.ly API
+    //$.getJSON(daurl, function(data){
+    jQuery.ajax({
+        dataType: "json",
+        url: daurl,
+        asynch: false,
+        success: successFn});
+
+    event.preventDefault();
+    return false;
+}
+
 function sendContactMail()
 {
     //collect values from the UI.

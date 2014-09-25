@@ -21,10 +21,6 @@
     }
   }
 
-  .post-title{
-    margin-bottom: 25px;
-  }
-
   div.blog-title {
     height: auto;
     width: 150px;
@@ -61,7 +57,11 @@
   }
 
   div.post-title {
-    padding-top: 0px;
+    padding: 0;
+
+    h1 {
+      margin: 15px 0 0 0;
+    }
   }
 
   div.category-table {

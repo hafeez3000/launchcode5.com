@@ -1,10 +1,11 @@
 div.social-bar
 {
   display: inline-block;
+  margin-top: 0px;
 
   div.social-icon {
     display: inline-block;
-    padding: 3px 2px;
+    padding: 0px 2px;
     opacity: 0.8;
 
     &:hover { opacity: 1.0; }
