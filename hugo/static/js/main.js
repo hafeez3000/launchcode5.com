@@ -2,6 +2,13 @@
  * Created by ryankimber on 2014-08-26.
  */
 
+function noArticles(event)
+{
+    alert("We're still drafting articles for this new section.\r\nSubscribe to our RSS feed, follow us on Twitter, or come back soon for new posts.");
+    event.preventDefault();
+    return false;
+}
+
 
 function tweet(event, text, url) {
 

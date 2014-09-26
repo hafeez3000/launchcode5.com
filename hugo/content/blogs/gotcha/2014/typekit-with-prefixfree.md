@@ -30,9 +30,7 @@ Normally, you can prevent prefixfree.js from parsing a particular stylesheet by 
  
 Instead, what will work is making a small modification to the JavaScript where we are loading TypeKit to add this attribute when TypeKit loads. Assuming you have jQuery available, the solution looks like this:
 
-{{% sourcecode html %}}
-<script>
-(function(d) {
+{{% sourcecode javascript %}}(function(d) {
     var config = {
                 kitId: 'irq3kqa',
                 scriptTimeout: 3000
@@ -45,7 +43,6 @@ Instead, what will work is making a small modification to the JavaScript where w
         }
         catch(e){}};s.parentNode.insertBefore(tk,s)
 })(document);
-</script>
 {{% /sourcecode %}}
 
 ...and now that I know that, hopefully we won't be running into that anymore. =)
