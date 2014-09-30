@@ -52,7 +52,7 @@ Although this example is quite trivial, once the data array is initialized, ther
 
 ### In Summary
 
-To sum up, the filter-related features and performance improvements in Angular 1.2 and now 1.3 should eliminate or mitigate many of the filter-related performance issues that developers experienced in Angular 1.0 and 1.1. This is very encouraging and I expect to start making better use of filters in our projects. At the same time, I'd like to see some benchmarks and best-practices documentation surface before I get too carried away. For now, I'll be paying extra close attention to the conversation around filters and to how they are used in libraries like Angular-Bootstrap as AngularJS 1.3 becomes the stable release.
+To sum up, the combined filter-related features and performance improvements in Angular 1.2 and now 1.3 should eliminate or mitigate many of the filter-related performance issues that developers experienced in previous versions of Angular. This is very encouraging and I expect to start making better use of filters in our projects. At the same time, I'd like to see some benchmarks and best-practices documentation surface before I get too carried away. For now, I'll be paying extra close attention to the conversation around filters and to how they are used in libraries like Angular-Bootstrap as AngularJS 1.3 becomes the stable release.
 
 ### I'd like to hear from you
 If you've got a story of a great triumph or disaster with Angular filters, if you find a factual or technical error in the work on this site, or if you'd just like to share your thoughts, we'd love to hear from you. Please use the comments thread below, or click the contact link at the top of the page to get in touch.
