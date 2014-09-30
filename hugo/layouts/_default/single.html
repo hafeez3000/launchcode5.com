@@ -60,6 +60,13 @@
                     <div class="col-sm-8 col-xs-12">
                         <div class="post-title">
                             <h1>{{ .Title }}</h1>
+                            <div class="tags">
+                                {{ range $tag := .Params.tags}}
+                                    <span class="tag"><a href="/tags/{{.}}/">{{ . }}</a></span>
+                                {{ end }}
+                            </div>
+
+
                             <div class="post-comment-count">
                                 <i class="fa fa-comments"></i>
                                 <a href="{{ .Permalink }}/#disqus_thread" data-disqus-identifier="{{ .Params.disqusid }}">View Comments</a>
