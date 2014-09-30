@@ -62,7 +62,7 @@
                             <h1>{{ .Title }}</h1>
                             <div class="tags">
                                 {{ range $tag := .Params.tags}}
-                                    <span class="tag"><a href="/tags/{{.}}/">{{ . }}</a></span>
+                                    <span class="tag"><a href="/tags/{{ lower .}}/">{{ . }}</a></span>
                                 {{ end }}
                             </div>
 
