@@ -6,6 +6,7 @@ title = "Typekit with Prefixfree.js"
 description = "Using typekit and prefixfree together can lead to Cross-Origin/XHR Warnings."
 author = "ryan-kimber"
 categories = ["gotcha"]
+tags = ["typekit", "prefixfreeJS", "JavaScript"]
 +++
 Adobe's [Typekit](https://typekit.com) service is a fantastic way to bring personality to a web site through the use of appropriate type faces.
 

@@ -4,7 +4,7 @@ draft = false
 title = "AngularJS 1.3: Time to Rethink Filter Use"
 author = "ryan-kimber"
 categories = ["tech"]
-tags = ["AngularJS"]
+tags = ["AngularJS", "JavaScript"]
 disqusid = "2014-09-29-rethinking-filter-use-in-angularjs"
 description = "Ryan discusses the changes to Angular filters that may make them suitable for tasks they failed at in the past."
 
