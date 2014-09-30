@@ -9,6 +9,13 @@ function noArticles(event)
     return false;
 }
 
+function scrollToId(id)
+{
+    jQuery('html, body').animate({
+        scrollTop: jQuery('#' + id).offset().top
+    }, 500);
+}
+
 
 function tweet(event, text, url) {
 
