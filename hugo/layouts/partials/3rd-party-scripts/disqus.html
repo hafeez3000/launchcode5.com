@@ -2,17 +2,15 @@
 
 </div>
 <script type="text/javascript">
+    //Be sure to declare these variables outside of the closure as the embed.js won't be executed inside the closure.
+    var disqus_shortname = 'launchcode5';
+    var disqus_identifier = '{{ .Params.disqusid }}';
+    var disqus_title = '{{ .Title }}';
+    var disqus_url = '{{ .Permalink }}';
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
     (function() {
-        // Don't ever inject disqus on localhost--it creates unwanted
-        // discussions from 'localhost:4000' on your disqus account...
-        if (window.location.hostname == "localhost") return;
-        var disqus_shortname = 'launchcode5';
-        var disqus_identifier = '{{ .Params.disqusid }}';
-        var disqus_title = '{{ .Title }}';
-        var disqus_url = '{{ .Permalink }}';
-
         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-
         dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
         (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
     })();
