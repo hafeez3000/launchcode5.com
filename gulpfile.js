@@ -122,18 +122,24 @@ gulp.task('deploy:production', ['buildProd'], function(callback){
             'Content-Encoding': 'gzip'
         };
 
-        var indexHeaders = {
+        var htmlHeaders = {
             'Cache-Control': 'max-age=0, no-transform, public',
             'Content-Encoding': 'gzip'
         };
 
         console.log("...starting upload...");
-        gulp.src(['./build/www/**/*', '!./build/www/**/*.scss'])
+        gulp.src(['./build/www/**/*', '!./build/www/**/*.scss', '!./build/www/**/*.html'])
             .pipe(gulpAws.gzip())
             .pipe(publisher.publish(resourceHeaders))
             .pipe(gulpAws.reporter())
             .on('end', function(){
-                console.log("Completed upload...");
+                gulp.src(['./build/www/**/*.html'])
+                    .pipe(gulpAws.gzip())
+                    .pipe(publisher.publish(htmlHeaders))
+                    .pipe(gulpAws.reporter())
+                    .on('end', function(){
+                        console.log("Completed upload...");
+                    });
             });
 
 });
