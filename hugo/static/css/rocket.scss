@@ -25,20 +25,22 @@ body{background:#34495e}
 .rocketTable div.titleLeft,
 .rocketTable div.titleRight {
   display: inline-block;
+  position: relative;
+  transition-timing-function: ease-in;
+  transform-origin: top right;
   padding-top: 3px;
   opacity: 1.0;
-  transform: rotate(0deg) scale(1.0);
-  transition: 1.8s;
-  transition-timing-function: ease-in;
   letter-spacing: -2px;
   font-size: 30px;
   color: #e0e0e0;
   text-shadow: 2px 2px rgba(50, 50, 50, 0.5);
+  transition: 1.0s;
+  top: 0;
 }
 
 .rocketTable .rocketSvg
 {
-  transform: rotate(0deg);
+  transform: rotate(0deg) scale(1.0);
   transition: 0.5s;
 }
 
@@ -57,8 +59,6 @@ body{background:#34495e}
 
 .rocketInner {
   transform: translateY(15px) translateX(-3px);
-  -webkit-transition: .3s;
-  -moz-transition: .3s;
   transition: .3s;
   color: rgba(72, 103, 117, 1.0);
 }
@@ -100,86 +100,68 @@ body{background:#34495e}
 
 .rocketTable:hover .rocketSvg
 {
-  animation-delay: 0.3s;
-  animation-name: rocketTurn;
-  animation-duration: 1.2s;
-  animation-iteration-count: 1;
-  transform: rotate(75deg) scale(3.0);
+  transform: rotate(75deg) scale(4.0);
 }
 
 .rocketTable:hover div.titleLeft {
-  animation-delay: 0.2s;
-  animation-name: fallAwayLeft;
-  animation-duration: 1.8s;
-  animation-iteration-count: 1;
-  transition-timing-function: ease-in;
-  transform-origin: top right;
-  position: relative;
   opacity: 0.0;
   transform: rotate(-30deg) scale(0.0);
-  top: 600px;
+  top: 1100px;
 }
 
 .rocketTable:hover div.titleRight{
-  animation-delay: 0.2s;
-  animation-name: fallAwayRight;
-  animation-duration: 1.8s;
-  animation-iteration-count: 1;
-  transition-timing-function: ease-in;
-  transform-origin: top left;
-  position: relative;
   opacity: 0.0;
-  transform: rotate(30deg) scale(0.0);
-  top: 600px;
+  transform: rotate(35deg) scale(0.0);
+  top: 1000px;
 }
 
 .rocketTable:hover .rocketBase {
-  transition: .2s;
+  transition: 0.2s;
   fill: #FFFFFF !important;
   stroke-width: 0px !important;
 }
 .rocketTable:hover .rocketShadow {
-  transition: .2s;
+  transition: 0.2s;
   fill: #EDEDED !important;
   stroke-width: 0px !important;
 }
 .rocketTable:hover .iconCircle {
-  transition: .2s;
+  transition: 0.2s;
   fill: #282e3a !important;
   stroke: #fff !important;
   stroke-width: 5px !important;
 }
 .rocketTable:hover .smallWindowPath {
-  transition: .2s;
+  transition: 0.2s;
   fill: #28B767 !important;
   stroke-width: 0px !important;
 }
 
 .rocketTable:hover .wingBase {
-  transition: .2s;
+  transition: 0.2s;
   fill: #E16E36 !important;
   stroke-width: 0px !important;
 }
 
 .rocketTable:hover .rocketShadow {
-  transition: .2s;
+  transition: 0.2s;
   fill: #EDEDED !important;
 }
 
 .rocketTable:hover .rocketMain {
-  transition: .2s;
+  transition: 0.2s;
   fill: #FFFFFF !important;
 }
 
 .rocketTable:hover .wingShadow
 {
-  transition: .2s;
+  transition: 0.2s;
   display: block !important;
   fill:#336699 !important;
 }
 
 .rocketTable:hover .wing {
-  transition: .2s;
+  transition: 0.2s;
   display: block !important;
   fill: #698EB8 !important;
 }
@@ -196,19 +178,9 @@ body{background:#34495e}
   fill: #CCCCCC !important;
 }
 
-.rocketTable:hover .rocketInner {
-  transition: .5s;
-  transform: translateY(0px) translateX(-3px) !important;
-}
-
 /*=============================================
 [ Animation Classes ]
 ==============================================*/
-
-.rocketTable:hover .rocketWrap
-{
-
-}
 
 .fire {
   display: none;
@@ -253,6 +225,7 @@ body{background:#34495e}
   animation-duration: 1.6s;
   transform-origin: bottom;
 }
+
 /*=============================================
 [ KeyFrame Animations ]
 ==============================================*/
@@ -268,6 +241,7 @@ body{background:#34495e}
   90% { transform: rotate(14deg) translateY(9px) }
   99% { transform: rotate(0deg) translateY(10px) }
 }
+
 @keyframes fireLeft {
   6% { transform: rotate(25deg) }
   15% { transform: rotate(-19deg) }
@@ -280,6 +254,7 @@ body{background:#34495e}
   83% { transform: rotate(16deg) }
   99% { transform: rotate(0deg) }
 }
+
 @keyframes fireMiddle {
   10% { transform: rotate(25deg) }
   20% { transform: rotate(-25deg) }
@@ -292,6 +267,7 @@ body{background:#34495e}
   90% { transform: rotate(16deg) }
   99% { transform: rotate(0deg) }
 }
+
 @keyframes fireRight {
   15% { transform: rotate(17deg) }
   23% { transform: rotate(-13deg) }
@@ -304,6 +280,7 @@ body{background:#34495e}
   96% { transform: rotate(14deg) }
   99% { transform: rotate(0deg) }
 }
+
 @keyframes fillOpacity1 {
   0% {
     fill-opacity: 1;
@@ -318,6 +295,7 @@ body{background:#34495e}
     stroke-opacity: 0;
   }
 }
+
 @keyframes fillOpacity2 {
   0% {
     fill-opacity: 1;
@@ -332,6 +310,7 @@ body{background:#34495e}
     stroke-opacity: 0;
   }
 }
+
 @keyframes fillOpacity3 {
   0% {
     fill-opacity: 1;
@@ -346,46 +325,12 @@ body{background:#34495e}
     stroke-opacity: 0;
   }
 }
+
 @keyframes rocketMove {
   0% {
     transform: translateY(0px);
   }
   100% {
     transform: translateY(20px);
-  }
-}
-
-@keyframes rocketTurn {
-  0% {
-    transform: rotate(0deg) scale(1.0);
-  }
-  100% {
-    transform: rotate(75deg) scale(3.0);
-  }
-}
-
-@keyframes fallAwayLeft {
-  0% {
-    opacity: 1.0;
-    transform: rotate(0deg) scale(1.0);
-    top: 0px;
-  }
-  100% {
-    opacity: 0.0;
-    transform: rotate(-30deg) scale(0.0);
-    top: 600px;
-  }
-}
-
-@keyframes fallAwayRight {
-  0% {
-    opacity: 1.0;
-    transform: rotate(0deg) scale(1.0);
-    top: 0px;
-  }
-  100% {
-    opacity: 0.0;
-    transform: rotate(30deg) scale(0.0);
-    top: 600px;
   }
 }
