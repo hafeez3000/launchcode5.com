@@ -148,14 +148,12 @@ div.next-prev-navigation {
 
   position: relative;
   width: 100%;
-  margin: 30px 0;
-  padding-bottom: 50px;
+  margin-top: 15px;
+  padding-bottom: 20px;
+  padding-top: 15px;
+  border-top: thin solid #dddddd;
 
   div.prev-box {
-
-    position: absolute;
-    left: 0;
-    max-width: 250px;
 
     div.prev {
       font-size: 15pt;
@@ -168,9 +166,6 @@ div.next-prev-navigation {
   }
 
   div.next-box {
-    position: absolute;
-    right: 0;
-    max-width: 250px;
 
     div.next{
       font-size: 15pt;
@@ -185,7 +180,6 @@ div.next-prev-navigation {
 
   div.hire-us-banner {
     margin-top: 25px;
-    height: 250px;
     padding: 50px 0 0 0;
     background: white;
     text-align: center;
@@ -193,20 +187,26 @@ div.next-prev-navigation {
     div.table {
 
       margin: 0 auto;
+      margin-bottom: 40px;
       max-width: 600px;
 
 
       div.rocket-cell {
-        max-width: 25px;
-        width: 25px;
-        position: relative;
-        right: 50px;
+        max-width: 100px;
+        width: 100px;
         overflow: visible;
+        border-top: 1px solid rgba(#888888, 0.3);
+        border-bottom: 1px solid rgba(#888888, 0.3);
+
+        svg {
+          position: relative;
+          right: 25px;
+        }
       }
 
       div.text-cell {
-        padding-left: 80px;
         border: 1px solid rgba(#888888, 0.3);
+        border-left: none;
       }
     }
 
@@ -217,12 +217,11 @@ div.next-prev-navigation {
     div.banner-text {
       font-size: 24pt;
       line-height: 1.3em;
-      padding-right: 25px;
-      margin-top: 10px;
+      padding: 10px 25px;
     }
 
     div.banner-button {
-      margin: 20px auto;
+      margin: 15px auto;
     }
 
     div.btn-primary {

@@ -76,24 +76,20 @@
                         <div class="post">
                             {{ .Content }}
                         </div>
-                        <div class="next-prev-navigation">
-                            <div class="prev-box">
+                        <div class="row next-prev-navigation">
+                            <div class="prev-box col-md-4 col-sm-12">
                                 {{ if .Next }} <!-- note the Hugo naming for previous and next seems to be backwards -->
                                 <div class="prev">Previous Article</div>
                                 <div><a href="{{.Next.Permalink}}">{{.Next.Title}}</a></div>
                                 {{ end }}
-                                {{ if .Prev }} <!-- note the Hugo naming for previous and next seems to be backwards -->
-                                <span class="hidden-lg hidden-md">
-                                <div class="prev">Next Article</div>
-                                <div><a href="{{.Prev.Permalink}}">{{.Prev.Title}}</a></div>
-                                </span>
-                                {{ end }}
                             </div>
-                            <div class="next-box hidden-sm hidden-xs"><!-- for smaller screens we hide this -->
+                            <div class="next-box col-md-4 col-md-offset-4 col-sm-12">
+                                <div class="pull-right">
                                 {{ if .Prev }} <!-- note the Hugo naming for previous and next seems to be backwards -->
                                 <div class="next">Next Article</div>
                                 <div><a href="{{.Prev.Permalink}}">{{.Prev.Title}}</a></div>
                                 {{ end }}
+                                </div>
                             </div>
                         </div>
                         {{ template "partials/3rd-party-scripts/disqus.html" . }}
@@ -144,7 +140,7 @@
                     <div class="col-xs-12 hire-us-banner">
                         <div class="table">
                             <div class="table-row">
-                                <div class="table-cell rocket-cell">
+                                <div class="table-cell rocket-cell hidden-sm hidden-xs">
                                     {{ $rocketSize := "200px" }}
                                     {{ template "partials/rocket.html" $rocketSize }}
                                 </div>
@@ -154,7 +150,6 @@
                                 </div>
                             </div>
                         </div>
-
                     </div>
                 </div>
             </div>
