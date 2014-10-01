@@ -144,6 +144,45 @@
     border-radius: 50px 50px;
   }
 
+div.next-prev-navigation {
+
+  position: relative;
+  width: 100%;
+  margin: 30px 0;
+  padding-bottom: 50px;
+
+  div.prev-box {
+
+    position: absolute;
+    left: 0;
+    max-width: 250px;
+
+    div.prev {
+      font-size: 15pt;
+      font-weight: 200;
+    }
+
+    div > a {
+
+    }
+  }
+
+  div.next-box {
+    position: absolute;
+    right: 0;
+    max-width: 250px;
+
+    div.next{
+      font-size: 15pt;
+      font-weight: 200;
+    }
+
+    div > a {
+
+    }
+  }
+}
+
   div.hire-us-banner {
     margin-top: 25px;
     height: 250px;

@@ -73,12 +73,22 @@
                                 {{ template "partials/3rd-party-scripts/share.html" . }}
                             </div>
                         </div>
-                        <div class="next-prev-navigation">
-                            {{ if .Prev }}<div>{{.Prev.Title}}</div>{{ end }}
-                            {{ if .Next }}<div>{{.Next.Title}}</div>{{ end }}
-                        </div>
                         <div class="post">
                             {{ .Content }}
+                        </div>
+                        <div class="next-prev-navigation">
+                            <div class="prev-box">
+                                {{ if .Next }} <!-- note the Hugo naming for previous and next seems to be backwards -->
+                                <div class="prev">Previous Article</div>
+                                <div><a href="{{.Next.Permalink}}">{{.Next.Title}}</a></div>
+                                {{ end }}
+                            </div>
+                            <div class="next-box">
+                                {{ if .Prev }} <!-- note the Hugo naming for previous and next seems to be backwards -->
+                                <div class="next">Next Article</div>
+                                <div><a href="{{.Prev.Permalink}}">{{.Prev.Title}}</a></div>
+                                {{ end }}
+                            </div>
                         </div>
                         {{ template "partials/3rd-party-scripts/disqus.html" . }}
                     </div>
