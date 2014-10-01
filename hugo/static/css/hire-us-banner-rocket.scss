@@ -1,0 +1,123 @@
+.hire-us-banner .rocketInner {
+  transform: translateY(3px);
+  transition: .3s;
+  color: rgba(72, 103, 117, 1.0);
+}
+
+.hire-us-banner .iconCircle {
+  transition: .2s;
+  fill: #22303e;
+  background: #22303e;
+}
+
+.hire-us-banner .rocketSvg
+{
+  transform: rotate(40deg);
+}
+
+.hire-us-banner .rocketBase {
+  fill: #FFFFFF !important;
+  stroke-width: 0px !important;
+}
+
+.hire-us-banner .rocketShadow {
+  fill: #EDEDED !important;
+  stroke-width: 0px !important;
+}
+
+.hire-us-banner .iconCircle {
+  fill: #282e3a !important;
+  stroke: #fff !important;
+  stroke-width: 5px !important;
+}
+.hire-us-banner .smallWindowPath {
+  fill: #28B767 !important;
+  stroke-width: 0px !important;
+}
+
+.hire-us-banner .wingBase {
+  fill: #E16E36 !important;
+  stroke-width: 0px !important;
+}
+
+.hire-us-banner .rocketShadow {
+  fill: #EDEDED !important;
+}
+
+.hire-us-banner .rocketMain {
+  fill: #FFFFFF !important;
+}
+
+.hire-us-banner .wingShadow
+{
+  display: block !important;
+  fill:#336699 !important;
+}
+
+.hire-us-banner .wing{
+  display: block !important;
+  fill: #698EB8 !important;
+}
+
+.hire-us-banner.windows .largeWindow > circle,
+.hire-us-banner .windows .smallWindow > circle{
+  fill: #AAA9A9 !important;
+}
+
+.hire-us-banner .windows .largeWindow > ellipse,
+.hire-us-banner .windows .largeWindow > ellipse {
+  fill: #CCCCCC !important;
+}
+
+/*=============================================
+[ Animation Classes ]
+==============================================*/
+
+.hire-us-banner .fire {
+  display: none;
+  animation-delay: 0s;
+  fill-opacity: 1;
+  animation-timing-function: ease-in;
+  stroke-width: 0px;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  transform-origin: 50% 50%;
+  animation-direction: normal;
+}
+
+.hire-us-banner .fireLeft{
+  display: block;
+  animation-delay: 0s;
+  animation-name: fireLeft, fillOpacity1;
+  animation-duration: 1.2s;
+}
+
+.hire-us-banner .fireMiddle {
+  display: block;
+  animation-delay: 0s;
+  animation-name: fireMiddle, fillOpacity1;
+  animation-duration: 1s;
+}
+
+.hire-us-banner .fireRight {
+  display: block;
+  animation-delay: 0s;
+  animation-name: fireRight, fillOpacity1;
+  animation-duration: 1.3s;
+}
+
+.hire-us-banner .fireSmallLeft {
+  display: block;
+  animation-delay: 0s;
+  animation-name: fireSmall, fillOpacity2;
+  animation-duration: 1.3s;
+  transform-origin: bottom;
+}
+
+.hire-us-banner .fireSmallRight {
+  display: block;
+  animation-delay: 0.3s;
+  animation-name: fireSmall, fillOpacity3;
+  animation-duration: 1.6s;
+  transform-origin: bottom;
+}

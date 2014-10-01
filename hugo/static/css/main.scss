@@ -112,6 +112,19 @@ div.blog-description
     .table-cell {
       display: table-cell;
       vertical-align: top;
+
+      &.middle
+      {
+        vertical-align: middle;
+      }
+
+      &.right {
+        text-align: right
+      }
+
+      &.left {
+        text-align: left;
+      }
     }
   }
 

@@ -60,8 +60,17 @@
     padding: 0;
 
     h1 {
-      margin: 15px 0 0 0;
+      margin: 5px 0 0 0;
     }
+
+    div.post-date {
+      margin-top: 5px;
+      font-size: 9pt;
+    }
+  }
+
+  div.post {
+    margin-bottom: 25px;
   }
 
   div.category-table {
@@ -134,6 +143,53 @@
   img.category-image {
     border-radius: 50px 50px;
   }
+
+  div.hire-us-banner {
+    margin-top: 25px;
+    height: 250px;
+    padding: 50px 0 0 0;
+    background: white;
+    text-align: center;
+
+    div.table {
+
+      margin: 0 auto;
+      max-width: 600px;
+
+
+      div.rocket-cell {
+        max-width: 25px;
+        width: 25px;
+        position: relative;
+        right: 50px;
+        overflow: visible;
+      }
+
+      div.text-cell {
+        padding-left: 80px;
+        border: 1px solid rgba(#888888, 0.3);
+      }
+    }
+
+    div.inline {
+      display: inline-block;
+    }
+
+    div.banner-text {
+      font-size: 24pt;
+      line-height: 1.3em;
+      padding-right: 25px;
+      margin-top: 10px;
+    }
+
+    div.banner-button {
+      margin: 20px auto;
+    }
+
+    div.btn-primary {
+      font-weight: bold;
+    }
+  }
 }
 
 .body-gradient-launchcode {
@@ -160,7 +216,7 @@
 
 div.single-post-row
 {
-  margin-bottom: 60px;
+  margin-bottom: 10px;
 }
 
 div.article-body

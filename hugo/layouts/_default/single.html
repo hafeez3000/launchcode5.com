@@ -59,21 +59,24 @@
                     </div>
                     <div class="col-sm-8 col-xs-12">
                         <div class="post-title">
+                            {{ $date := .Date.Format "Jan 2, 2006"}}
+                            <div class="post-date">{{ upper $date }}</div>
                             <h1>{{ .Title }}</h1>
                             <div class="tags">
                                 {{ range $tag := .Params.tags}}
                                     <span class="tag"><a href="/tags/{{ lower .}}/">{{ . }}</a></span>
                                 {{ end }}
                             </div>
-
-
                             <div class="post-comment-count">
                                 <i class="fa fa-comments"></i>
                                 <a href="{{ .Permalink }}/#disqus_thread" data-disqus-identifier="{{ .Params.disqusid }}">View Comments</a>
                                 {{ template "partials/3rd-party-scripts/share.html" . }}
                             </div>
                         </div>
-                        <hr />
+                        <div class="next-prev-navigation">
+                            {{ if .Prev }}<div>{{.Prev.Title}}</div>{{ end }}
+                            {{ if .Next }}<div>{{.Next.Title}}</div>{{ end }}
+                        </div>
                         <div class="post">
                             {{ .Content }}
                         </div>
@@ -122,8 +125,24 @@
                             </a>
                         </div>
                     </div>
+                    <div class="col-xs-12 hire-us-banner">
+                        <div class="table">
+                            <div class="table-row">
+                                <div class="table-cell rocket-cell">
+                                    {{ $rocketSize := "200px" }}
+                                    {{ template "partials/rocket.html" $rocketSize }}
+                                </div>
+                                <div class="table-cell text-cell">
+                                    <div class="banner-text">We'll build the software<br />that builds your business.</div>
+                                    <div class="banner-button"><a class="btn btn-primary" href="#contactModal" data-toggle="modal" data-target="#contactModal">Hire Us</a></div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
             </div>
+
         </div>
         {{ template "partials/footer.html" . }}
     </body>
