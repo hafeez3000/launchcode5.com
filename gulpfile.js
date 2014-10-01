@@ -2,7 +2,6 @@
 
 var actions             = require('./gulp-scripts/gulp-actions'),
     connect             = require('gulp-connect'),
-    cdnizer             = require('gulp-cdnizer'),
     gulp                = require('gulp'),
     gulpAws             = require('gulp-awspublish'),
     plugins             = require('gulp-load-plugins')(),
