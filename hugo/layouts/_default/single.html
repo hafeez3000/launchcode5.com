@@ -83,9 +83,15 @@
                                 <div><a href="{{.Next.Permalink}}">{{.Next.Title}}</a></div>
                                 {{ end }}
                             </div>
-                            <div class="next-box">
+                            <div class="next-box hidden-sm hidden-xs"><!-- for smaller screens we hide this -->
                                 {{ if .Prev }} <!-- note the Hugo naming for previous and next seems to be backwards -->
                                 <div class="next">Next Article</div>
+                                <div><a href="{{.Prev.Permalink}}">{{.Prev.Title}}</a></div>
+                                {{ end }}
+                            </div>
+                            <div class="prev-box hidden-md hidden-lg"> <!-- For larger screens we hide this -->
+                                {{ if .Prev }} <!-- note the Hugo naming for previous and next seems to be backwards -->
+                                <div class="prev">Next Article</div>
                                 <div><a href="{{.Prev.Permalink}}">{{.Prev.Title}}</a></div>
                                 {{ end }}
                             </div>
