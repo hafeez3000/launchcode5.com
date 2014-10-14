@@ -5,7 +5,7 @@ draft = true
 title = "Delivering Iterative Value"
 author = "ryan-kimber"
 categories = ["process"]
-
+tags = ["drafts"]
 +++
 There has been much focus on agile development and software iterations.
 

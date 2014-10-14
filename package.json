@@ -1,7 +1,7 @@
 {
   "name": "www-wychwoodsoft",
-  "description": "A project for our WychwoodSoft website",
-  "repository": "https://bitbucket.org/RateAndPillage/www-wychwoodsoft.git",
+  "description": "A project for our Launchcode5 website",
+  "repository": "https://bitbucket.org/Launchcode5/launchcode5.com.git",
   "version": "0.0.0",
   "dependencies": {
     "connect-livereload": "^0.4.0",

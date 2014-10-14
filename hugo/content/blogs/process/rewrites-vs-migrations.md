@@ -5,6 +5,7 @@ title = "Rewrites vs Migrations"
 author = "ryan-kimber"
 categories = ["process"]
 disqusid = "20141022-rewrites-vs-migrations"
+tags = ["drafts"]
 +++
 Some content created in Hugo - testing
 --------------------------------------

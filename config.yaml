@@ -8,32 +8,3 @@ Taxonomies:
   tag: "tags"
   category: "categories"
   series: "series"
-
-menu:
-    primary:
-        - Name: About Me
-          Pre: "<i class='fa fa-fw fa-user'></i>"
-          Url: "/about/"
-        - Name: Blog
-          Pre: "<i class='fa fa-fw fa-bullhorn'></i>"
-          Url: "/post/"
-        - Name: Work
-          Pre: "<i class='fa fa-fw fa-star'></i>"
-          Url: "/work/"
-        - Name: Interviews
-          Pre: "<i class='fa fa-fw fa-microphone'></i>"
-          Url: "/interviews/"
-
-    social:
-        - Name: "Facebook"
-          Pre: "<i class='fa fa-facebook-square'></i>"
-          Url: "https://facebook.com/rahulb286"
-        - Name: "Twitter"
-          Pre: "<i class='fa fa-twitter-square'></i>"
-          Url: "https://twitter.com/rahul286"
-        - Name: "Github"
-          Pre: "<i class='fa fa-github-square'></i>"
-          Url: "https://github.com/rahul286"
-        - Name: "RSS Feed"
-          Pre: "<i class='fa fa-rss-square'></i>"
-          Url: "/index.xml"

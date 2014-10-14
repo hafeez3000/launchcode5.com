@@ -70,6 +70,15 @@ function tweet(event, text, url) {
     return false;
 }
 
+
+function openResume(author, event)
+{
+    newwindow=window.open('/resumes/index.html','resume','height=850,width=600');
+    if (window.focus) {newwindow.focus()}
+    event.preventDefault();
+    return false;
+}
+
 function sendContactMail()
 {
     //collect values from the UI.
