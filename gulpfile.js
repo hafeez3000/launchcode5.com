@@ -83,15 +83,12 @@ gulp.task('express', function(callback) {
     //actions.startLiveReload(buildProperties);
     runSequence('clean', 'build-dev', function()
     {
-        return gulp.src(['hugo/**/*', '!hugo/static/vendor/**/*'], { read : false})
-            .pipe(plugins.watch({ emit: 'all', debounce: 200, timeout: 0 }, function(events, done){
-                runSequence('build-dev', function() {
-                    connect.reload();
-                    //actions.notifyLiveReload(files); //was file.path
-                    done();
-                });
-            }));
-     });
+        plugins.util.log("Starting watches...");
+        gulp.watch(['./src/js/**/*.js', './src/js/**/*.tpl.html'], ['scripts']);
+        gulp.watch(['hugo/static/**/*.scss'], ['buildCss']);
+        gulp.watch(['hugo/static/**/*', '!hugo/static/**/*.scss'], ['build-dev']);
+        gulp.watch(['hugo/content/**/*', 'hugo/layouts/**/*'], ['build-dev']);
+    });
 });
 
 gulp.task('rebuildApp', function(callback){
