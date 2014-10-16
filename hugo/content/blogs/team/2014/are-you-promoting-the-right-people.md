@@ -9,7 +9,7 @@ disqusid = "2014-10-15-promoting-the-right-people"
 tags = ["teams", "promotions"]
 +++
 
-An open position on your team is an opportunity to reinforce the virtues that you want your staff to demonstrate on a daily basis. Who you select to fill a position sends a message to the rest of your organization about the traits and behaviours that management truly values, regardless of what you tell new hires or have written in employee handbooks and documentation.When it comes to promotions <b>*actions speak louder than words*</b>. Select the right candidate and you are demonstrating to your staff what sort of behaviours the organization rewards. Select the wrong candidate and your are letting your staff know what failings will be overlooked.
+An open position on your team is an opportunity to reinforce the virtues that you want your staff to demonstrate on a daily basis. Who you select to fill a position sends a message to the rest of your organization about the traits and behaviours that management truly values, regardless of what you tell new hires or have written in employee handbooks and documentation. When it comes to promotions <b>*actions speak louder than words*</b>. Select the right candidate and you are demonstrating to your staff what sort of behaviours the organization rewards. Select the wrong candidate and your are letting your staff know what failings will be overlooked.
 
 Hopefully, you've got someone in mind that you'd like to promote because they're hard-working, an excellent collaborator, well-liked by their peers, ethical, knowledgeable and share credit for their many professional achievements with their co-workers. Unfortunately, there are many poor reasons that frequently lead to the promotion of an individual. 
 

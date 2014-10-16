@@ -115,7 +115,7 @@ gulp.task('deploy:production', ['buildProd'], function(callback){
 
         // define custom headers
         var resourceHeaders = {
-            'Cache-Control': 'max-age=315360000, no-transform, public',
+            'Cache-Control': 'max-age=1209600, no-transform, public',
             'Content-Encoding': 'gzip'
         };
 
@@ -125,7 +125,7 @@ gulp.task('deploy:production', ['buildProd'], function(callback){
         };
 
         console.log("...starting upload...");
-        gulp.src(['./build/www/**/*', '!./build/www/**/*.scss', '!./build/www/**/*.html'])
+        gulp.src(['./build/www/**/*', '!./build/www/**/*.scss', '!./build/www/**/*.html', '!./build/www/js/pdfjs/cmaps/**/*', './build/www/js/pdfjs/locale/**/*'])
             .pipe(gulpAws.gzip())
             .pipe(publisher.publish(resourceHeaders))
             .pipe(gulpAws.reporter())
