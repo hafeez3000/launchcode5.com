@@ -125,7 +125,9 @@ gulp.task('deploy:production', ['buildProd'], function(callback){
         };
 
         console.log("...starting upload...");
-        gulp.src(['./build/www/**/*', '!./build/www/**/*.scss', '!./build/www/**/*.html', '!./build/www/js/pdfjs/cmaps/**/*', './build/www/js/pdfjs/locale/**/*'])
+        gulp.src(['./build/www/**/*',
+            //Skip anything starting with a '!'
+            '!./build/www/**/*.scss', '!./build/www/**/*.html', '!./build/www/js/pdfjs/cmaps/**/*', '!./build/www/js/pdfjs/locale/**/*', '!./build/www/js/pdfjs/images/**/*'])
             .pipe(gulpAws.gzip())
             .pipe(publisher.publish(resourceHeaders))
             .pipe(gulpAws.reporter())

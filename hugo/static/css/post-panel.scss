@@ -1,3 +1,9 @@
+div.post-comment-count {
+  text-align: right;
+  display: inline-block;
+}
+
+
 div.post-wrapper {
   background-color: #FFFFFD;
   margin-top: 15px;
@@ -136,11 +142,6 @@ div.post-wrapper {
     {
       text-align: left;
     }
-
-    .post-comment-count {
-      text-align: right;
-    }
-
 
     &.team {
       background-color: $teamColour;

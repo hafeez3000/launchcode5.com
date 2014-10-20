@@ -6,14 +6,22 @@
         {{ if eq .Params.author "ryan-kimber" }}
         {{ template "partials/authors/mid/ryan-kimber.html" . }}
         {{ end}}
+        {{ if eq .Params.author "betty-li" }}
+        {{ template "partials/authors/mid/betty-li.html" . }}
+        {{ end}}
     </div>
     <div class="table-row">
         <div style="display: table-cell; border-top: 1px dashed #555555; padding-top: 8px;">
-            <div><a class="hand" href="#contactModal" data-toggle="modal" data-target="#contactModal"><i class="fa fa-fw fa-phone fa-lg"></i><span class="hidden-sm">Hire Us</span></a></div>
+            <div style="margin-top: 5px;"><a class="hand btn btn-block btn-default" href="#contactModal" data-toggle="modal" data-target="#contactModal"><i class="fa fa-fw fa-phone fa-lg"></i><span class="hidden-sm">Hire Us</span></a></div>
             {{ if eq .Params.author "ryan-kimber" }}
-                <div><a class="hand" onclick="openResume('ryan-kimber')"><i class="fa fa-fw fa-file-text-o fa-lg"></i>View Resume</a></div>
-                <div><a class="hand" href="https://twitter.com/ryan_kimber" data-show-count="false"><i class="fa fa-fw fa-twitter fa-lg"></i>Follow Ryan</a></div>
-                <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+                <div style="margin-top: 5px;"><a class="hand btn btn-block btn-default" onclick="openResume('ryan-kimber')"><i class="fa fa-fw fa-file-text-o fa-lg"></i>View Resume</a></div>
+                <div style="margin-top: 5px;">
+                    <a class="hand btn btn-block btn-default" onclick="twitterFollow('ryan_kimber');"><i class="fa fa-fw fa-twitter fa-lg"></i>Follow Ryan</a>
+                </div>
+
+            {{ end }}
+            {{ if eq .Params.author "betty-li" }}
+            <div style="margin-top: 5px;"><a class="hand btn btn-block btn-default" onclick="twitterFollow('blibotics');"><i class="fa fa-fw fa-twitter fa-lg"></i>Follow Betty</a></div>
             {{ end }}
         </div>
     </div>

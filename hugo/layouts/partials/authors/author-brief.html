@@ -3,10 +3,13 @@
         <div class="post-author">
             {{ if eq .Params.author "ryan-kimber" }}
             {{ template "partials/authors/brief/ryan-kimber.html" . }}
+            {{ end }}
+            {{ if eq .Params.author "betty-li" }}
+            {{ template "partials/authors/brief/betty-li.html" . }}
             {{ end}}
         </div>
         <div class="post-author-pic">
-            <img class="author-pic" src="/images/contributors/{{ .Params.author}}.png" />
+            <img class="author-pic" src="/images/contributors/{{.Params.author}}.png" />
         </div>
     </div>
 </div>

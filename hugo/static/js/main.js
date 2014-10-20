@@ -16,6 +16,21 @@ function scrollToId(id)
     }, 500);
 }
 
+function twitterFollow(username)
+{
+    var width  = 575,
+        height = 420,
+        left   = ($(window).width()  - width)  / 2,
+        top    = ($(window).height() - height) / 2,
+        opts   = 'status=1' +
+            ',width='  + width  +
+            ',height=' + height +
+            ',top='    + top    +
+            ',left='   + left,
+        queryString = 'screen_name=' + encodeURIComponent(username);
+
+    window.open('https://twitter.com/intent/follow?' + queryString, 'twitter', opts);
+}
 
 function tweet(event, text, url) {
 
@@ -42,7 +57,7 @@ function tweet(event, text, url) {
         // Make a good use of short URL
         var shortUrl = data.results[url].shortUrl;
         var width  = 575,
-            height = 400,
+            height = 420,
             left   = ($(window).width()  - width)  / 2,
             top    = ($(window).height() - height) / 2,
             opts   = 'status=1' +
