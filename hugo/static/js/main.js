@@ -105,7 +105,7 @@ function sendContactMail()
 
     var mandrillMessage = {
         'key': 'aCWt44WwNLjZsspYAlrvFw',
-        'template_name': 'wychwood-contact',
+        'template_name': 'launchcode-contact',
         'template_content': [
             {
                 'contactFullname' : fullname,
@@ -125,7 +125,7 @@ function sendContactMail()
             'text': message,
             'to': [
                 {
-                    'email': 'info@launchcode5.com.com',
+                    'email': 'info@launchcode5.com',
                     'name': 'Launchcode Studios',
                     'type': 'to'
                 }],
