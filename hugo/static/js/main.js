@@ -121,12 +121,12 @@ function sendContactMail()
             'headers': {
                 'Reply-To': emailAddress
             },
-            'subject': 'Wychwood Contact Form Submission',
+            'subject': 'Launchcode5.com Contact: ' + subject,
             'text': message,
             'to': [
                 {
-                    'email': 'info@wychwoodsoft.com',
-                    'name': 'Wychwood Software Studios - Info',
+                    'email': 'info@launchcode5.com.com',
+                    'name': 'Launchcode Studios',
                     'type': 'to'
                 }],
             'merge': true,
@@ -138,7 +138,7 @@ function sendContactMail()
             ],
             'merge_vars': [
                 {
-                    'rcpt': 'info@wychwoodsoft.com',
+                    'rcpt': 'info@launchcode5.com',
                     'vars': [
                         { 'name': 'contactFullname', 'content': fullname },
                         { 'name' : 'contactEmail', 'content' : emailAddress },
