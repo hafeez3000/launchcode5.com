@@ -376,7 +376,7 @@ div.section
     {
       position: fixed;
       width: 100%;
-      background-color: rgba(lighten($fourthColour, 10), 0.85);
+      background-color: rgba(#FFFFFF, 0.85);
       z-index: 50;
     }
 }
@@ -389,35 +389,35 @@ div.section
 
 .navbar-default .navbar-brand
 {
-    color: #F0FFFF;
+    color: #000000;
     padding-top: 13px;
 }
 
 .navbar-default a.navbar-brand:hover
 {
-    color: #F0FFFF;
+    color: #333333;
 }
 
 .navbar-default {
-    border-color: $darkColour;
+    border-color: $firstColour;
     border-top: none;
-    color: #d9F0F0;
+    color: #000000;
 }
 
 .navbar-default .navbar-nav > .active > a,
 .navbar-default .navbar-nav > .active > a:hover {
-    background-color: rgba(lighten($fourthColour, 18), 0.8);
+    background-color: rgba($fourthColour, 0.8);
     color: #F0FFFF;
 }
 
 .navbar-default .navbar-nav > li > a {
-    color: #d9F0F0;
-    text-shadow: 2px 2px rgba(50,50,50, 0.5);
+    color: #000000;
+    /* text-shadow: 2px 2px rgba(50,50,50, 0.5); */
     font-size: 16px;
 }
 
 .navbar-default .navbar-nav > li > a:hover {
-    color: #F0FFFF;
+    color: #333333;
 }
 
 .navbar .form-control {
