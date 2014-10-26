@@ -11,6 +11,9 @@
 body {
   height: 100%;
   color: #545454;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 300;
+  line-height: 1.4;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -372,12 +375,20 @@ div.section
 .navbar {
     border-radius: 0 !important;
 
-    &.wychwood-nav
+    &.launchcode-nav
     {
       position: fixed;
       width: 100%;
-      background-color: rgba(#FFFFFF, 0.85);
+      background-color: rgba(#FFFFFF, 0.65);
       z-index: 50;
+      transition: 1.0s;
+      transition-timing-function: linear;
+    }
+
+    &.launchcode-nav:hover
+    {
+      background-color: rgba(#FFFFFF, 1.0);
+      transition-timing-function: linear;
     }
 }
 

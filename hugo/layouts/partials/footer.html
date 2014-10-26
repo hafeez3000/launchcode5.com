@@ -18,6 +18,7 @@
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script> -->
 <script src="vendor/jquery/dist/jquery.js"></script>
 <script src="vendor/bootstrap/dist/js/bootstrap.js"></script>
+<script src="js/flowtype.js"></script>
 <script src="js/main.js"></script>
 <script src="js/prism.js"></script>
 
@@ -27,6 +28,13 @@
 <script src="http://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
 <script>
     Prism.highlightAll(false);
+    jQuery('.flowtype').flowtype({
+        minimum   : 500,
+        maximum   : 1200,
+        minFont   : 10,
+        maxFont   : 36,
+        fontRatio : 40
+    });
 </script>
 {{ template "partials/3rd-party-scripts/google-analytics.html" . }}
 {{ template "partials/3rd-party-scripts/disqus-comment-count.html" . }}
