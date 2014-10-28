@@ -21,6 +21,7 @@
   z-index: 0;
   position: absolute;
   top: 0;
+  opacity: 0.3;
 
   .overlay
   {
@@ -28,7 +29,7 @@
     height: 100%;
     z-index: 2;
     position: relative;
-    background-color: rgba(darken($firstColour, 20), 0.75);
+    background-color: rgba($firstColour, 0.30);
   }
 
   .banner-image-wrapper {
@@ -47,6 +48,7 @@
       animation-timing-function: ease-in-out;
       animation-iteration-count: infinite;
       animation-direction: forward;
+      opacity: 0.1;
     }
 
     .img1 {

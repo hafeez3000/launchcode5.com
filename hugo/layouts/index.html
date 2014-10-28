@@ -2,14 +2,26 @@
 <html class="no-js" lang="en-US" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
     <head>
         <!-- This is where the head starts -->
-{{ template "partials/html-header.html" . }}
+{{ template "partials/common/html-header.html" . }}
     </head>
 <body lang="en" class="tk-freight-sans-pro">
-    {{ template "partials/page-header.html" . }}
+    {{ template "partials/common/page-header.html" . }}
     {{ template "partials/index/banner.html" . }}
 
-
 <div class="container-fluid">
+    <div class="row section section1">
+
+    </div>
+    <div class="row section section2">
+
+    </div>
+    <div class="row section section3">
+
+    </div>
+    <div class="row section section4">
+
+    </div>
+
     <div class="row section button-section">
         <div class="col-xs-6 col-md-3">
             <div class="tile firstGradient">
@@ -45,27 +57,10 @@
            </div>
        </div>
     </div>
-    <div class="anchor" id="section1"></div>
-    <div class="row section firstGradient">
-        {{ template "partials/index/web-and-app-development.html" . }}
-    </div>
-    <div class="anchor" id="section2"></div>
-    <div class="row section secondGradient">
-       {{ template "partials/index/strategy-and-startup-support.html" . }}
-    </div>
-    <div class="anchor" id="section3"></div>
-    <div class="row section thirdGradient">
-        {{ template "partials/index/principles.html" . }}
-    </div>
-    <div class="anchor" id="section4"></div>
-    <div class="row section fourthGradient">
-        {{ template "partials/index/consultations.html" . }}
-    </div>
-    <div class="anchor" id="section5"></div>
     <div class="row section secondGradient">
         {{ template "partials/index/latest-from-blog.html" . }}
     </div>
 </div>
-{{ template "partials/footer.html" }}
+{{ template "partials/common/footer.html" }}
 </body>
 </html>

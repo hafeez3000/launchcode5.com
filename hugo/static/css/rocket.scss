@@ -5,7 +5,6 @@
 /*=============================================
 [ Page Setup ]
 ==============================================*/
-body{background:#34495e}
 #pageWrap {width:100%;overflow:hidden;}
 
 .rocketSvg {
@@ -20,6 +19,7 @@ body{background:#34495e}
 
 .rocketTable {
   display: table;
+  background:#34495e;
 }
 
 .rocketTable div.titleLeft,

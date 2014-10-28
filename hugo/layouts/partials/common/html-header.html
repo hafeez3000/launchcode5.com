@@ -1,6 +1,6 @@
 <!-- Header -->
     <meta charset="utf-8">
-    {{ template "partials/meta.html" . }}
+    {{ template "partials/common/meta.html" . }}
     <base href="${base}">
     <link rel="canonical" href="{{ .Permalink }}">
     <link href="http://gmpg.org/xfn/11" rel="profile">
@@ -23,4 +23,4 @@
     <!-- RSS -->
     <link href="{{ .RSSlink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
 
-    {{ template "partials/head-includes.html" . }}
+    {{ template "partials/common/head-includes.html" . }}

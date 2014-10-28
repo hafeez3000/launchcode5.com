@@ -5,6 +5,8 @@ active = false
 title = "Web & Application Design Apprentice"
 description = "Description Placeholde."
 author = "ryan-kimber"
+tags = ["job-posting"]
+categories = ["job-posting"]
 +++
 Launchcode Studios is a digital design and development agency based in Toronto, ON. We work with early-stage startups as well as established companies and organizations.
 

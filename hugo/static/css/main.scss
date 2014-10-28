@@ -10,8 +10,9 @@
 
 body {
   height: 100%;
-  color: #545454;
+  color: #353535;
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  background-color: #FFFFFF;
   font-weight: 300;
   line-height: 1.4;
   -webkit-font-smoothing: antialiased;
@@ -33,6 +34,48 @@ a.no-decoration
 
 .text-right {
   text-align: right;
+}
+
+div.cutout-surround {
+
+  border-top: 6px solid $firstColour;
+  background-color: white;
+  margin: 0px 0px;
+  position: relative;
+  z-index: 100;
+  width: 100%;
+
+  div.cutout-image-wrapper {
+    width: 250px;
+    height: 250px;
+    background-color: white;
+    padding: 20px 20px;
+    position: relative;
+    top: -131px;
+    margin: 0 15%;
+    border: 6px solid $firstColour;
+    border-radius: 125px 125px;
+
+    div.border-bottom-overlay {
+      overflow: visible;
+      width: 262px;
+      height: 262px;
+      position: absolute;
+      left: -6px;
+      top: 125px;
+      height: 128px;
+      background-color: white;
+      border: 6px solid white;
+      z-index: -10;
+    }
+
+    img {
+      width: 216px;
+      height: auto;
+      margin: 0 auto;
+      z-index: 5;
+    }
+  }
 }
 
 div.tags {
@@ -133,6 +176,29 @@ div.blog-description
         text-align: left;
       }
     }
+  }
+
+}
+
+.section {
+
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  &.section1 {
+    background-color: rgba($firstColour, 0.2);
+  }
+
+  &.section2 {
+    background-color: rgba($secondColour, 0.2);
+  }
+
+  &.section3 {
+    background-color: rgba($thirdColour, 0.2);
+  }
+
+  &.section4 {
+    background-color: rgba($fourthColour, 0.2);
   }
 
 }

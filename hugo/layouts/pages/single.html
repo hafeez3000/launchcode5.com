@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en-US" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
+<head>
+    <!-- This is where the head starts -->
+    {{ template "partials/common/html-header.html" . }}
+</head>
+<body lang="en" class="tk-freight-sans-pro">
+{{ template "partials/common/page-header.html" . }}
+
+
+<h3>This is the single page representation for {{ .Params.page }}</h3>
+{{ if eq .Params.page "about" }}
+    {{ template "partials/pages/about.html" . }}
+{{ end }}
+{{ if eq .Params.page "services" }}
+    {{ template "partials/pages/services.html" . }}
+{{ end }}
+
+
+{{ template "partials/common/footer.html" }}
+</body>
+</html>
