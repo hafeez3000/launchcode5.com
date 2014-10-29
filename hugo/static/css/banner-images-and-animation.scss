@@ -96,37 +96,67 @@ svg.wychwood-svg
 {
   opacity: 0;
   width: 40%; height: auto; margin: 15% auto;
-  animation-name: wychwoodSvgAnimation;
-  animation-duration: 20s;
+  animation-name: slide0Animation;
+  animation-duration: 45s;
   -webkit-animation-fill-mode: forwards; /* Chrome, Safari, Opera */
   animation-fill-mode: forwards;
 }
 
-svg.gets-better-svg
+svg.slide-1
 {
   position: absolute;
   top: 0;
   left: 0;
   width: 60%;
-  margin: 15% 20% 0 20%;
+  margin: 5% 20% 0 20%;
   height: auto;
-  animation-name: getsBetterSvgAnimation;
-  animation-duration: 20s;
+  animation-name: slide1Animation;
+  animation-duration: 45s;
   -webkit-animation-fill-mode: forwards; /* Chrome, Safari, Opera */
   animation-fill-mode: forwards;
   opacity: 0;
 }
 
-svg.let-us-help
+svg.slide-2
 {
   position: absolute;
   top: 0;
   left: 0;
   width: 60%;
-  margin: 15% 20% 0 20%;
+  margin: 5% 20% 0 20%;
   height: auto;
-  animation-name: letUsHelpSvgAnimation;
-  animation-duration: 20s;
+  animation-name: slide2Animation;
+  animation-duration: 45s;
+  -webkit-animation-fill-mode: forwards; /* Chrome, Safari, Opera */
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+svg.slide-3
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60%;
+  margin: 5% 20% 0 20%;
+  height: auto;
+  animation-name: slide3Animation;
+  animation-duration: 45s;
+  -webkit-animation-fill-mode: forwards; /* Chrome, Safari, Opera */
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+svg.slide-4
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60%;
+  margin: 5% 20% 0 20%;
+  height: auto;
+  animation-name: slide4Animation;
+  animation-duration: 45s;
   -webkit-animation-fill-mode: forwards; /* Chrome, Safari, Opera */
   animation-fill-mode: forwards;
   opacity: 0;
@@ -267,20 +297,20 @@ div.banner-table.slide-zoom-animation
   }
 }
 
-@keyframes wychwoodSvgAnimation {
+@keyframes slide0Animation {
   0% {
     opacity:0;
   }
 
-  4.2% {
+  5.0% {
     opacity: 1;
   }
 
-  29.2% {
+  18.1% {
     opacity: 1;
   }
 
-  33.3% {
+  21.5% {
     opacity: 0;
   }
 
@@ -289,24 +319,24 @@ div.banner-table.slide-zoom-animation
   }
 }
 
-@keyframes getsBetterSvgAnimation {
+@keyframes slide1Animation {
   0% {
     opacity:0;
   }
 
-  33.3% {
+  20.1% {
     opacity: 0;
   }
 
-  37.5% {
+  23.5% {
     opacity: 1;
   }
 
-  62.5% {
+  38.2% {
     opacity: 1;
   }
 
-  66.66% {
+  41.6% {
     opacity: 0;
   }
 
@@ -315,20 +345,68 @@ div.banner-table.slide-zoom-animation
   }
 }
 
-@keyframes letUsHelpSvgAnimation {
+@keyframes slide2Animation {
+   0% {
+     opacity:0;
+   }
+
+   39.2% {
+     opacity: 0;
+   }
+
+   48.6% {
+     opacity: 1;
+   }
+
+   57.4% {
+     opacity: 1;
+   }
+
+   60.8% {
+     opacity: 0;
+   }
+
+   100% {
+     opacity: 0;
+   }
+ }
+
+@keyframes slide3Animation {
   0% {
     opacity:0;
   }
 
-  66.66% {
+  58.4% {
     opacity: 0;
   }
 
-  70.9% {
+  61.8% {
     opacity: 1;
   }
 
-  95.8% {
+  76.5% {
+    opacity: 1;
+  }
+
+  79.9% {
+    opacity: 0;
+  }
+}
+
+@keyframes slide4Animation {
+  0% {
+    opacity:0;
+  }
+
+  76.5% {
+    opacity: 0;
+  }
+
+  81.9% {
+    opacity: 1;
+  }
+
+  95.6% {
     opacity: 1;
   }
 

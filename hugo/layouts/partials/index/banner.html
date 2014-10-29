@@ -23,27 +23,11 @@
         <div class="center-cell" style="overflow: hidden;">
             <div class="wychwood-logo">
                 {{ template "partials/index/launchcode-studios-svg.html" . }}
-                <svg class="gets-better-svg" viewBox="0 0 220 32">
-                    <text x="7" y="12" style="fill: #333333 !important; text-shadow: 2px 2px rgba(15, 15, 15, 0.3); font-size: 10pt;">
-                        <tspan x="12">We develop ideas, applications and</tspan>
-                        <tspan x="2" y="25" style="font-size: 10pt;">web sites that </tspan>
-                        <tspan style="fill: #000000;">get even better over time.</tspan>
-                    </text>
-                </svg>
-                <svg class="let-us-help" viewBox="0 0 220 32">
-                    <text x="7" y="12" style="fill: #333333 !important; text-shadow: 2px 2px rgba(15, 15, 15, 0.3); font-size: 10pt;">
-                        <tspan x="14">Let us help your organization develop</tspan>
-                        <tspan x="10" y="25" style="font-size: 10pt;">your ideas into </tspan>
-                        <tspan style="fill: #000000;">products with real value.</tspan>
-                    </text>
-                </svg>
+                {{ template "partials/index/slide-1.html" .}}
+                {{ template "partials/index/slide-2.html" .}}
+                {{ template "partials/index/slide-3.html" .}}
+                <a href="#contactModal" data-toggle="modal" data-target="#contactModal">{{ template "partials/index/slide-4.html" .}}</a>
             </div>
-            <!-- <div class="rocketFlier animate">
-                <div class="rocket-no-circle">
-                    {{ $rocketSize := "600px" }}
-                    {{ template "partials/rocket.html" $rocketSize }}
-                </div>
-            </div> -->
         </div>
     </div>
 </div>

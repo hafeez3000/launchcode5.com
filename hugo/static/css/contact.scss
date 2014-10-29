@@ -1,8 +1,8 @@
 .contact-header
 {
-  color: #FFFFFD;
-  background-color: rgba($darkColour, 0.9);
-  border-bottom: 1px solid $darkColour;
+  color: #151515;
+  background-color: rgba(lighten($logoColour, 20), 0.9);
+  border-bottom: 1px solid darken($logoColour, 20);
   position: fixed;
   top: 0px;
   font-size: 16px;
