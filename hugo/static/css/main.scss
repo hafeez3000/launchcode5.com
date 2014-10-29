@@ -180,25 +180,28 @@ div.blog-description
 
 }
 
-.section {
+.row.section {
 
   padding-top: 50px;
   padding-bottom: 50px;
 
   &.section1 {
-    background-color: rgba($firstColour, 0.2);
+    background-color: #FFFFFF;
   }
 
   &.section2 {
-    background-color: rgba($secondColour, 0.2);
+    background-color: rgba($firstColour, 0.2);
+
   }
 
   &.section3 {
-    background-color: rgba($thirdColour, 0.2);
+    background-color: rgba($secondColour, 0.2);
+
   }
 
   &.section4 {
-    background-color: rgba($fourthColour, 0.2);
+    background-color: rgba($thirdColour, 0.2);
+    /* background-color: rgba($fourthColour, 0.2); */
   }
 
 }
