@@ -84,22 +84,22 @@ div.post-wrapper {
 
     &.team {
       background-color: $teamColour;
-      color: darken($teamColour, 30);
+      color: darken($teamColour, 60);
     }
 
     &.tech {
       background-color: $techColour;
-      color: darken($techColour, 30);
+      color: darken($techColour, 60);
     }
 
     &.process {
       background-color: $processColour;
-      color: darken($processColour, 30);
+      color: darken($processColour, 60);
     }
 
     &.launchcode {
       background-color: $launchcodeColour;
-      color: darken($launchcodeColour, 30);
+      color: darken($launchcodeColour, 60);
     }
 
     &.gotcha {

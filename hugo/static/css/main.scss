@@ -182,8 +182,41 @@ div.blog-description
 
 .row.section {
 
+  position: relative;
   padding-top: 50px;
   padding-bottom: 50px;
+
+  a.btn
+  {
+    margin-top: 25px;
+  }
+
+  h1 {
+
+    font-size: 36px;
+
+    @media screen and (max-width: $break-small) {
+      font-size: 20px;
+    }
+
+  }
+
+  p {
+    margin: 10px auto;
+    max-width: 1000px;
+    font-size: 20px;
+
+    @media screen and (max-width: $break-small) {
+      font-size: 14px;
+    }
+  }
+
+  img.bordered-circle
+  {
+    border: 8px solid $logoColour;
+    border-radius: 50%;
+    margin-top: 20%;
+  }
 
   &.section1 {
     background-color: #FFFFFF;
@@ -322,7 +355,7 @@ div.section
     {
       position: fixed;
       width: 100%;
-      background-color: rgba(#FFFFFF, 0.65);
+      background-color: rgba(#FFFFFF, 0.80);
       z-index: 50;
       transition: 1.0s;
       transition-timing-function: linear;
