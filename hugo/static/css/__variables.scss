@@ -1,7 +1,7 @@
 $firstColour   : #0075CF;
-$secondColour  : #DAFF47;
+$secondColour  : #57DEFF;
 $thirdColour   : #0BA6FF;
-$fourthColour  : #57DEFF;
+$fourthColour  : #DAFF47;
 $fifthColour   : #0C100B;
 $darkColour    : #253C4A;
 
@@ -11,8 +11,8 @@ $logoColour    : #3e6e95;
 
 $break-small: 768px;
 
-$techColour : lighten(#578638, 15);
-$launchcodeColour: $firstColour;
-$gotchaColour: #cc9999;
-$teamColour : $thirdColour;
-$processColour: $fourthColour;
+$techColour : lighten($secondColour, 25);
+$launchcodeColour: lighten($firstColour, 25);
+$gotchaColour: lighten(#cc9999, 25);
+$teamColour : lighten($thirdColour, 25);
+$processColour: lighten($logoColour,25);
