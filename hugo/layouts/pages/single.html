@@ -4,19 +4,23 @@
     <!-- This is where the head starts -->
     {{ template "partials/common/html-header.html" . }}
 </head>
-<body lang="en" class="tk-freight-sans-pro">
+<body lang="en">
 {{ template "partials/common/page-header.html" . }}
-
-
-<h3>This is the single page representation for {{ .Params.page }}</h3>
-{{ if eq .Params.page "about" }}
-    {{ template "partials/pages/about.html" . }}
-{{ end }}
-{{ if eq .Params.page "services" }}
-    {{ template "partials/pages/services.html" . }}
-{{ end }}
-
-
+<div class="page-banner-table">
+    <div class="page-banner-row">
+        <div class="page-banner-cell">
+            <img class="page-banner-image" src="/images/banner-{{ .Params.page }}.jpg" />
+        </div>
+    </div>
+</div>
+<div class="container-fluid">
+    {{ if eq .Params.page "about" }}
+        {{ template "partials/pages/about.html" . }}
+    {{ end }}
+    {{ if eq .Params.page "services" }}
+        {{ template "partials/pages/services.html" . }}
+    {{ end }}
+</div>
 {{ template "partials/common/footer.html" }}
 </body>
 </html>

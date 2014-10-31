@@ -18,6 +18,17 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+.centre {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+div.page-container {
+  margin: 0 0;
+  margin-top: 60px;
+}
+
 a.hand:hover {
   cursor: pointer;
 }
@@ -201,6 +212,11 @@ div.blog-description
 
   }
 
+  div.limited-section-width
+  {
+    max-width: 1000px;
+  }
+
   p {
     margin: 10px auto;
     max-width: 1000px;
@@ -281,35 +297,11 @@ div.modal-dialog
 }
 
 
-div.banner-table {
-  display: table;
-  width: 100%;
-  max-height: 15%;
-  position: relative;
-  overflow: hidden;
-  border-bottom: 2px solid darken($firstColour, 20);
-
-  .center-cell {
-    position: relative;
-    display: table-cell;
-    vertical-align: middle;
-    text-align: center;
-    padding-top: 50px;
-    z-index: 10;
-  }
-}
-
 div.section
 {
   padding-top: 0px;
   padding-bottom: 15px;
   min-height: 75px;
-
-  &.button-section {
-    position: relative;
-    background: url(/images/css/pattern-grey.png) repeat;
-    padding: 5px 0 20px 0;
-  }
 
   .section-header {
     padding-top: 15px;
@@ -386,8 +378,8 @@ div.section
 }
 
 .navbar-default {
-    border-color: $firstColour;
-    border-top: none;
+    border: none;
+    border-bottom: 1px solid $firstColour;
     color: #000000;
 }
 
@@ -417,35 +409,53 @@ div.section
 
 .bullet-wrapper
 {
-  background-color: rgba(#FFFFFD, 0.4);
-  margin-top: 15px;
-  margin-bottom: 15px;
+  margin-top: 10px;
+  margin-bottom: 10px;
   position: relative;
   overflow: hidden;
-  border-radius: 8px 8px 8px 8px;
-  border-top: 6px solid #ccc;
-  box-shadow: 2px 2px 2px 2px #888;
-  padding: 15px 15px;
+  border-top: 2px solid rgba(#CCCCCC, 0.3);
+  border-right: 2px solid rgba(#CCCCCC, 0.3);
+  background-color: rgba(#FFFFFF, 0.2);
 
-  .bullet-icon {
-    position: relative;
-    padding-right: 15px;
+  @media screen and (max-width: $break-small) {
+    border-right: none;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
+
   }
 
-  .bullet-title {
-      font-size: 20px;
+
+  h4.bullet-title
+  {
+    font-size: 20px;
+    @media screen and (max-width: $break-small) {
+      font-size: 16px;
+    }
+
   }
 
-  .bullet-body {
-    position: relative;
+  p.bullet-text {
+    font-size: 16px;
+    padding-right: 10px;
+
+    @media screen and (max-width: $break-small) {
+      font-size: 13px;
+    }
+
   }
 
   td.bullet-counter {
     vertical-align: top;
     padding: 0px 10px;
-
-    h1 {
-      margin-top: 0;
+    margin-top: 0px;
+    h3 {
+      margin-top: 10px;
+      font-size: 20px;
+      @media screen and (max-width: $break-small) {
+        font-size: 13px;
+      }
     }
   }
 }
