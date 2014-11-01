@@ -231,6 +231,15 @@ div.blog-description
     margin: 0 auto;
   }
 
+  div.pillar-image-wrapper {
+    margin: 15px auto;
+    text-align: center;
+    img.pillar-image {
+      width: 60%;
+      margin: 15px auto;
+    }
+  }
+
   p {
     margin: 10px auto;
     max-width: 1000px;
