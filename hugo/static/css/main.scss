@@ -32,6 +32,13 @@ body {
   margin-right: auto;
 }
 
+img.image-fit-width
+{
+  width: 100%;
+  margin-top: 15px;
+  height: auto;
+}
+
 div.page-container {
   margin: 0 0;
   margin-top: 60px;
@@ -214,6 +221,15 @@ div.blog-description
   {
     margin-top: 25px;
   }
+
+  ul > li {
+    font-size: 20px;
+
+    @media screen and (max-width: $break-small) {
+      font-size: 14px;
+    }
+  }
+
 
   h1 {
 
@@ -425,6 +441,13 @@ div.section
     padding-left: 0;
     padding-right: 0;
 
+  }
+
+  .bullet-icon {
+    position: relative;
+    top: 5px;
+    padding-right: 10px;
+    color: rgba(darken($logoColour, 10), 0.7);
   }
 
   a.bullet-link {

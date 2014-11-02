@@ -1,255 +1,241 @@
-<div class="row section fourthGradient">
-    {{ template "partials/index/consultations.html" . }}
-</div>
-<div class="row section firstGradient">
-    <div class="row section-header">
-        <div class="col-xs-3 col-md-2">
-            <i class="fa fa-fw fa-cogs fa-4x pull-right"></i>
+<div class="row button-section" style="padding-top: 10px; padding-bottom: 10px;">
+    <div class="col-md-offset-2 col-md-8 col-xs-offset-0 col-xs-12">
+        <div class="col-sm-3 col-xs-6 centre">
+            <a href="/services/#better" class="centre">Get Better, Get Faster</a>
         </div>
-        <div class="col-xs-8">
-            <h2>Web &amp; Application Development</h2>
+        <div class="col-sm-3 col-xs-6 centre">
+            <a href="/services/#consulting" class="centre">Consulting Services</a>
+        </div>
+        <div class="col-sm-3 col-xs-6 centre">
+            <a href="/services/#appdev" class="centre">Web &amp; Application Development</a>
+        </div>
+        <div class="col-sm-3 col-xs-6 centre">
+            <a href="/services/#startup" class="center">Startup Services</a>
         </div>
     </div>
-    <div class="row">
+</div>
+<div class="anchor" id="better"></div>
+<div class="row section section1">
+    <div class="col-md-offset-2 col-md-8 col-xs-offset-1 col-xs-10">
+        <div class="limited-section-width">
+            <h1 style="text-align: center;">Get Better, Get Faster</h1>
+            <p>Maybe you have good in-house development capabilities, but you'd like to be better. Perhaps you have an idea for a product or feature set but not the capacity build it.</p>
+            <p>Launchcode can improve your in-house processes, take on development efforts and refresh difficult-to-support or poorly designed product to improve your productivity.</p>
+            <p>We'll help you build out new technology or get your existing tech and team in shape so you can sustain a new pace of innovation.</p>
+            <div class="centre"><a style="margin: 20px auto;" href="#contactModal" data-toggle="modal" data-target="#contactModal" class="btn btn-default">Let's Get Started</a></div>
+        </div>
+    </div>
+</div>
+<div class="anchor" id="consulting"></div>
+<div class="row section section2">
+    <div class="limited-section-width">
+        <h1 style="text-align: center;">Consulting Services</h1>
+        <div class="col-xs-3">
+            <img class="image-fit-width" src="/images/services-consulting.png" />
+        </div>
+        <div class="col-xs-9">
+            <p>Launchcode is pleased to offer consulting services in several areas, including:</p>
+            <ul>
+                <li>Application Architecture</li>
+                <li>Application, Data and Network Security</li>
+                <li>Code Auditing</li>
+                <li>Process Reviews</li>
+                <li>Team Structure</li>
+            </ul>
+        </div>
         <div class="col-xs-12">
-            <div class="col-md-1 hidden-sm hidden-xs"></div>
-            <div class="col-md-10 col-sm-12">
-                <div class="col-sm-6 col-xs-12">
-                    <div class="bullet-wrapper">
-                        <div class="table">
-                            <div class="table-row">
-                                <div class="bullet-icon table-cell hidden-xs">
-                                    <i class="fa fa-fw fa-4x fa-flask"></i>
-                                </div>
-                                <div class="table-cell">
-                                    <div class="bullet-title">Prototyping &amp; Validation</div>
-                                    <div class="bullet-body">
-                                        <p>We love tackling problems &amp; bringing solutions to life. Our team has years of experience in building working, fully integrated prototypes and has developed strategies for prototyping new features on existing products that don't mess with the original systems.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-xs-12">
-                    <div class="bullet-wrapper">
-                        <div class="table">
-                            <div class="table-row">
-                                <div class="bullet-icon table-cell hidden-xs">
-                                    <i class="fa fa-fw fa-4x fa-mobile"></i>
-                                </div>
-                                <div class="table-cell">
-                                    <div class="bullet-title">Mobile App Development</div>
-                                    <div class="bullet-body">
-                                        <p>Need to build a cross-platform mobile presence?</p>
-                                        <p>Leveraging the latest tools for Android, Apple and Windows Mobile devices, our team will work with you to bring a new product to life on mobile, or to develop a mobile solution for an existing application.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Add the extra clearfix for only the required viewport -->
-                <div class="clearfix hidden-xs"></div>
-                <div class="col-sm-6 col-xs-12">
-                    <div class="bullet-wrapper">
-                        <div class="table">
-                            <div class="table-row">
-                                <div class="bullet-icon table-cell hidden-xs">
-                                    <i class="fa fa-fw fa-4x fa-laptop"></i>
-                                </div>
-                                <div class="table-cell">
-                                    <div class="bullet-title">Web Design &amp; Development</div>
-                                    <div class="bullet-body">
-                                        <p>More &amp; more frequently, an organization's web site is itself becoming a full-featured application.</p>
-                                        <p>Let us help bring the services your organization offers online to reach more clients more easily.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-xs-12">
-                    <div class="bullet-wrapper">
-                        <div class="table">
-                            <div class="table-row">
-                                <div class="bullet-icon table-cell hidden-xs">
-                                    <i class="fa fa-fw fa-4x fa-magic"></i>
-                                </div>
-                                <div class="table-cell">
-                                    <div class="bullet-title">Application Modernization</div>
-                                    <div class="bullet-body">
-                                        <p>Many organizations, both large and small, have legacy systems that are difficult to support and make needed changes to.</p>
-                                        <p>Our team has expertise in refactoring existing applications to leverage the strengths of existing functionality, while adding new features that are easily supported.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Add the extra clearfix for only the required viewport -->
-                <div class="clearfix hidden-xs"></div>
-                <div class="col-sm-6 col-xs-12">
-                    <div class="bullet-wrapper">
-                        <div class="table">
-                            <div class="table-row">
-                                <div class="bullet-icon table-cell hidden-xs">
-                                    <i class="fa fa-fw fa-4x fa-tasks"></i>
-                                </div>
-                                <div class="table-cell">
-                                    <div class="bullet-title">Lean, Agile Processes</div>
-                                    <div class="bullet-body">
-                                        <p>Our team works directly with our clients in a rapid, collaborative &amp; iterative process that utilizes modern standards, but doesn't weigh projects down with unnecessary overhead.</p>
-                                        <p>Working iteratively ensures that feedback can be quickly incorporated into the product &amp; minimizes the cost of changes.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-xs-12">
-                    <div class="bullet-wrapper">
-                        <div class="table">
-                            <div class="table-row">
-                                <div class="bullet-icon table-cell hidden-xs">
-                                    <i class="fa fa-fw fa-4x fa-fighter-jet fa-rotate-45-ccw"></i>
-                                </div>
-                                <div class="table-cell">
-                                    <div class="bullet-title">Engineering Discipline</div>
-                                    <div class="bullet-body">
-                                        <p>We believe in continuous delivery and continuous deployment.</p>
-                                        <p>During a project, our clients have complete access to the latest testable, running version of the project, updated with every completed task.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Add the extra clearfix for only the required viewport -->
-                <div class="clearfix hidden-xs"></div>
-                <div class="col-sm-6 col-xs-12">
-                    <div class="bullet-wrapper">
-                        <div class="table">
-                            <div class="table-row">
-                                <div class="bullet-icon table-cell hidden-xs">
-                                    <i class="fa fa-fw fa-4x fa-plug"></i>
-                                </div>
-                                <div class="table-cell">
-                                    <div class="bullet-title">Support on Your Terms</div>
-                                    <div class="bullet-body">
-                                        <p>We will support your organization at the level that you require, based on the expertise and talents of your existing staff.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-xs-12">
-                    <div class="bullet-wrapper">
-                        <div class="table">
-                            <div class="table-row">
-                                <div class="bullet-icon table-cell hidden-xs">
-                                    <i class="fa fa-fw fa-4x fa-cloud"></i>
-                                </div>
-                                <div class="table-cell">
-                                    <div class="bullet-title">Hosting How You'd Like</div>
-                                    <div class="bullet-body">
-                                        <p>We offer solutions ranging from internally-facing applications hosted on pre-existing servers behind a corporate firewall to virtualized, cloud-based deployments distributed internationally for low latency access around the globe.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <div class="centre"><a style="margin: 20px auto;" href="#contactModal" data-toggle="modal" data-target="#contactModal" class="btn btn-default">How can we help you?</a></div>
         </div>
     </div>
 </div>
-<div class="row section-header">
-    <div class="col-xs-3 col-md-2">
-        <i class="fa fa-fw fa-lightbulb-o fa-4x pull-right"></i>
-    </div>
-    <div class="col-xs-8">
-        <h2>Startup Support &amp; Concept Development</h2>
-    </div>
-</div>
-<div class="row">
-    <div class="col-xs-12">
-        <div class="col-md-10 col-sm-12 col-md-offset-1">
-            <div class="col-sm-6 col-xs-12">
+<div class="anchor" id="appdev"></div>
+<div class="row section section3">
+    <div class="col-md-offset-2 col-md-8 col-xs-offset-1 col-xs-10">
+        <div class="limited-section-width">
+            <h1 style="text-align: center;">Web &amp; Application Development</h1>
+            <p>We live to bring ideas to life. Here are a few of the ways we do it:</p>
+            <div class="col-sm-6 col-xs-12 no-padding-small">
                 <div class="bullet-wrapper">
-                    <div class="table">
-                        <div class="table-row">
-                            <div class="bullet-icon table-cell hidden-xs">
-                                <i class="fa fa-fw fa-4x fa-flask"></i>
-                            </div>
-                            <div class="table-cell">
-                                <div class="bullet-title">Concept Development</div>
-                                <div class="bullet-body">
-                                    <p>Our team has years of experience in the development and commercialization of new products for both existing enterprises and start-ups.</p>
-                                    <p>We'll help you understand the technical and logistical challenges you may encounter, develop a working prototype and turn a prototype into a finished product.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <table>
+                        <tr>
+                            <td class="bullet-icon"><i class="fa fa-fw fa-2x fa-flask"></i></td>
+                            <td>
+                                <h4 class="bullet-title">Prototyping &amp; Validation</h4>
+                                <p class="bullet-text">We love bringing solutions to life. Our team has years of experience in building fully-functional, integrated prototypes. We've even got ways to prototype new features on existing products that don't mess with the original system.</p>
+                            </td>
+                        </tr>
+                    </table>
                 </div>
             </div>
-            <div class="col-sm-6 col-xs-12">
+            <div class="col-sm-6 col-xs-12 no-padding-small">
                 <div class="bullet-wrapper">
-                    <div class="table">
-                        <div class="table-row">
-                            <div class="bullet-icon table-cell hidden-xs">
-                                <i class="fa fa-fw fa-4x fa-magic"></i>
-                            </div>
-                            <div class="table-cell">
-                                <div class="bullet-title">Operations &amp; Support</div>
-                                <div class="bullet-body">
-                                    <p>There's a lot more involved in creating a new product then software development.</p>
-                                    <p>Whether it's setting up interactive telephone services, corporate e-mail, online newsletters or anything else a startup needs to do, we can help.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <table>
+                        <tr>
+                            <td class="bullet-icon"><i class="fa fa-fw fa-2x fa-mobile"></i></td>
+                            <td>
+                                <h4 class="bullet-title">Mobile App Development</h4>
+                                <p class="bullet-text">Need a cross-platform mobile presence?</p>
+                                <p class="bullet-text">Leveraging the latest tools, our team will bring your new product to life on mobile, or can create mobile solutions for an existing application.</p>
+                            </td>
+                        </tr>
+                    </table>
                 </div>
             </div>
-            <!-- Add the extra clearfix for only the required viewport -->
             <div class="clearfix hidden-xs"></div>
-            <div class="col-sm-6 col-xs-12">
+            <div class="col-sm-6 col-xs-12 no-padding-small">
                 <div class="bullet-wrapper">
-                    <div class="table">
-                        <div class="table-row">
-                            <div class="bullet-icon table-cell hidden-xs">
-                                <i class="fa fa-fw fa-4x fa-laptop"></i>
-                            </div>
-                            <div class="table-cell">
-                                <div class="bullet-title">Market Validation</div>
-                                <div class="bullet-body">
-                                    <p>We'll help you quickly identify your potential customers, determine what kind of questions need to be asked of them and develop mechanisms for validating your product idea.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <table>
+                        <tr>
+                            <td class="bullet-icon"><i class="fa fa-fw fa-2x fa-laptop"></i></td>
+                            <td>
+                                <h4 class="bullet-title">Web &amp; App Development</h4>
+                                <p class="bullet-text">Organization's web sites are frequently becoming full-featured applications.</p>
+                                <p class="bullet-text">Have us make the services your organization offers available instantly with a click, right at your homepage.</p>
+                            </td>
+                        </tr>
+                    </table>
                 </div>
             </div>
-            <div class="col-sm-6 col-xs-12">
+            <div class="col-sm-6 col-xs-12 no-padding-small">
                 <div class="bullet-wrapper">
-                    <div class="table">
-                        <div class="table-row">
-                            <div class="bullet-icon table-cell hidden-xs">
-                                <i class="fa fa-fw fa-4x fa-mobile"></i>
-                            </div>
-                            <div class="table-cell">
-                                <div class="bullet-title">Rapid Prototyping</div>
-                                <div class="bullet-body">
-                                    We're experts in prototyping!<br />
-                                    Whether you have a completely new product idea, or you're looking to test out new features for an existing application, we can get you testing your idea with users or clients quickly.
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <table>
+                        <tr>
+                            <td class="bullet-icon"><i class="fa fa-fw fa-2x fa-magic"></i></td>
+                            <td>
+                                <h4 class="bullet-title">Application Modernization</h4>
+                                <p class="bullet-text">Many organizations have legacy systems that are difficult to support and modify.</p>
+                                <p class="bullet-text">Our team is experienced in refactoring existing applications to radically improve their supportability and lifetime.</p>
+
+                            </td>
+                        </tr>
+                    </table>
                 </div>
             </div>
+            <div class="clearfix hidden-xs"></div>
+            <div class="col-sm-6 col-xs-12 no-padding-small">
+                <div class="bullet-wrapper">
+                    <table>
+                        <tr>
+                            <td class="bullet-icon"><i class="fa fa-fw fa-2x fa-tasks"></i></td>
+                            <td>
+                                <h4 class="bullet-title">Lean, Agile Processes</h4>
+                                <p class="bullet-text">We work in a rapid, collaborative &amp; iterative process that utilizes modern standards, but without unnecessary overhead.</p>
+                                <p class="bullet-text">Working iteratively ensures feedback can be quickly incorporated with minimal impact on timelines or cost.</p>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="col-sm-6 col-xs-12 no-padding-small">
+                <div class="bullet-wrapper">
+                    <table>
+                        <tr>
+                            <td class="bullet-icon"><i class="fa fa-fw fa-2x fa-fighter-jet fa-rotate-45-ccw"></i></td>
+                            <td>
+                                <h4 class="bullet-title">Engineering Discipline</h4>
+                                <p class="bullet-text">We believe in continuous delivery and continuous deployment.</p>
+                                <p class="bullet-text">During a project, our clients have complete access to the latest testable, running version of the project, updated with every completed task.</p>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="clearfix hidden-xs"></div>
+            <div class="col-sm-6 col-xs-12 no-padding-small">
+                <div class="bullet-wrapper">
+                    <table>
+                        <tr>
+                            <td class="bullet-icon"><i class="fa fa-fw fa-2x fa-plug"></i></td>
+                            <td>
+                                <h4 class="bullet-title">Support How You'd Like</h4>
+                                <p class="bullet-text">We will support your organization at the level that you require, based on the expertise and talents of your existing staff.</p>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="col-sm-6 col-xs-12 no-padding-small">
+                <div class="bullet-wrapper">
+                    <table>
+                        <tr>
+                            <td class="bullet-icon"><i class="fa fa-fw fa-2x fa-cloud"></i></td>
+                            <td>
+                                <h4 class="bullet-title">Hosting on Your Terms</h4>
+                                <p class="bullet-text">We offer solutions ranging from hosting on servers behind a corporate firewall to distributed cloud-based deployments for low latency access around the globe.</p>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="centre"><a style="margin: 20px auto;" href="#contactModal" data-toggle="modal" data-target="#contactModal" class="btn btn-default">Tell Us About Your Project</a></div>
         </div>
     </div>
 </div>
-
+<div class="anchor" id="startup"></div>
+<div class="row section section4">
+    <div class="col-md-offset-2 col-md-8 col-xs-offset-1 col-xs-10">
+        <div class="limited-section-width">
+            <h1 style="text-align: center;">Startup Services</h1>
+            <p>Companies that are just starting up typically have small budgets and broad, evolving needs. Technical resources with skills spanning those needs are in high-demand and expensive.</p>
+            <p>Before sinking capital or equity into a technical co-founder or team, find out how we can help. We offer a number of services directed specifically at start-ups:</p>
+            <div class="col-sm-6 col-xs-12 no-padding-small">
+                <div class="bullet-wrapper">
+                    <table>
+                        <tr>
+                            <td class="bullet-icon"><i class="fa fa-fw fa-2x fa-lightbulb-o"></i></td>
+                            <td>
+                                <h4 class="bullet-title">Concept Development</h4>
+                                <p class="bullet-text">We have years of experience in the development of new products for existing enterprises and start-ups.</p>
+                                <p class="bullet-text">We'll help you understand the technical and logistical challenges you may encounter, develop a working prototype and turn a prototype into a finished product.</p>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="col-sm-6 col-xs-12 no-padding-small">
+                <div class="bullet-wrapper">
+                    <table>
+                        <tr>
+                            <td class="bullet-icon"><i class="fa fa-fw fa-2x fa-cog"></i></td>
+                            <td>
+                                <h4 class="bullet-title">Operations &amp; Support</h4>
+                                <p class="bullet-text">There's a lot more to a start-up than software development.</p>
+                                <p class="bullet-text">We'll handle the set-up of interactive telephone services, corporate e-mail, online newsletters and a myriad of other startup needs using popular &amp; affordable services.</p>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="clearfix hidden-xs"></div>
+            <div class="col-sm-6 col-xs-12 no-padding-small">
+                <div class="bullet-wrapper">
+                    <table>
+                        <tr>
+                            <td class="bullet-icon"><i class="fa fa-fw fa-2x fa-dashboard"></i></td>
+                            <td>
+                                <h4 class="bullet-title">Rapid Prototyping</h4>
+                                <p class="bullet-text">We're experts in prototyping!</p>
+                                <p class="bullet-text">Whether you have a completely new product idea, or you're looking to test out new features for an existing application, we can get you testing your idea with users or clients quickly.
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="col-sm-6 col-xs-12 no-padding-small">
+                <div class="bullet-wrapper">
+                    <table>
+                        <tr>
+                            <td class="bullet-icon"><i class="fa fa-fw fa-2x fa-users"></i></td>
+                            <td>
+                                <h4 class="bullet-title">Consulting &amp; Mentoring</h4>
+                                <p class="bullet-text">We're happy to provide guidance and share our experiences with your staff.</p>
+                                <p class="bullet-text">By retaining us for regular or occasional sessions, we can help your team validate their architecture, implement best-practices processes and identify issues that are difficult to see from inside.</p>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="centre"><a style="margin: 20px auto;" href="#contactModal" data-toggle="modal" data-target="#contactModal" class="btn btn-default">Tell Us About Your Start-up</a></div>
+        </div>
+    </div>
+</div>
