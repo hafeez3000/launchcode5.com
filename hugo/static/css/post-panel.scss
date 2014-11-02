@@ -16,7 +16,18 @@ div.post-wrapper {
   box-shadow: 2px 2px 2px 2px #888;
 
   div.post-header {
-    padding: 20px 20px;
+    padding: 0px 20px;
+    min-height: 82px;
+    max-height: 82px;
+
+    overflow: visible;
+    opacity: 1;
+    transition: 0.5s;
+  }
+
+  &:hover div.post-header {
+    opacity: 0;
+    transition: 0.5s;
   }
 
   div.post-body
@@ -76,11 +87,36 @@ div.post-wrapper {
     text-decoration: none;
   }
 
-  .post-category
-  {
+  .post-category {
+
     font-size: 8pt;
     margin: 0 0;
     padding: 4px 6px;
+
+    &.team {
+      background-color: $teamColour;
+      color: darken($teamColour, 60);
+    }
+
+    &.tech {
+      background-color: $techColour;
+      color: darken($techColour, 60);
+    }
+
+    &.process {
+      background-color: $processColour;
+      color: darken($processColour, 60);
+    }
+
+    &.launchcode {
+      background-color: $launchcodeColour;
+      color: darken($launchcodeColour, 60);
+    }
+
+    &.gotcha {
+      background-color: $gotchaColour;
+      color: darken($gotchaColour, 30);
+    }
   }
 
   div.table-row {
@@ -117,15 +153,34 @@ div.post-wrapper {
     {
       text-align: left;
     }
+
+    &.team {
+      background-color: $teamColour;
+      color: darken($teamColour, 50);
+    }
+
+    &.tech {
+      background-color: $techColour;
+      color: darken($techColour, 50);
+    }
+
+    &.process {
+      background-color: $processColour;
+      color: darken($processColour, 50);
+    }
+
+    &.launchcode {
+      background-color: $launchcodeColour;
+      color: darken($launchcodeColour, 50);
+    }
+
+    &.gotcha {
+      background-color: $gotchaColour;
+      color: darken($gotchaColour, 50);
+    }
   }
 
   &:hover {
     cursor: pointer;
   }
-}
-
-div.post-title {
-  margin-top: 20px;
-  margin-bottom: 20px;
-  font-size: 21px;
 }

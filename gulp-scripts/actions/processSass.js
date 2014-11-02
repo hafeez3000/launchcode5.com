@@ -5,7 +5,7 @@ var gulp                    = require('gulp'),
 
 module.exports = function(buildProperties, callback){
     plugins.util.log('Building main.css...');
-    return gulp.src(['./hugo/static/css/*.scss'])
+    return gulp.src(['hugo/static/css/*.scss', 'hugo/layouts/**/*.scss'])
             .pipe(plugins.concat('./css/main.css'))
             .pipe(sass({ includePaths : ['./hugo/static/css/'] }))
             .pipe(streamify(plugins.size({ showFiles: true })))

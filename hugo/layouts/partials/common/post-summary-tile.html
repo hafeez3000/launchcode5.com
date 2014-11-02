@@ -2,7 +2,7 @@
     <div class="post-wrapper {{ index .Params.categories 0 }}" onclick="location.href = '{{ .Permalink }}';">
         {{ $category := index .Params.categories 0 }}
         <div class="post-category {{ $category }}">
-            {{ if eq $category "launchcode" }}Launchcode News Blog{{ end }}
+            {{ if eq $category "launchcode" }}Launchcode News{{ end }}
             {{ if eq $category "gotcha" }}Gotcha! Quick Solutions &amp; Frustrations{{ end }}
             {{ if eq $category "tech" }}Technology &amp; Design{{ end }}
             {{ if eq $category "process" }}Management &amp; Process{{ end }}

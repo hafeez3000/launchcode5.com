@@ -16,25 +16,29 @@
         </div>
     </div>
         <div class="container-fluid single-post-wrapper">
-            <div class="row button-section" style="padding-top: 10px; padding-bottom: 10px;">
-                <div class="col-md-2">Our Blogs:</div>
-                <div class="col-md-8 col-xs-offset-0 col-xs-12">
-                    <div class="col-sm-3 col-xs-6 centre">
-                        <a href="/categories/launchcode/" class="centre">Launchcode News</a>
-                    </div>
-                    <div class="col-sm-3 col-xs-6 centre">
-                        <a href="/categories/tech/" class="centre">Technology &amp; Design</a>
-                    </div>
-                    <div class="col-sm-3 col-xs-6 centre">
-                        <a href="/categories/team/" class="centre">Team Management</a>
-                    </div>
-                    <div class="col-sm-3 col-xs-6 centre">
-                        <a href="/categories/gotcha/" class="centre">Gotchas &amp; Fixes</a>
-                    </div>
-                    <div class="col-sm-3 col-xs-6 centre">
-                        <a href="/categories/process/" class="center">Business &amp; Process</a>
-                    </div>
-                </div>
+            <div class="row button-section">
+                <table class="hidden-sm hidden-xs button-table" cellspacing="0" cellpadding="0">
+                    <tr>
+                        <td class="{{ if eq $category "launchcode" }}selected{{ end }}"><a href="/categories/launchcode/" class="centre"><img class="category-button" src="/images/blog-launchcode-btn.png" /></a></td>
+                        <td class="{{ if eq $category "process" }}selected{{ end }}"><a href="/categories/process/" class="center"><img class="category-button" src="/images/blog-process-btn.png" /></a></td>
+                        <td class="{{ if eq $category "team" }}selected{{ end }}"><a href="/categories/team/" class="centre"><img class="category-button" src="/images/blog-team-btn.png" /></a></td>
+                        <td class="{{ if eq $category "tech" }}selected{{ end }}"><a href="/categories/tech/" class="centre"><img class="category-button" src="/images/blog-tech-btn.png" /></a></td>
+                        <td class="{{ if eq $category "gotcha" }}selected{{ end }}"><a href="/categories/gotcha/" class="centre"><img class="category-button" src="/images/blog-gotcha-btn.png" /></a></td>
+                    </tr>
+                </table>
+                <table class="hidden-lg hidden-md button-table" cellspacing="0" cellpadding="0">
+                    <tr>
+                        <td class="{{ if eq $category "launchcode" }}selected{{ end }}"><a href="/categories/launchcode/" class="centre"><img class="category-button" src="/images/blog-launchcode-btn.png" /></a></td>
+                        <td class="{{ if eq $category "process" }}selected{{ end }}"><a href="/categories/process/" class="center"><img class="category-button" src="/images/blog-process-btn.png" /></a></td>
+                    </tr>
+                </table>
+                <table class="hidden-lg hidden-md button-table" cellspacing="0" cellpadding="0">
+                    <tr>
+                        <td class="{{ if eq $category "team" }}selected{{ end }}"><a href="/categories/team/" class="centre"><img class="category-button" src="/images/blog-team-btn.png" /></a></td>
+                        <td class="{{ if eq $category "tech" }}selected{{ end }}"><a href="/categories/tech/" class="centre"><img class="category-button" src="/images/blog-tech-btn.png" /></a></td>
+                        <td class="{{ if eq $category "gotcha" }}selected{{ end }}"><a href="/categories/gotcha/" class="centre"><img class="category-button" src="/images/blog-gotcha-btn.png" /></a></td>
+                    </tr>
+                </table>
             </div>
 
             <div class="row single-post-row">
@@ -63,6 +67,13 @@
                         </div>
                         <div class="post flowtype">
                             {{ .Content }}
+                        </div>
+                        <div class="col-xs-12 hidden-lg hidden-md hidden-sm" style="border-bottom: 1px solid #cccccc; padding-bottom: 15px; margin-bottom: 15px;">
+                            <h3>The Author</h3>
+                            {{ template "partials/authors/author-mid.html" . }}
+                            <div style="margin-top: 15px;">
+                                <a class="hand btn btn-block btn-primary" onclick="twitterFollow('launchcode5');"><i class="fa fa-fw fa-twitter fa-lg"></i>Follow Launchcode5</a>
+                            </div>
                         </div>
                         <div class="row next-prev-navigation">
                             <div class="prev-box col-md-4 col-sm-12">

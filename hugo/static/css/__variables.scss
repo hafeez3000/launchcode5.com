@@ -1,18 +1,44 @@
 $firstColour   : #0075CF;
-$secondColour  : #57DEFF;
+$secondColour  : darken(#E0E4CC,30);
 $thirdColour   : #0BA6FF;
-$fourthColour  : lighten(#85C441, 10);
+$fourthColour  : lighten(#DDDDDD, 10);
 $fifthColour   : #0C100B;
 $darkColour    : #253C4A;
 
 $logoColour    : #3e6e95;
-/* Colours generated from our banner image using pictaculous.com */
+/* Colour used as overlay in header graphics is #173850 */
+$overlayColour : #173850;
+$lighterOverlay: #2c5877;
 
 
 $break-small: 768px;
 
 $techColour : lighten($secondColour, 5);
-$launchcodeColour: lighten($firstColour, 25);
+$launchcodeColour: lighten($lighterOverlay, 20);
 $gotchaColour: lighten(#cc9999, 5);
 $teamColour : darken($fourthColour, 15);
-$processColour: lighten($logoColour,25);
+$processColour: lighten($logoColour,40);
+
+/* Some Bootstrap Overrides */
+
+.btn {
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  -webkit-font-smoothing: antialiased !important;
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
+}
+.btn-primary {
+  background-color: $logoColour;
+}
+
+.btn-default {
+  color: $logoColour;
+}
+
+a {
+  color: $logoColour;
+
+  &:hover {
+    text-decoration: none;
+    color: lighten($logoColour, 15);
+  }
+}

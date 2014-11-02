@@ -1,0 +1,41 @@
+div.author-brief {
+  position: absolute;
+  bottom: -35px;
+  width: 100%;
+  transition: all 0.4s ease 0;
+  padding-left: 15px;
+  padding-right: 15px;
+
+  div.table-row {
+    position: relative;
+    display: table-row;
+    width: 100%;
+  }
+
+  div.post-author {
+    display: table-cell;
+    opacity: 0;
+    transition: all 0.4s ease 0;
+    width: 70%;
+
+    .author {
+      text-align: left;
+    }
+
+    .author-brief
+    {
+      color: lighten($darkColour, 30);
+    }
+  }
+
+  div.post-author-pic {
+    display: table-cell;
+    width: 30%;
+    img.author-pic {
+      width: 100px;
+      height: auto;
+      border-radius: 50%;
+      border: 1px solid white;
+    }
+  }
+}

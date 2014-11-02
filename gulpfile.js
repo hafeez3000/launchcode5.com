@@ -83,10 +83,10 @@ gulp.task('express', function(callback) {
     runSequence('clean', 'build-dev', function()
     {
         plugins.util.log("Starting watches...");
-        gulp.watch(['./src/js/**/*.js', './src/js/**/*.tpl.html'], ['scripts']);
-        gulp.watch(['hugo/static/**/*.scss'], ['buildCss']);
-        gulp.watch(['hugo/static/**/*', '!hugo/static/**/*.scss'], ['build-dev']);
-        gulp.watch(['hugo/content/**/*', 'hugo/layouts/**/*'], ['build-dev']);
+        gulp.watch(['./src/js/**/*.js'], ['scripts']);
+        gulp.watch(['hugo/**/*.scss'], ['buildCss']);
+        gulp.watch(['hugo/static/**/*', '!hugo/static/**/*.scss'], ['build-dev']); /* We really don't need to do a build for this - just move the files over. */
+        gulp.watch(['hugo/content/**/*', 'hugo/layouts/**/*', '!hugo/layouts/**/*.scss'], ['build-dev']);
     });
 });
 

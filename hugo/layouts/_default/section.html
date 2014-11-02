@@ -8,76 +8,44 @@
 </head>
 <body lang="en" class="body-gradient-{{ $category }}">
 {{ template "partials/common/page-header.html" . }}
-<div class="container-fluid section-wrapper">
-    <div class="row">
-        <div class="category-table">
-            <div class="col-sm-10 col-sm-offset-1 col-xs-12">
-                <div class="table-cell our-blogs">
-                    Our Blogs
-                </div>
-            </div>
+<div class="page-banner-table blog-banner-table">
+    <div class="page-banner-row">
+        <div class="page-banner-cell">
+            <img class="page-banner-image" src="/images/blog-all.jpg" />
         </div>
     </div>
-    <div class="row">
-        <div class="category-table">
-            <div class="table-row">
-                <div class="table-cell">
-                    <img class="circuit-left" src="/images/circuitboard.png" />
-                </div>
-                <div class="table-cell blog-title">
-                   <a href="/categories/launchcode">
-                        <svg class="title-svg launchcode" viewBox="0 0 164 110">
-                            <ellipse cx="82" cy="55" rx="80" ry="55" />
-                            <text x="23" y="65" class="tk-youngblood title" style="font-size: 42pt; text-shadow: 2px 2px rgba(15, 15, 15, 0.25);">Thrive</text>
-                            <text x="23" y="80" class="tk-freight-sans-pro description" style="font-size: 10pt; text-transform: uppercase;">Launchcode News</text>
-                        </svg>
-                    </a>
-                </div>
-                <div class="table-cell blog-title">
-                    <a href="/categories/gotcha">
-                        <svg class="title-svg gotcha" viewBox="0 0 164 110">
-                            <ellipse cx="82" cy="55" rx="80" ry="55"  />
-                            <text x="30" y="65" class="tk-youngblood title" style="font-size: 42pt; text-shadow: 2px 2px rgba(15, 15, 15, 0.25);">Gotcha</text>
-                            <text x="35" y="80" class="tk-freight-sans-pro description" style="font-size: 10pt; text-transform: uppercase;">Quick Solutions</text>
-                        </svg>
-                    </a>
-                </div>
-                <div class="table-cell blog-title">
-                    <a href="/categories/tech">
-                        <svg class="title-svg tech" viewBox="0 0 164 110">
-                            <ellipse cx="82" cy="55" rx="80" ry="55" />
-                            <text x="32" y="65" class="tk-youngblood title" style="font-size: 42pt; text-shadow: 2px 2px rgba(15, 15, 15, 0.25);">Evolve</text>
-                            <text x="17" y="80" class="tk-freight-sans-pro description" style="font-size: 9pt; text-transform: uppercase;">Design &amp; Development</text>
-                        </svg>
-                    </a>
-                </div>
-                <div class="table-cell blog-title">
-                    <a href="#/categories/process" onclick="noArticles()">
-                        <svg class="title-svg process" viewBox="0 0 164 110">
-                            <ellipse cx="82" cy="55" rx="80" ry="55"  />
-                            <text x="24" y="65" class="tk-youngblood title" style="font-size: 42pt;  text-shadow: 2px 2px rgba(15, 15, 15, 0.25);">Emerge</text>
-                            <text x="23" y="80" class="tk-freight-sans-pro description" style="font-size: 10pt;  text-transform: uppercase;">Business &amp; Process</text>
-                        </svg>
-                    </a>
-                </div>
-                <div class="table-cell blog-title">
-                    <a href="#/categories/team" onclick="noArticles()">
-                        <svg class="title-svg team" viewBox="0 0 164 110">
-                            <ellipse cx="82" cy="55" rx="80" ry="55"   />
-                            <text x="12" y="63" class="tk-youngblood title" style="font-size: 34pt;  text-shadow: 2px 2px rgba(15, 15, 15, 0.25);">Collaborate</text>
-                            <text x="23" y="80" class="tk-freight-sans-pro description" style="font-size: 10pt; text-transform: uppercase;">Team Management</text>
-                        </svg>
-                    </a>
-                </div>
-                <div class="table-cell">
-                    <img class="circuit-right" src="/images/circuitboard.png" />
-                </div>
-            </div>
-        </div>
+</div>
+<div class="container-fluid single-post-wrapper">
+    <div class="row button-section">
+        <table class="hidden-sm hidden-xs button-table" cellspacing="0" cellpadding="0">
+            <tr>
+                <td><a href="/categories/launchcode/" class="centre"><img class="category-button" src="/images/blog-launchcode-btn.png" /></a></td>
+                <td><a href="/categories/process/" class="center"><img class="category-button" src="/images/blog-process-btn.png" /></a></td>
+                <td><a href="/categories/team/" class="centre"><img class="category-button" src="/images/blog-team-btn.png" /></a></td>
+                <td><a href="/categories/tech/" class="centre"><img class="category-button" src="/images/blog-tech-btn.png" /></a></td>
+                <td><a href="/categories/gotcha/" class="centre"><img class="category-button" src="/images/blog-gotcha-btn.png" /></a></td>
+            </tr>
+        </table>
+        <table class="hidden-lg hidden-md button-table" cellspacing="0" cellpadding="0">
+            <tr>
+                <td><a href="/categories/launchcode/" class="centre"><img class="category-button" src="/images/blog-launchcode-btn.png" /></a></td>
+                <td><a href="/categories/process/" class="center"><img class="category-button" src="/images/blog-process-btn.png" /></a></td>
+            </tr>
+        </table>
+        <table class="hidden-lg hidden-md button-table" cellspacing="0" cellpadding="0">
+            <tr>
+                <td><a href="/categories/team/" class="centre"><img class="category-button" src="/images/blog-team-btn.png" /></a></td>
+                <td><a href="/categories/tech/" class="centre"><img class="category-button" src="/images/blog-tech-btn.png" /></a></td>
+                <td><a href="/categories/gotcha/" class="centre"><img class="category-button" src="/images/blog-gotcha-btn.png" /></a></td>
+            </tr>
+        </table>
     </div>
-    <div class="row section first-gradient">
-        <div class="col-md-10 col-md-offset-1 col-sm-12 article-body {{ $category }}">
-            <div class="col-xs-12"><h5>RECENT POSTS</h5></div>
+    <div class="row section section1">
+        <div class="col-md-10 col-md-offset-1 col-sm-12">
+            <p>We believe in sharing our experiences, successes and failures with each other and with the wider world. Select a category above, or a recent post below. <a class="hand" onclick="twitterFollow('launchcode5');">Follow us on Twitter</a> to never miss a post.</p>
+        </div>
+        <div class="col-md-10 col-md-offset-1 col-sm-12">
+            <div class="col-xs-12"><h1>Recent Posts</h1></div>
             <div class="col-xs-12 ">
                     <div class="posts">
                         {{ range .Data.Pages.ByDate.Reverse }}

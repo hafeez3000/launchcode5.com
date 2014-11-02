@@ -1,4 +1,11 @@
-.single-post-wrapper
+div.blog-banner-table
+{
+  border-bottom: 2px solid darken($firstColour, 20);
+
+}
+
+
+div.single-post-wrapper
 {
   min-height: 1000px;
 
@@ -19,6 +26,56 @@
         text-align: right;
       }
     }
+  }
+
+  div.button-section {
+
+      padding: 0;
+      margin: 0;
+      margin-left: -15px;
+      margin-right: -15px;
+
+      img.category-button
+      {
+        width: 100%;
+        height: auto;
+        padding: 0;
+        margin: 0;
+      }
+
+      table.button-table
+      {
+        padding: 0;
+        margin: 0;
+        height: auto;
+        border-bottom: 2px solid darken($firstColour, 20);
+
+        td {
+          opacity: 0.6;
+          position: relative;
+          &:hover {
+            opacity: 1.0;
+          }
+        }
+
+        td.selected {
+          opacity: 1.0;
+          &:before {
+            position: absolute;
+            left: 45%;
+            top: 0;
+            margin: 0 auto;
+            border-top: 10px solid darken($firstColour, 20);
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            box-sizing: border-box;
+            content: "";
+            width: 0;
+            height: 0;
+          }
+        }
+
+      }
   }
 
   div.blog-title {
@@ -60,7 +117,7 @@
     padding: 0;
 
     h1 {
-      margin: 5px 0 0 0;
+      margin: 15px 0 15px 0;
     }
 
     div.post-date {
@@ -231,56 +288,19 @@ div.next-prev-navigation {
   }
 }
 
-.body-gradient-launchcode {
-  @include gradient(lighten($launchcodeColour, 25), #FFFFFD);
-}
-
-.body-gradient-process {
-  @include gradient(lighten($processColour, 40), #FFFFFD);
-}
-
-.body-gradient-team {
-  @include gradient(lighten($teamColour, 20), #FFFFFD);
-}
-
-.body-gradient-tech {
-  @include gradient(lighten($techColour, 20), #FFFFFD);
-
-}
-
-.body-gradient-gotcha {
-  @include gradient(lighten($gotchaColour, 20), #FFFFFD);
-
-}
-
 div.single-post-row
 {
+  padding-top: 15px;
   margin-bottom: 10px;
+  margin-top: 15px;
 }
 
 div.article-body
 {
+  margin-top: 10px !important;
   background-color: #FFFFFD;
   border-radius: 10px;
 
-  &.launchcode {
-    border-top: 10px solid $launchcodeColour;
-  }
 
-  &.tech {
-    border-top: 10px solid $techColour;
-  }
-
-  &.team {
-    border-top: 10px solid $teamColour;
-  }
-
-  &.process {
-    border-top: 10px solid $processColour;
-  }
-
-  &.gotcha {
-    border-top: 10px solid $gotchaColour;
-  }
 }
 
