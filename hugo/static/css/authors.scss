@@ -11,8 +11,6 @@ div.author-brief {
     position: relative;
     display: table-row;
     width: 100%;
-
-
   }
 
   div.post-author {
@@ -30,9 +28,25 @@ div.author-brief {
       color: lighten($darkColour, 30);
     }
   }
+}
 
-  div.post-author-pic {
+div.author-mid
+{
+  width: 100%;
+  display: table;
+  margin: 15px auto;
+
+  div.table-row {
+    display: table-row;
+    position: relative;
+    width: 100%;
+  }
+
+  div.author-mid-details {
+    margin: 10px auto;
+    text-align: center;
     display: table-cell;
+    background-color: red;
     width: 30%;
     img.author-pic {
       width: 100px;
@@ -40,20 +54,23 @@ div.author-brief {
       border-radius: 50%;
       border: 1px solid white;
     }
-  }
-}
 
-div.author-mid
-{
-  display: table;
+    h5.author-name {
+      margin-top: 0;
+      font-size: 12px;
+      text-align: left;
+      margin-bottom: 0;
+    }
 
-
-  div.table-row {
-    display: table-row;
-    position: relative;
-    width: 100%;
-
-
+    p.author-role {
+      margin-top: 3px;
+      margin-left: auto;
+      margin-right: auto;
+      font-size: 10px;
+      opacity: 0.7;
+      font-style: italic;
+      text-align: left;
+    }
   }
 
   div.single-post-author-pic
@@ -67,21 +84,6 @@ div.author-mid
       width: 120px;
       height: auto;
       border-radius: 50%;
-    }
-
-    h5.author-name {
-      margin-top: 0;
-      font-size: 12px;
-      text-align: left;
-      margin-bottom: 0;
-    }
-
-    p.author-role {
-      margin-top: 3px;
-      font-size: 10px;
-      opacity: 0.7;
-      font-style: italic;
-      text-align: left;
     }
   }
 
