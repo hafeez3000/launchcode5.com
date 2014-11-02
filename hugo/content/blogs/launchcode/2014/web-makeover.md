@@ -9,7 +9,7 @@ categories = ["launchcode"]
 tags = ["launchcode5", "flowtype"]
 +++
 {{% figure src="/images/posts/launchcode/2014/wet-paint-sign-bench.jpg" title="" %}}
-Today we're pleased to be publishing a new look, improved navigation and social integration, among a number of other improvements. 
+Today we're pleased to be publishing a new look and improved navigation and social integration, among a number of other improvements. 
 
 One of the features I like best is [flowtype](http://simplefocus.com/flowtype/). Flowtype automatically adjusts the size of the text in our blog posts to make them easy to read, regardless of the device you're using. Try resizing your browser window to see it in action. It's pretty great.
 

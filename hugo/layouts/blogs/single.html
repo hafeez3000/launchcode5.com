@@ -59,10 +59,11 @@
                                     <span class="tag"><a href="/tags/{{ lower .}}/">{{ . }}</a></span>
                                 {{ end }}
                             </div>
-                            {{ template "partials/3rd-party-scripts/share.html" . }}
-                            <div class="post-comment-count btn btn-default">
-                                <i class="fa fa-comments"></i>
-                                <a href="{{ .Permalink }}/#disqus_thread" data-disqus-identifier="{{ .Params.disqusid }}">View Comments</a>
+                            <div style="margin-top: 10px;">{{ template "partials/3rd-party-scripts/share.html" . }}
+                                <div class="post-comment-count btn btn-default">
+                                    <i class="fa fa-comments"></i>
+                                    <a href="{{ .Permalink }}/#disqus_thread" data-disqus-identifier="{{ .Params.disqusid }}">View Comments</a>
+                                </div>
                             </div>
                         </div>
                         <div class="post flowtype">
