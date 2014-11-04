@@ -379,8 +379,55 @@ div.section
 
 .nav > li > a
 {
-  padding: 10px 10px;
+  padding: 10px 8px;
   padding-top: 15px;
+}
+
+.nav.nav-pills > li > a > div.nav-social-btn
+{
+  width: 25px;
+  height: 25px;
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.nav.nav-pills > li > a.twitter-follow-btn
+{
+  background-color: darken(#3071a9, 10);
+  color: #E0E0E0 !important;
+  margin: 0 0;
+  padding: 2px 2px;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+.nav.nav-pills > li > a.feedburner-subscribe-btn
+{
+  background-color: darken(#FF6600, 10);
+  color: #E0E0E0 !important;
+  margin: 0 0;
+  padding: 2px 2px;
+  margin-left: 3px;
+  margin-top: 10px;
+}
+
+.nav.nav-pills > li > a > span.twitter-follow-btn {
+  color:  #F0F0F0 !important;
+  background-color: #3071a9;
+  &:hover, &:focus {
+    color:  #F0F0F0 !important;
+    background-color: #3071a9;
+  }
+}
+
+.nav.nav-pills > li > a > span.feedburner-subscribe-btn {
+  color:  #F0F0F0 !important;
+  background-color: #FF6600;
+  &:hover, &:focus {
+    color:  #F0F0F0 !important;
+    background-color: #FF6600;
+  }
 }
 
 .navbar-default .navbar-brand
@@ -402,7 +449,6 @@ div.section
 
 .navbar-default .navbar-nav > .active > a,
 .navbar-default .navbar-nav > .active > a:hover {
-    background-color: rgba($fourthColour, 0.8);
     color: #F0FFFF;
 }
 
