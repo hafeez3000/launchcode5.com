@@ -19,6 +19,7 @@ If you are interested in contributing to Launchcode, please send me a note or a 
 
 Thanks for reading, 
 <br />
+<br />
 **Ryan Kimber**  
 Technologist and Founding Contributor  
 Launchcode Software Studios  

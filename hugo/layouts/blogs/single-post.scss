@@ -45,19 +45,20 @@ div.single-post-wrapper
 
       table.button-table
       {
+        width: 100%;
         padding: 0;
         margin: 0;
         height: auto;
         border-bottom: 2px solid darken($firstColour, 20);
 
-        td {
+        tr > td {
+          width: 20%;
           opacity: 0.6;
           position: relative;
           &:hover {
             opacity: 1.0;
           }
         }
-
         td.selected {
           opacity: 1.0;
           &:before {
