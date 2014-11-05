@@ -6,12 +6,12 @@
         <!-- This is where the head starts -->
         {{ template "partials/common/html-header.html" . }}
     </head>
-    <body lang="en" class="body-gradient-{{ $category }}">
+    <body lang="en" class="list-page">
     {{ template "partials/common/page-header.html" . }}
     <div class="page-banner-table blog-banner-table">
         <div class="page-banner-row">
             <div class="page-banner-cell">
-                <img class="page-banner-image" src="/images/blog-{{ $category }}.png" />
+                <img class="page-banner-image" src="/images/blog-{{ $category }}.jpg" />
             </div>
         </div>
     </div>
@@ -19,30 +19,30 @@
         <div class="row button-section">
             <table class="hidden-sm hidden-xs button-table" cellspacing="0" cellpadding="0">
                 <tr>
-                    <td class="{{ if eq $category "launchcode" }}selected{{ end }}"><a href="/categories/launchcode/" class="centre"><img class="category-button" src="/images/blog-launchcode-btn.png" /></a></td>
-                    <td class="{{ if eq $category "process" }}selected{{ end }}"><a href="/categories/process/" class="center"><img class="category-button" src="/images/blog-process-btn.png" /></a></td>
-                    <td class="{{ if eq $category "team" }}selected{{ end }}"><a href="/categories/team/" class="centre"><img class="category-button" src="/images/blog-team-btn.png" /></a></td>
-                    <td class="{{ if eq $category "tech" }}selected{{ end }}"><a href="/categories/tech/" class="centre"><img class="category-button" src="/images/blog-tech-btn.png" /></a></td>
-                    <td class="{{ if eq $category "gotcha" }}selected{{ end }}"><a href="/categories/gotcha/" class="centre"><img class="category-button" src="/images/blog-gotcha-btn.png" /></a></td>
+                    <td class="{{ if eq $category "launchcode" }}selected{{ end }}"><a href="/categories/launchcode/" class="centre"><img class="category-button" src="/images/blog-launchcode-btn.jpg" /></a></td>
+                    <td class="{{ if eq $category "process" }}selected{{ end }}"><a href="/categories/process/" class="center"><img class="category-button" src="/images/blog-process-btn.jpg" /></a></td>
+                    <td class="{{ if eq $category "team" }}selected{{ end }}"><a href="/categories/team/" class="centre"><img class="category-button" src="/images/blog-team-btn.jpg" /></a></td>
+                    <td class="{{ if eq $category "tech" }}selected{{ end }}"><a href="/categories/tech/" class="centre"><img class="category-button" src="/images/blog-tech-btn.jpg" /></a></td>
+                    <td class="{{ if eq $category "gotcha" }}selected{{ end }}"><a href="/categories/gotcha/" class="centre"><img class="category-button" src="/images/blog-gotcha-btn.jpg" /></a></td>
                 </tr>
             </table>
             <table class="hidden-lg hidden-md button-table" cellspacing="0" cellpadding="0">
                 <tr>
-                    <td class="{{ if eq $category "launchcode" }}selected{{ end }}"><a href="/categories/launchcode/" class="centre"><img class="category-button" src="/images/blog-launchcode-btn.png" /></a></td>
-                    <td class="{{ if eq $category "process" }}selected{{ end }}"><a href="/categories/process/" class="center"><img class="category-button" src="/images/blog-process-btn.png" /></a></td>
+                    <td class="{{ if eq $category "launchcode" }}selected{{ end }}"><a href="/categories/launchcode/" class="centre"><img class="category-button" src="/images/blog-launchcode-btn.jpg" /></a></td>
+                    <td class="{{ if eq $category "process" }}selected{{ end }}"><a href="/categories/process/" class="center"><img class="category-button" src="/images/blog-process-btn.jpg" /></a></td>
                 </tr>
             </table>
             <table class="hidden-lg hidden-md button-table" cellspacing="0" cellpadding="0">
                 <tr>
-                    <td class="{{ if eq $category "team" }}selected{{ end }}"><a href="/categories/team/" class="centre"><img class="category-button" src="/images/blog-team-btn.png" /></a></td>
-                    <td class="{{ if eq $category "tech" }}selected{{ end }}"><a href="/categories/tech/" class="centre"><img class="category-button" src="/images/blog-tech-btn.png" /></a></td>
-                    <td class="{{ if eq $category "gotcha" }}selected{{ end }}"><a href="/categories/gotcha/" class="centre"><img class="category-button" src="/images/blog-gotcha-btn.png" /></a></td>
+                    <td class="{{ if eq $category "team" }}selected{{ end }}"><a href="/categories/team/" class="centre"><img class="category-button" src="/images/blog-team-btn.jpg" /></a></td>
+                    <td class="{{ if eq $category "tech" }}selected{{ end }}"><a href="/categories/tech/" class="centre"><img class="category-button" src="/images/blog-tech-btn.jpg" /></a></td>
+                    <td class="{{ if eq $category "gotcha" }}selected{{ end }}"><a href="/categories/gotcha/" class="centre"><img class="category-button" src="/images/blog-gotcha-btn.jpg" /></a></td>
                 </tr>
             </table>
         </div>
         <div class="row single-post-row">
             <div class="col-sm-10 col-sm-offset-1 col-xs-12 article-body {{ $category }}">
-                <div class="col-xs-12"><h1>Recent Posts</h1></div>
+                <div class="col-xs-12"><h1>Recent Posts About <span class="tag">{{ .Title }}</span></h1></div>
                 <div class="col-xs-12">
                     <div class="content">
                         <div class="posts">

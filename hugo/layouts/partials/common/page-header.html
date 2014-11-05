@@ -5,7 +5,7 @@
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#wych-navbar-collapse">
-                <div style="float: left; margin-right: 15px;">MENU</div>
+                <div style="float: left; margin-right: 10px;">MENU</div>
                 <div style="float: right; padding-top: 3px;">
                     <span class="sr-only">Toggle navigation</span>
                     <!-- These spans represent the sandwich button -->
@@ -14,15 +14,15 @@
                     <span class="icon-bar"></span>
                 </div>
             </button>
-            <a href="/"><img src="/images/logo-300px.png" style="margin-top: 10px; margin-left: 15px;width: auto; height: 25px;"></img></a>
+            <a href="/"><img src="/images/logo-300px.png" class="nav-launch-logo"></img></a>
             <!-- {{ template "partials/rocket-logo.html" . }} -->
         </div>
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse pull-right" id="wych-navbar-collapse">
             <ul class="nav navbar-nav">
-                <li><a href="/services"><i class="fa fa-fw fa-gears"></i>&nbsp;Services</a></li>
-                <li><a href="/blogs/"><i class="fa fa-fw fa-rss"></i>&nbsp;Blogs</a></li>
-                <li><a href="/about"><i class="fa fa-fw fa-lightbulb-o"></i>&nbsp;About</a></li>
+                <li><a href="/services"><i class="fa fa-fw fa-gears"></i><span class="nav-text">Services</span></a></li>
+                <li><a href="/blogs/"><i class="fa fa-fw fa-rss"></i><span class="nav-text">Blogs</span></a></li>
+                <li><a href="/about"><i class="fa fa-fw fa-lightbulb-o"></i><span class="nav-text">About</span></a></li>
                 <!--<li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Blog <span class="caret"></span></a>
                     <ul class="dropdown-menu" role="menu">
@@ -35,8 +35,8 @@
                         <li><a href="#">One more separated link</a></li>
                     </ul>
                 </li> -->
-                <li><a target="_careers" href="http://apply.launchcode5.com"><i class="fa fa-fw fa-group"></i>&nbsp;Careers</a></li>
-                <li><a href="#contactModal" data-toggle="modal" data-target="#contactModal"><i class="fa fa-fw fa-phone"></i>&nbsp;Contact</a></li>
+                <li><a target="_careers" href="http://apply.launchcode5.com"><i class="fa fa-fw fa-group"></i><span class="nav-text">Careers</span></a></li>
+                <li><a href="#contactModal" data-toggle="modal" data-target="#contactModal"><i class="fa fa-fw fa-phone"></i><span class="nav-text">Contact</span></a></li>
             </ul>
             <ul class="nav navbar-nav nav-right nav-pills">
                 <li class="hidden-xs">
@@ -51,10 +51,10 @@
                 </li>
                 <li class="visible-xs">
                     <a class="hand" onclick="twitterFollow('launchcode5');" title="Follow us on Twitter">
-                        <span class="btn btn-sm twitter-follow-btn"><i class="fa fa-fw fa-twitter"></i>&nbsp;Follow</span>
+                        <span class="btn btn-sm twitter-follow-btn"><i class="fa fa-fw fa-twitter"></i>&;Follow</span>
                     </a>
                     <a class="hand" href="http://feeds.feedburner.com/BlogsAtLaunchcodeSoftwareStudios" title="Subscribe to our Blogs Feed">
-                        <span class="btn btn-sm feedburner-subscribe-btn"><i class="fa fa-fw fa-rss"></i>&nbsp;Subscribe</span>
+                        <span class="btn btn-sm feedburner-subscribe-btn"><i class="fa fa-fw fa-rss"></i>Subscribe</span>
                     </a>
                 </li>
             </ul>
