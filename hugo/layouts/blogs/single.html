@@ -50,10 +50,30 @@
                             </div>
                     </div>
                     <div class="col-sm-9 col-xs-12">
+                        {{ if isset .Params "image" }}
+                            <figure>
+                                <img src="{{ .Params.image }}"  />
+
+                            </figure>
+                        {{ end }}
                         <div class="post-title">
-                            {{ $date := .Date.Format "Jan 2, 2006"}}
-                            <div class="post-date">{{ upper $date }}</div>
-                            <h1>{{ .Title }}</h1>
+                            <h1 class="flowtype-title">{{ .Title }}</h1>
+                            {{ $month := .Date.Format "Jan"}}
+                            {{ $dayOfWeek := .Date.Format "Monday" }}
+                            {{ $day := .Date.Format "2" }}
+                            {{ $year := .Date.Format "2006" }}
+                            <div class="post-date">
+                                <div class="year-month-block">
+                                    <div class="month">{{ upper $month}}</div>
+                                    <div class="year">{{ $year }}</div>
+                                </div>
+
+                                <div class="day-block">
+                                    <div class="dayOfWeek">{{$dayOfWeek}}</div>
+                                    <div class="day">{{$day}}</div>
+                                </div>
+                            </div>
+
                             <div class="tags">
                                 {{ range $tag := .Params.tags}}
                                     <span class="tag"><a href="/tags/{{ lower .}}/">{{ . }}</a></span>

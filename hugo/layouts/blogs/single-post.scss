@@ -122,8 +122,42 @@ div.single-post-wrapper
     }
 
     div.post-date {
+      width: 75px;
+      margin-right: 15px;
+      float: left;
       margin-top: 5px;
       font-size: 9pt;
+      border: 1px solid #888888;
+      text-align: center;
+      border-radius: 5px;
+
+      div.year-month-block {
+        background-color: #BB3333;
+        color: black;
+        margin: 0 0;
+        padding: 2px 5px;
+        width: 100%;
+        height: 18px;
+        .year {
+          padding-right: 5px;
+          float: right;
+        }
+        .month {
+          padding-left: 5px;
+          float: left;
+        }
+      }
+
+      div.day-block {
+        .day-of-week {
+          color: #999999;
+        }
+        .day {
+          font-size: 15pt;
+        }
+      }
+
+
     }
   }
 

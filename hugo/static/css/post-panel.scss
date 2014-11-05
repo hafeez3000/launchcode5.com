@@ -20,15 +20,15 @@ div.post-wrapper {
     min-height: 82px;
     max-height: 82px;
 
-    overflow: visible;
+    /* overflow: visible;
     opacity: 1;
-    transition: 0.5s;
+    transition: 0.5s; */
   }
 
-  &:hover div.post-header {
+  /*&:hover div.post-header {
     opacity: 0;
     transition: 0.5s;
-  }
+  }*/
 
   div.post-body
   {

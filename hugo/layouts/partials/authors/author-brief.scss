@@ -3,39 +3,40 @@ div.author-brief {
   bottom: -35px;
   width: 100%;
   transition: all 0.4s ease 0;
+
+  font-size: 12pt;
   padding-left: 15px;
   padding-right: 15px;
 
-  div.table-row {
-    position: relative;
-    display: table-row;
-    width: 100%;
-  }
-
   div.post-author {
     display: table-cell;
+    padding-top: 30px;
     opacity: 0;
     transition: all 0.4s ease 0;
     width: 70%;
 
-    .author {
+    h4.author {
       text-align: left;
+      margin-bottom: 5px;
+      margin-top: 5px;
     }
 
-    .author-brief
+    p.author-brief
     {
       color: lighten($darkColour, 30);
+      font-size: 14px;
     }
   }
 
-  div.post-author-pic {
-    display: table-cell;
-    width: 30%;
     img.author-pic {
-      width: 100px;
+      width: 35%;
+      float: right;
+      margin-top: 30px;
+      margin-left: -7px;
+      margin-right: 0px;
+      max-width: 100px;
       height: auto;
       border-radius: 50%;
-      border: 1px solid white;
-    }
+      border: 1px solid transparent;
   }
 }
