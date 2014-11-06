@@ -4,6 +4,7 @@ var actions             = require('./gulp-scripts/gulp-actions'),
     connect             = require('gulp-connect'),
     gulp                = require('gulp'),
     gulpAws             = require('gulp-awspublish'),
+    gulpConfig          = require('./gulp-config.json').config,
     plugins             = require('gulp-load-plugins')(),
     shell               = require('gulp-shell'),
     runSequence         = require('run-sequence');
@@ -83,10 +84,10 @@ gulp.task('express', function(callback) {
     runSequence('clean', 'build-dev', function()
     {
         plugins.util.log("Starting watches...");
-        gulp.watch(['./src/js/**/*.js'], ['scripts']);
-        gulp.watch(['hugo/**/*.scss'], ['buildCss']);
-        gulp.watch(['hugo/static/**/*', '!hugo/static/**/*.scss'], ['build-dev']); /* We really don't need to do a build for this - just move the files over. */
-        gulp.watch(['hugo/content/**/*', 'hugo/layouts/**/*', '!hugo/layouts/**/*.scss'], ['build-dev']);
+        gulp.watch(['./src/js/**/*.js', './src/js/**/*.tpl.html'], ['scripts']);
+        gulp.watch(['hugo/static/**/*.scss'], ['buildCss']);
+        gulp.watch(['hugo/static/**/*', '!hugo/static/**/*.scss'], ['build-dev']);
+        gulp.watch(['hugo/content/**/*', 'hugo/layouts/**/*'], ['build-dev']);
     });
 });
 
@@ -104,12 +105,13 @@ gulp.task('deploy:production', ['buildProd'], function(callback){
     buildProperties.FIREBASE_SERVER = '<replace me!>'
     buildProperties.useMin = 'min.';
 
+
     // create a new publisher
     var publisher = gulpAws.create({
-         "key": "AKIAJXYACETOUPXW7XEA",
-         "secret": "4G475F+jeyq4FXVStVm5TUr9lF2RxXUew4B972xK",
-         "bucket": "www.launchcode5.com",
-         "region": "us-west-2"
+         "key": gulpConfig.awsKey,
+         "secret": gulpConfig.awsSecret,
+         "bucket": gulpConfig.awsBucket,
+         "region": gulpConfig.awsRegion
     });
 
         // define custom headers

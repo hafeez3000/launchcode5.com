@@ -1,0 +1,8 @@
+{
+    "config" : {
+        "awsKey" : "<your aws key>",
+        "awsSecret" : "<your aws secret>",
+        "awsBucket" : "www.launchcode5.com",
+        "awsRegion" : "us-west-2"
+    }
+}
