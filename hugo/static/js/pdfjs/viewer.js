@@ -24,7 +24,7 @@
 
 'use strict';
 
-var DEFAULT_URL = '/resumes/ryan-kimber-resume1.compressed.pdf';
+var DEFAULT_URL = '/resumes/ryan-kimber-resume-tech-architect.pdf';
 //var DEFAULT_URL = '/resumes/compressed.tracemonkey-pldi-09.pdf';
 var DEFAULT_SCALE = 'auto';
 var DEFAULT_SCALE_DELTA = 1.1;
