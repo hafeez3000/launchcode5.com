@@ -1,7 +1,7 @@
 +++
 date = 2014-11-05T00:00:00Z
 draft = false
-title = "We're Technical & We're Blogging. Here's Why We're Using Hugo."
+title = "Technical & Blogging? Here's Why We're Using Hugo."
 image = "/images/posts/tech/2014/we-use-hugo.jpg"
 author = "ryan-kimber"
 categories = ["tech"]

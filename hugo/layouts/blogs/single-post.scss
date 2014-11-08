@@ -7,6 +7,12 @@ div.blog-banner-table
 div.single-post-wrapper {
   min-height: 1000px;
 
+  h1.flowtype-title {
+    line-height: 1.45;
+    font-size: 2.5em;
+  }
+
+
   figure {
 
     border: 2px solid rgba(#444444, 0.5);
@@ -161,22 +167,6 @@ div.single-post-wrapper {
   div.post-content {
     margin-top: 25px;
     margin-bottom: 25px;
-
-    h1, h2, h3, h4, h5, h6, p {
-      line-height: 1.45;
-    }
-    h1 {
-      font-size: 2.5em;
-    }
-    h2 {
-      font-size: 1.9em;
-    }
-    h3 {
-      font-size: 1.65em;
-    }
-    h4 {
-      font-size: 1.25em;
-    }
   }
     div.category-table {
       display: table;
