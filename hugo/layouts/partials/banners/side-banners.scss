@@ -1,0 +1,77 @@
+div.side-banner
+{
+  position: relative;
+  width: 100%;
+  padding: 5px 5px;
+  margin-top: 80px;
+
+  border: 1px solid  rgba($secondColour, 0.3);
+  background-color: rgba($secondColour, 0.2);
+
+  text-align: center;
+
+  &:before
+  {
+    content: " ";
+    position: absolute;
+    z-index: -1;
+    top: 5px;
+    left: 5px;
+    right: 5px;
+    bottom: 5px;
+    border: 1px solid rgba($secondColour, 0.3);
+  }
+
+  div.table {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    table-layout:fixed;
+    margin-bottom: 40px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 50px;
+
+
+    div.rocket-cell {
+      max-width: 100px;
+      width: 100px;
+      margin: 0 auto;
+      overflow: visible;
+      text-align: center;
+
+      svg {
+        position: relative;
+      }
+    }
+
+    div.text-cell {
+      text-align: center;
+
+    }
+  }
+
+  div.inline {
+    display: inline-block;
+  }
+
+  div.banner-text {
+    margin: 0 auto;
+    font-size: 24pt;
+    line-height: 1.3em;
+    position: relative;
+    max-width: 150px;
+
+    @media screen and (max-width: 910px) {
+      font-size: 20pt;
+    }
+  }
+
+  div.banner-button {
+    margin: 15px auto;
+  }
+
+  div.btn-primary {
+    font-weight: bold;
+  }
+}

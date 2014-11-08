@@ -1,0 +1,55 @@
+div.hire-us-banner {
+  margin-top: 25px;
+  padding: 50px 0 0 0;
+  text-align: center;
+
+  div.table {
+    margin: 0 auto;
+    margin-bottom: 40px;
+    max-width: 600px;
+    background-color: white;
+
+    div.table-row {
+      display: table-row;
+    }
+
+    div.rocket-cell {
+      max-width: 100px;
+      width: 100px;
+      overflow: visible;
+      border-top: 1px solid rgba(#888888, 0.3);
+      border-bottom: 1px solid rgba(#888888, 0.3);
+
+      svg {
+        position: relative;
+        right: 25px;
+      }
+    }
+
+    div.text-cell {
+      border: 1px solid rgba(#888888, 0.3);
+      border-left: none;
+
+    }
+  }
+
+  div.inline {
+    display: inline-block;
+  }
+
+  div.banner-text {
+    position: relative;
+    top: 25px;
+    font-size: 24pt;
+    line-height: 1.3em;
+    padding: 10px 25px;
+  }
+
+  div.banner-button {
+    margin: 15px auto;
+  }
+
+  div.btn-primary {
+    font-weight: bold;
+  }
+}

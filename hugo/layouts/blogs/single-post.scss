@@ -1,12 +1,10 @@
 div.blog-banner-table
 {
   border-bottom: 2px solid darken($firstColour, 20);
-
 }
 
 
-div.single-post-wrapper
-{
+div.single-post-wrapper {
   min-height: 1000px;
 
   figure {
@@ -14,6 +12,9 @@ div.single-post-wrapper
     border: 2px solid rgba(#444444, 0.5);
     padding: 7px 7px;
     margin: 15px 15px;
+    margin: 0 auto;
+    max-width: 990px;
+    max-height: 500px;
 
     img {
       width: 100%;
@@ -30,53 +31,51 @@ div.single-post-wrapper
 
   div.button-section {
 
+    padding: 0;
+    margin: 0;
+    margin-left: -15px;
+    margin-right: -15px;
+
+    img.category-button {
+      width: 100%;
+      height: auto;
       padding: 0;
       margin: 0;
-      margin-left: -15px;
-      margin-right: -15px;
+    }
 
-      img.category-button
-      {
-        width: 100%;
-        height: auto;
-        padding: 0;
-        margin: 0;
-      }
+    table.button-table {
+      width: 100%;
+      padding: 0;
+      margin: 0;
+      height: auto;
+      border-bottom: 2px solid darken($firstColour, 20);
 
-      table.button-table
-      {
-        width: 100%;
-        padding: 0;
-        margin: 0;
-        height: auto;
-        border-bottom: 2px solid darken($firstColour, 20);
-
-        tr > td {
-          width: 20%;
-          opacity: 0.6;
-          position: relative;
-          &:hover {
-            opacity: 1.0;
-          }
-        }
-        td.selected {
+      tr > td {
+        width: 20%;
+        opacity: 0.6;
+        position: relative;
+        &:hover {
           opacity: 1.0;
-          &:before {
-            position: absolute;
-            left: 45%;
-            top: 0;
-            margin: 0 auto;
-            border-top: 10px solid darken($firstColour, 20);
-            border-left: 10px solid transparent;
-            border-right: 10px solid transparent;
-            box-sizing: border-box;
-            content: "";
-            width: 0;
-            height: 0;
-          }
         }
-
       }
+      td.selected {
+        opacity: 1.0;
+        &:before {
+          position: absolute;
+          left: 45%;
+          top: 0;
+          margin: 0 auto;
+          border-top: 10px solid darken($firstColour, 20);
+          border-left: 10px solid transparent;
+          border-right: 10px solid transparent;
+          box-sizing: border-box;
+          content: "";
+          width: 0;
+          height: 0;
+        }
+      }
+
+    }
   }
 
   div.blog-title {
@@ -91,8 +90,7 @@ div.single-post-wrapper
       width: 100px;
     }
 
-    .title-svg
-    {
+    .title-svg {
       height: 150px;
       width: 150px;
 
@@ -157,185 +155,157 @@ div.single-post-wrapper
         }
       }
 
-
     }
   }
 
-  div.post {
+  div.post-content {
     margin-top: 25px;
     margin-bottom: 25px;
+
+    h1, h2, h3, h4, h5, h6, p {
+      line-height: 1.45;
+    }
+    h1 {
+      font-size: 2.5em;
+    }
+    h2 {
+      font-size: 1.9em;
+    }
+    h3 {
+      font-size: 1.65em;
+    }
+    h4 {
+      font-size: 1.25em;
+    }
   }
+    div.category-table {
+      display: table;
+      width: 100%;
+      padding-top: 55px;
 
-  div.category-table {
-    display: table;
-    width: 100%;
-    padding-top: 55px;
+      div.table-row {
+        display: table-row;
 
-    div.table-row {
-      display: table-row;
-
-      div.table-cell {
-        display: table-cell;
-        position: relative;
-        vertical-align: middle;
-
-        &.blog-descriptor {
-          width: 290px;
-          font-size: 12pt;
+        div.table-cell {
+          display: table-cell;
+          position: relative;
           vertical-align: middle;
-          margin: 0 auto;
-          z-index: 5;
 
-          div.dotted-border {
+          &.blog-descriptor {
             width: 290px;
-            border-top: 1px solid rgba(#000000, 0.5);
-            border-bottom: 1px solid rgba(#000000, 0.5);
-            padding: 5px 5px;
-            text-align: center;
-            text-transform: uppercase;
-            font-weight: 200;
+            font-size: 12pt;
+            vertical-align: middle;
+            margin: 0 auto;
+            z-index: 5;
 
-            @media screen and (max-width: $break-small) {
-              margin-right: 5px;
+            div.dotted-border {
+              width: 290px;
+              border-top: 1px solid rgba(#000000, 0.5);
+              border-bottom: 1px solid rgba(#000000, 0.5);
+              padding: 5px 5px;
+              text-align: center;
+              text-transform: uppercase;
+              font-weight: 200;
+
+              @media screen and (max-width: $break-small) {
+                margin-right: 5px;
+              }
             }
           }
-        }
 
-        .circuit-left
-        {
-          position: absolute;
-          height: 100%;
-          width: auto;
-          left: 0;
-          top: 0;
-          z-index: 5;
-        }
+          .circuit-left {
+            position: absolute;
+            height: 100%;
+            width: auto;
+            left: 0;
+            top: 0;
+            z-index: 5;
+          }
 
-        .circuit-right
-        {
-          position: absolute;
-          height: 100%;
-          width: auto;
-          right: 0;
-          top: 0;
-          z-index: 5;
-          transform: rotate(180deg);
-        }
+          .circuit-right {
+            position: absolute;
+            height: 100%;
+            width: auto;
+            right: 0;
+            top: 0;
+            z-index: 5;
+            transform: rotate(180deg);
+          }
 
-        &.left {
-          text-align: left;
-        }
+          &.left {
+            text-align: left;
+          }
 
-        &.right {
-          text-align: right;
+          &.right {
+            text-align: right;
+          }
         }
       }
     }
-  }
 
-  img.category-image {
-    border-radius: 50px 50px;
-  }
-
-div.next-prev-navigation {
-
-  position: relative;
-  width: 100%;
-  margin-top: 15px;
-  padding-bottom: 20px;
-  padding-top: 15px;
-  border-top: thin solid #dddddd;
-
-  div.prev-box {
-
-    div.prev {
-      font-size: 15pt;
-      font-weight: 200;
+    img.category-image {
+      border-radius: 50px 50px;
     }
 
-    div > a {
+    div.next-prev-navigation {
 
-    }
-  }
+      position: relative;
+      width: 100%;
+      margin-top: 40px;
+      padding-bottom: 40px;
+      padding-top: 40px;
+      border-top: 2px solid #dddddd;
 
-  div.next-box {
+      div.prev-box {
 
-    div.next{
-      font-size: 15pt;
-      font-weight: 200;
-    }
+        div.prev {
+          font-size: 15pt;
+        }
 
-    div > a {
+        div > a {
 
-    }
-  }
-}
-
-  div.hire-us-banner {
-    margin-top: 25px;
-    padding: 50px 0 0 0;
-    text-align: center;
-
-    div.table {
-
-      margin: 0 auto;
-      margin-bottom: 40px;
-      max-width: 600px;
-      background-color: white;
-
-
-      div.rocket-cell {
-        max-width: 100px;
-        width: 100px;
-        overflow: visible;
-        border-top: 1px solid rgba(#888888, 0.3);
-        border-bottom: 1px solid rgba(#888888, 0.3);
-
-        svg {
-          position: relative;
-          right: 25px;
         }
       }
 
-      div.text-cell {
-        border: 1px solid rgba(#888888, 0.3);
-        border-left: none;
+      div.next-box {
+
+        div.next {
+          font-size: 15pt;
+        }
+
+        div > a {
+
+        }
       }
     }
 
-    div.inline {
-      display: inline-block;
+    div.single-post-row {
+      padding-top: 15px;
+      margin-bottom: 10px;
+      margin-top: 15px;
+
+      div.social-table {
+        table-layout: fixed;
+        margin-top: 25px;
+        overflow: hidden;
+        display: table;
+        width: 100%;
+
+        div.table-row {
+          display: table-row;
+
+          div.table-cell {
+            display: table-cell;
+          }
+        }
+      }
     }
 
-    div.banner-text {
-      font-size: 24pt;
-      line-height: 1.3em;
-      padding: 10px 25px;
-    }
+    div.article-body {
+      margin-top: 10px !important;
+      background-color: #FFFFFD;
+      border-radius: 10px;
 
-    div.banner-button {
-      margin: 15px auto;
-    }
-
-    div.btn-primary {
-      font-weight: bold;
     }
   }
-}
-
-div.single-post-row
-{
-  padding-top: 15px;
-  margin-bottom: 10px;
-  margin-top: 15px;
-}
-
-div.article-body
-{
-  margin-top: 10px !important;
-  background-color: #FFFFFD;
-  border-radius: 10px;
-
-
-}
 
