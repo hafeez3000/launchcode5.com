@@ -1,0 +1,3 @@
+<div class="prism-sourcecode">
+    <pre data-src="{{ .Page.Permalink }}{{ .Get "href" }}" class="{{ with .Get "lineNumbers"}}line-numbers {{ end }}language-{{ .Get "language" }}" {{with .Get "startingLineNumber"}}data-start="{{ . }}"{{end}}></pre>
+</div>

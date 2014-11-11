@@ -31,19 +31,6 @@ Normally, you can prevent prefixfree.js from parsing a particular stylesheet by 
  
 Instead, what will work is making a small modification to the JavaScript where we are loading TypeKit to add this attribute when TypeKit loads. Assuming you have jQuery available, the solution looks like this:
 
-{{% sourcecode javascript %}}(function(d) {
-    var config = {
-                kitId: 'irq3kqa',
-                scriptTimeout: 3000
-            },
-            h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='//use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);
-        try{
-            Typekit.load(config);
-            //Fix to prevent CORS error/collision with prefixfree.js
-            jQuery('head').find('link[rel=stylesheet]:last').attr('data-noprefix', true);
-        }
-        catch(e){}};s.parentNode.insertBefore(tk,s)
-})(document);
-{{% /sourcecode %}}
+{{% sourceFromFile language="javascript" lineNumbers="true" startingLineNumber="1" href="source.js" %}}
 
 ...and now that I know that, hopefully we won't be running into that anymore. =)

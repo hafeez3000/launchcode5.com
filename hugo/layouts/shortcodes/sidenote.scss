@@ -1,0 +1,47 @@
+div.sidenote
+{
+  border: thin solid lighten($logoColour, 30);
+  background-color: rgba($secondColour, 0.1);
+  border-radius: 8px 8px;
+  margin: 25px 25px;
+  padding: 25px 25px;
+
+  hr {
+    color: $logoColour;
+    padding: 2px 2px;
+    margin: 2px 2px;
+  }
+
+  h1, h2, h3, h4, h5, h6, p {
+    line-height: 1.2;
+  }
+  h1 {
+    font-size: 1.4em;
+  }
+  h2 {
+    font-size: 1.3em;
+  }
+  h3 {
+    font-size: 1.2em;
+  }
+  h4 {
+    font-size: 1.1em;
+  }
+  h5 {
+    font-size: 1.0em;
+  }
+  h6 {
+    font-size: 0.9em;
+  }
+  p, li {
+    font-size: 0.85em;
+  }
+
+  div.sidenote-title {
+    font-size: 1.2em;
+  }
+
+  div.sidenote-contents {
+
+  }
+}

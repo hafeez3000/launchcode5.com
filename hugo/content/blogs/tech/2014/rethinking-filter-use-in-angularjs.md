@@ -29,24 +29,11 @@ In the time since Angular 1.0, filters have become a more functional and optimiz
 3. The previously mentioned <a href="http://www.bennadel.com/blog/2489-how-often-do-filters-execute-in-angularjs.htm" target="_new">Ben Nadel article</a> and <a href="https://www.google.ca/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8#safe=off&q=improving+angularjs+performance+filter" target="_new">many AngularJS performance optimization threads or blogs</a> that tackle filters or incorrect use of them as a chokepoint. 
 
 <span id="point"></span>With all of the improvements since 1.1 though, it's time to wonder if "you shouldn't paginate with a filter" is still true, so I decided to take put together a minimalistic pagination filter. The filter takes 3 arguments (the data array/collection, the current page number and the number of items to display in a page). Since all the data it could need is passed in the arguments, it's stateless. In total, it runs all of 5 lines of code including the Angular declaration:
-
-### Simple Paginating Filter
-
-{{% sourcecode javascript %}}// Usage &lt;div ng-repeat="item in collection | paginate:currentPageNumber:itemsPerPage"&gt;{{item}}&lt;/div&gt;
-.filter('paginate', function(){
-        return function(array, pageNumber, itemsPerPage){
-            var begin = ((pageNumber - 1) * itemsPerPage);
-            var end = begin + itemsPerPage;
-            return array.slice(begin, end);
-        };
-    })
-{{% /sourcecode %}}
-
+{{% sourceFromFile language="javascript" lineNumbers="true" startingLineNumber="1" href="source.js" %}}
 
 I've also put together an example on Plunkr. Check it out and play with the number of data elements (line 13 of app.js):
 
-
-{{% plunkr http://embed.plnkr.co/iWxWlCEvd6Uh8erUOyaF/preview %}}
+{{% plunkr iWxWlCEvd6Uh8erUOyaF %}}
 
 <br />
 Although this example is quite trivial, once the data array is initialized, there doesn't seem to be any noticeable performance hit in moving from page to page within the data, regardless of the number of rows. Certainly, decorating the table with editors or putting watches on the source data would have an effect on the overall performance of the page, but, in theory at least, this wouldn't be affected at all by the use of a filter for the pagination vs. any other mechanism. 

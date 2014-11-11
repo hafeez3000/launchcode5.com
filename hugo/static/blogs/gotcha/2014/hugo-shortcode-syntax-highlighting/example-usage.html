@@ -1,0 +1,9 @@
+{{% sourcecode language="javascript" lineNumbers="true" startingLineNumber="1" %}}
+    /* Usage <div ng-repeat="item in collection | paginate:currentPageNumber:itemsPerPage">{{item}}</div> */
+    angular.module('myModule').filter("paginate", function() {
+        return function(array, pageNumber, itemsPerPage){
+        var begin = ((pageNumber - 1) * itemsPerPage);
+        var end = begin + itemsPerPage;
+        return array.slice(begin, end);
+    };
+}){{% /sourcecode %}}

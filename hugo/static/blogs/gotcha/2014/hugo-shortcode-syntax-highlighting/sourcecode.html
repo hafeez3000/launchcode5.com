@@ -1,0 +1,5 @@
+<div>
+    <pre class="{{ with .Get "lineNumbers"}}line-numbers {{ end }}language-{{ .Get "language" }}" {{with .Get "startingLineNumber"}}data-start="{{ . }}"{{end}}>
+    <code class="language-{{ .Get "language" }}">{{ .Inner }}</code>
+    </pre>
+</div>
