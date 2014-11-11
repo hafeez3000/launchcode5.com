@@ -48,4 +48,5 @@ The site you're looking at now was built with Hugo and was built quickly. Adding
  
 In the coming weeks, I'll be adding articles describing how to integrate [gulpjs](http://www.gulpjs.com) with Hugo to add the power and features of the Gulp stream building system, such as single-command deployment, to a Hugo site, as well as some Gotcha/Quick Fix posts on some useful custom tags/shortcodes. I'll keep this section updated with links to new Hugo articles as we add them, but an even better place to check is our [Hugo tag page](/tags/hugo/).
 
-- [Hugo shortcode: Custom syntax highlighting with line numbers using PrismJS](/blogs/gotcha/2014/hugo-shortcode-syntax-hightlighting/)
+- [Hugo Shortcode: PrismJS Syntax Highlighter](/blogs/gotcha/2014/hugo-shortcode-syntax-hightlighting/)
+- [Hugo shortcode: Plnkr](/blogs/gotcha/2014/hugo-shortcode-plnkr/)

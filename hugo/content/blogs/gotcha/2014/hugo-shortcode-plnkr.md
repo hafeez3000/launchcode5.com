@@ -1,6 +1,6 @@
 +++
 date = 2014-11-10T21:49:12Z
-disqusid = "2014-11-10-hugo-shortcode-plunkr"
+disqusid = "2014-11-10-hugo-shortcode-plnkr"
 draft = false
 title = "Hugo Shortcode: Plnkr"
 description = "Ryan builds a Hugo shortcode for including a Plnkr inline in an article or blogpost"
