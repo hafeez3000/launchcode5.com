@@ -2,6 +2,7 @@
 {{ $category := index .Params.categories 0 }}
 <html>
     <head>
+        <title>{{ .Title }} &middot; {{ .Site.Title }} &middot; Blogs</title>
         <!-- This is where the head starts -->
         {{ template "partials/common/html-header.html" . }}
     </head>

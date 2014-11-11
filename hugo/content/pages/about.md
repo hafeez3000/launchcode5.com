@@ -1,5 +1,5 @@
 +++
-title = "About Launchcode Software Studios"
+title = "About"
 tags = ["page"]
 categories = ["page"]
 url = "/about/index.html"
